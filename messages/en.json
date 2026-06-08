@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "The new direction for your business"
+  }
+}
