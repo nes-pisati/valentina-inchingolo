@@ -5,6 +5,9 @@
     "contact": "Contatti"
   },
   "hero": {
-    "tagline": "La nuova direzione per il tuo business"
+    "taglineLead": "Strategia digitale per chi cerca",
+    "taglineAccent": "direzione",
+    "taglineTail": "— non un altro fornitore.",
+    "cta": "Vedi i progetti ↓"
   }
 }

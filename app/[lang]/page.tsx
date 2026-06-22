@@ -1,7 +1,9 @@
+import Hero from '../../components/sections/Hero/Hero'
+
 export default function Home() {
   return (
     <main>
-      <h1>VALEINK</h1>
+      <Hero />
     </main>
   )
 }

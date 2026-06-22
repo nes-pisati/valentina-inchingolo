@@ -5,6 +5,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "tagline": "The new direction for your business"
+    "taglineLead": "Digital strategy for teams that need",
+    "taglineAccent": "direction",
+    "taglineTail": "— not another vendor.",
+    "cta": "See the projects ↓"
   }
 }
