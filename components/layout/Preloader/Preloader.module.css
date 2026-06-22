@@ -1,0 +1,35 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--container-padding);
+  background: var(--color-inchiostro);
+  color: var(--color-osso);
+  will-change: transform;
+}
+
+.counter {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  font-size: clamp(72px, 16vw, 220px);
+  font-variant-numeric: tabular-nums;
+}
+
+.value {
+  display: inline-block;
+}
+
+.percent {
+  margin-left: 0.06em;
+  align-self: flex-start;
+  font-size: 0.3em;
+  line-height: 1;
+  color: var(--color-cipria);
+}
