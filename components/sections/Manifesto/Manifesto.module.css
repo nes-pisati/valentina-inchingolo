@@ -1,0 +1,76 @@
+.manifesto {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-1 * var(--expand-hold));
+  background: var(--color-osso);
+  color: var(--color-inchiostro);
+  padding: clamp(6rem, 14vh, 12rem) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 9vh, 8rem);
+  overflow: hidden;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vh, 1.5rem);
+  max-width: 100%;
+  will-change: transform;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Parola oversize */
+.word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(40px, 14vw, 260px);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.wordMask {
+  display: block;
+  overflow: hidden;
+  padding: 0.14em 0 0.1em;
+  margin: -0.14em 0 -0.1em;
+}
+
+.wordInner {
+  display: block;
+  will-change: transform;
+}
+
+/* Riga di raccordo */
+.line {
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+  line-height: 1.4;
+  color: var(--color-fango);
+}
+
+.accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-corallo);
+}
+
+@media (max-width: 640px) {
+  .right {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

@@ -9,5 +9,25 @@
     "taglineAccent": "direzione",
     "taglineTail": "— non un altro fornitore.",
     "cta": "Vedi i progetti ↓"
+  },
+  "manifesto": {
+    "items": {
+      "vision": {
+        "word": "VISION",
+        "line": "Leggo il progetto da più punti di vista: business, utente, contenuti, canali."
+      },
+      "strategy": {
+        "word": "STRATEGY",
+        "line": "Non cosa si <em>può</em> fare: cosa fare, perché, e in che ordine."
+      },
+      "ideas": {
+        "word": "IDEAS",
+        "line": "Direzioni concrete, non slide che restano nel cassetto."
+      },
+      "workflow": {
+        "word": "WORKFLOW",
+        "line": "Roadmap, priorità, responsabilità. Un piano che il team può <em>eseguire</em>."
+      }
+    }
   }
 }

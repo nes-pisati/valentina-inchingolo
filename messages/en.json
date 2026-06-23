@@ -9,5 +9,25 @@
     "taglineAccent": "direction",
     "taglineTail": "— not another vendor.",
     "cta": "See the projects ↓"
+  },
+  "manifesto": {
+    "items": {
+      "vision": {
+        "word": "VISION",
+        "line": "I read the project from multiple angles: business, user, content, channels."
+      },
+      "strategy": {
+        "word": "STRATEGY",
+        "line": "Not what <em>can</em> be done: what to do, why, and in what order."
+      },
+      "ideas": {
+        "word": "IDEAS",
+        "line": "Concrete directions, not slides that stay in a drawer."
+      },
+      "workflow": {
+        "word": "WORKFLOW",
+        "line": "Roadmap, priorities, ownership. A plan the team can <em>execute</em>."
+      }
+    }
   }
 }

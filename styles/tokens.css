@@ -24,6 +24,11 @@
   --container-max: 1280px;
   --container-padding: clamp(1.5rem, 5vw, 4rem);
 
+  /* Overlap ExpandMedia <-> Manifesto */
+  --expand-enter: 100svh;
+  --expand-dwell: 60svh;
+  --expand-hold: 100svh;
+
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:   cubic-bezier(0.87, 0, 0.13, 1);
