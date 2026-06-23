@@ -1,0 +1,36 @@
+.expand {
+  position: relative;
+  height: 220vh;
+  background: var(--color-osso);
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  will-change: clip-path;
+}
+
+.media {
+  position: absolute;
+  inset: -10% 0;
+  will-change: transform;
+}
+
+.img {
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .expand {
+    height: 180vh;
+  }
+}
