@@ -32,11 +32,19 @@
 /* Parola oversize */
 .word {
   margin: 0;
+  display: inline-block;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(40px, 14vw, 260px);
   line-height: 0.85;
   letter-spacing: -0.04em;
+  color: var(--color-inchiostro);
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+
+.word:hover {
+  color: var(--color-corallo);
 }
 
 .wordMask {

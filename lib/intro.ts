@@ -15,3 +15,21 @@ export function onIntro(cb: () => void): () => void {
   listeners.add(cb)
   return () => listeners.delete(cb)
 }
+
+let completed = false
+const completeListeners = new Set<() => void>()
+
+export function signalIntroComplete() {
+  completed = true
+  completeListeners.forEach(cb => cb())
+  completeListeners.clear()
+}
+
+export function onIntroComplete(cb: () => void): () => void {
+  if (completed) {
+    cb()
+    return () => {}
+  }
+  completeListeners.add(cb)
+  return () => completeListeners.delete(cb)
+}

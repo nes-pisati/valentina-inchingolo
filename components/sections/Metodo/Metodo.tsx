@@ -26,13 +26,11 @@ export default function Metodo() {
       const descs = q('[data-desc]')
       const counter = q('[data-counter]')[0]
       const fill = q('[data-fill]')[0]
-      const ticks = q('[data-tick]')
       if (!counter || !fill) return
-      const activeCls = styles.tickActive ?? ''
 
       const mm = gsap.matchMedia()
 
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
+      mm.add('(min-width: 641px) and (prefers-reduced-motion: no-preference)', () => {
         gsap.from(head, {
           autoAlpha: 0,
           y: 20,
@@ -60,8 +58,6 @@ export default function Metodo() {
             invalidateOnRefresh: true,
             onUpdate: (self) => {
               ;(fill as HTMLElement).style.transform = `scaleX(${self.progress})`
-              const active = Math.min(KEYS.length - 1, Math.floor(self.progress * KEYS.length))
-              ticks.forEach((tk, idx) => tk.classList.toggle(activeCls, idx === active))
             },
           },
         })
@@ -76,7 +72,6 @@ export default function Metodo() {
           tl.to(desc, { autoAlpha: 1, y: 0, duration: 0.3 }, at + 0.12)
           tl.to(counter, { yPercent: -(100 / KEYS.length) * i, duration: 0.25 }, at)
 
-          // l'ultimo step non esce: resta e cede all'unpin
           if (i < KEYS.length - 1) {
             tl.to(word, { yPercent: -130, duration: 0.3 }, at + 0.72)
             tl.to(desc, { autoAlpha: 0, y: -30, duration: 0.3 }, at + 0.72)
@@ -134,17 +129,6 @@ export default function Metodo() {
         <div className={styles.progress} aria-hidden="true">
           <div className={styles.track}>
             <span className={styles.fill} data-fill />
-          </div>
-          <div className={styles.ticks}>
-            {KEYS.map((key, i) => (
-              <span
-                key={key}
-                className={`${styles.tick} ${i === 0 ? styles.tickActive : ''}`}
-                data-tick
-              >
-                {t(`items.${key}.word`)}
-              </span>
-            ))}
           </div>
         </div>
       </div>
