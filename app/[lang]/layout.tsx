@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import Preloader from '../../components/layout/Preloader/Preloader'
+import CustomCursor from '../../components/layout/CustomCursor/CustomCursor'
 
 const locales = ['it', 'en']
 
@@ -24,6 +25,7 @@ export default async function LangLayout({
   return (
     <NextIntlClientProvider locale={lang} messages={messages}>
       <Preloader />
+      <CustomCursor />
       <div data-intro-content>{children}</div>
     </NextIntlClientProvider>
   )
