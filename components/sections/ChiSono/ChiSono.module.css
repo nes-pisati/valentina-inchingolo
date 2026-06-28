@@ -1,0 +1,146 @@
+.chisono {
+  position: relative;
+  z-index: 2;
+  background: var(--color-osso);
+  color: var(--color-inchiostro);
+  padding: clamp(6rem, 14vh, 12rem) var(--container-padding);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  will-change: transform, opacity;
+}
+
+.portraitInner {
+  position: absolute;
+  inset: 0;
+  display: block;
+  will-change: transform;
+}
+
+.portraitImg {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.04);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3.5vh, 2.5rem);
+  padding-top: clamp(0.5rem, 4vh, 3rem);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
+.num {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.occhiello {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  color: var(--color-corallo);
+}
+
+.para {
+  max-width: 46ch;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--color-fango);
+  will-change: transform, opacity;
+}
+
+.accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-corallo);
+}
+
+.experiences {
+  margin-top: clamp(0.5rem, 2vh, 1.5rem);
+  will-change: transform, opacity;
+}
+
+.expLabel {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.expList {
+  list-style: none;
+}
+
+.expItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-fango) 22%, transparent);
+}
+
+.expItem:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-fango) 22%, transparent);
+}
+
+.expName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+  letter-spacing: -0.02em;
+}
+
+.expRole {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  color: var(--color-fango);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 8vh, 3.5rem);
+  }
+
+  .portrait {
+    max-width: 22rem;
+  }
+
+  .text {
+    padding-top: 0;
+  }
+}

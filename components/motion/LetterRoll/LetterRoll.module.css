@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inner {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.char {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.col {
+  position: relative;
+  display: block;
+  will-change: transform;
+}
+
+.face {
+  display: block;
+  line-height: 1.1;
+}
+
+.face[data-roll] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.rollCorallo .face[data-roll] {
+  color: var(--color-corallo);
+}
+
+.rollInchiostro .face[data-roll] {
+  color: var(--color-inchiostro);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .face[data-roll] {
+    display: none;
+  }
+}
