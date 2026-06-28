@@ -55,5 +55,73 @@
         "desc": "I stay alongside the team through execution, until the plan delivers results."
       }
     }
+  },
+  "progetti": {
+    "num": "06",
+    "occhiello": "selected projects",
+    "items": {
+      "polly": {
+        "tag": "E-commerce · Go-to-market",
+        "title": "MyPolly",
+        "result": "Peaks of <em>~80 orders a day</em> at moments of highest traction."
+      },
+      "biodiversa": {
+        "tag": "Product · UX",
+        "title": "App Biodiversa",
+        "result": "Biodiversity data turned into <em>concrete actions</em> for the people using the app."
+      }
+    }
+  },
+  "marquee": {
+    "words": [
+      "Strategy",
+      "Direction",
+      "Product",
+      "Method",
+      "User experience",
+      "Go-to-market",
+      "Roadmap",
+      "Vision"
+    ]
+  },
+  "chisono": {
+    "num": "08",
+    "occhiello": "about",
+    "alt": "Valentina Inchingolo, portrait",
+    "p1": "I’ve worked across communication, e-commerce, advertising, funnels, community and digital products. That lets me read a project from multiple angles — and quickly see <em>where</em> things get tangled and where to step in.",
+    "p2": "I don’t have to run every task myself: I help companies and teams decide better, build a clear plan, and guide its execution with method.",
+    "experiencesLabel": "Experience",
+    "experiences": {
+      "treebee": {
+        "name": "3Bee",
+        "role": "marketing · product · PM"
+      },
+      "lordgun": {
+        "name": "LordGun",
+        "role": "cycling e-commerce"
+      },
+      "ideagency": {
+        "name": "Ideagency",
+        "role": "SEO · content"
+      },
+      "italtech": {
+        "name": "Italtech",
+        "role": "B2B communication"
+      }
+    }
+  },
+  "contatti": {
+    "num": "09",
+    "eyebrow": "let's talk",
+    "question": "Got a project to analyse, launch or reposition?",
+    "location": "Brescia / Milan / Remote"
+  },
+  "footer": {
+    "contactsLabel": "Contact",
+    "navLabel": "Navigate",
+    "langLabel": "Language",
+    "location": "Brescia / Milan / Remote",
+    "rights": "© 2026 Valentina Inchingolo",
+    "backToTop": "Back to top"
   }
 }

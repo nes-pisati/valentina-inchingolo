@@ -55,5 +55,73 @@
         "desc": "Resto accanto al team nell’esecuzione, finché il piano produce risultati."
       }
     }
+  },
+  "progetti": {
+    "num": "06",
+    "occhiello": "progetti selezionati",
+    "items": {
+      "polly": {
+        "tag": "E-commerce · Go-to-market",
+        "title": "MyPolly",
+        "result": "Picchi di <em>~80 ordini al giorno</em> nei momenti di maggiore trazione."
+      },
+      "biodiversa": {
+        "tag": "Prodotto · UX",
+        "title": "App Biodiversa",
+        "result": "Dati di biodiversità tradotti in <em>azioni concrete</em> per chi usa l’app."
+      }
+    }
+  },
+  "marquee": {
+    "words": [
+      "Strategia",
+      "Direzione",
+      "Prodotto",
+      "Metodo",
+      "Esperienza utente",
+      "Go-to-market",
+      "Roadmap",
+      "Visione"
+    ]
+  },
+  "chisono": {
+    "num": "08",
+    "occhiello": "chi sono",
+    "alt": "Valentina Inchingolo, ritratto",
+    "p1": "Ho lavorato su comunicazione, e-commerce, advertising, funnel, community e prodotti digitali. Questo mi permette di leggere un progetto da più punti di vista — e di capire in fretta <em>dove</em> c’è confusione e dove intervenire.",
+    "p2": "Non devo eseguire ogni attività: aiuto aziende e team a decidere meglio, costruire un piano chiaro e guidarne l’implementazione con metodo.",
+    "experiencesLabel": "Esperienze",
+    "experiences": {
+      "treebee": {
+        "name": "3Bee",
+        "role": "marketing · prodotto · PM"
+      },
+      "lordgun": {
+        "name": "LordGun",
+        "role": "e-commerce cycling"
+      },
+      "ideagency": {
+        "name": "Ideagency",
+        "role": "SEO · contenuti"
+      },
+      "italtech": {
+        "name": "Italtech",
+        "role": "comunicazione B2B"
+      }
+    }
+  },
+  "contatti": {
+    "num": "09",
+    "eyebrow": "parliamone",
+    "question": "Hai un progetto da analizzare, lanciare o riposizionare?",
+    "location": "Brescia / Milano / Remoto"
+  },
+  "footer": {
+    "contactsLabel": "Contatti",
+    "navLabel": "Naviga",
+    "langLabel": "Lingua",
+    "location": "Brescia / Milano / Remoto",
+    "rights": "© 2026 Valentina Inchingolo",
+    "backToTop": "Torna su"
   }
 }

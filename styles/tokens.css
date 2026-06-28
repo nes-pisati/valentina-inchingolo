@@ -24,6 +24,9 @@
   --container-max: 1280px;
   --container-padding: clamp(1.5rem, 5vw, 4rem);
 
+  /* Footer "sipario" — usata dal footer fixed e dal margin del contenuto */
+  --footer-h: 100vh;
+
   /* Overlap ExpandMedia <-> Manifesto */
   --expand-enter: 100svh;
   --expand-dwell: 60svh;
