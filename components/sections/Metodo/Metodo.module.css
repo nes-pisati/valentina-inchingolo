@@ -201,6 +201,14 @@
 }
 
 @media (max-width: 640px) and (prefers-reduced-motion: no-preference) {
+  .metodo {
+    min-height: 100dvh;
+  }
+
+  .inner {
+    height: 100dvh;
+  }
+
   .counter {
     display: none;
   }

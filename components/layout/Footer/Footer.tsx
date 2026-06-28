@@ -35,7 +35,7 @@ export default function Footer() {
       el.style.justifyContent = 'flex-start'
       const natural = el.scrollWidth
       el.style.justifyContent = ''
-      el.style.fontSize = `${(100 * avail) / natural * 0.97}px`
+      el.style.fontSize = `${((100 * avail) / natural) * 0.99}px`
     }
 
     fit()
