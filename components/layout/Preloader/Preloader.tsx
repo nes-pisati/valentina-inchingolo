@@ -2,9 +2,12 @@
 
 import { useRef } from 'react'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { signalIntro } from '../../../lib/intro'
 import styles from './Preloader.module.css'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const SEEN_KEY = 'valeink-intro-seen'
 
@@ -23,6 +26,7 @@ export default function Preloader() {
       const finish = () => {
         gsap.set(overlay.current, { display: 'none' })
         unlock()
+        ScrollTrigger.refresh()
       }
 
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -52,7 +56,11 @@ export default function Preloader() {
         },
       })
         .to(overlay.current, { yPercent: -100, duration: 0.8, ease: 'power4.inOut' }, '+=0.15')
-        .to(content, { yPercent: 0, autoAlpha: 1, duration: 1, ease: 'power3.out' }, '-=0.55')
+        .to(
+          content,
+          { yPercent: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', clearProps: 'transform' },
+          '-=0.55',
+        )
         .call(signalIntro, undefined, '<')
     },
     { scope: overlay },
