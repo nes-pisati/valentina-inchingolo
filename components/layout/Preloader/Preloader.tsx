@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { signalIntro } from '../../../lib/intro'
+import { signalIntro, signalIntroComplete } from '../../../lib/intro'
 import styles from './Preloader.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -27,6 +27,7 @@ export default function Preloader() {
         gsap.set(overlay.current, { display: 'none' })
         unlock()
         ScrollTrigger.refresh()
+        signalIntroComplete()
       }
 
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
