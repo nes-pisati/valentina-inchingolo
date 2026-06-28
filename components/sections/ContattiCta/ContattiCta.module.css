@@ -1,0 +1,79 @@
+.contatti {
+  position: relative;
+  z-index: 2;
+  background: var(--color-osso);
+  color: var(--color-inchiostro);
+  padding: clamp(7rem, 18vh, 14rem) var(--container-padding);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: clamp(1.5rem, 4vh, 3rem);
+  will-change: transform, opacity;
+}
+
+.num {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.eyebrow {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  color: var(--color-corallo);
+}
+
+.question {
+  margin: 0 0 clamp(2.5rem, 8vh, 6rem);
+  max-width: 18ch;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6.5vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  will-change: transform, opacity;
+}
+
+.emailWrap {
+  will-change: transform, opacity;
+}
+
+.email {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4.6vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-inchiostro);
+}
+
+.location {
+  margin: clamp(2.5rem, 7vh, 5rem) 0 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-fango);
+  opacity: 0.7;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+  .question {
+    max-width: 100%;
+  }
+}
