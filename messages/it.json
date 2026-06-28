@@ -29,5 +29,31 @@
         "line": "Roadmap, priorità, responsabilità. Un piano che il team può <em>eseguire</em>."
       }
     }
+  },
+  "metodo": {
+    "num": "05",
+    "occhiello": "metodo",
+    "items": {
+      "analisi": {
+        "word": "Analisi",
+        "desc": "Parto dai dati e dal contesto: mercato, utenti, numeri, e ciò che già esiste."
+      },
+      "diagnosi": {
+        "word": "Diagnosi",
+        "desc": "Isolo il problema reale, non i sintomi: dove si perde valore e perché."
+      },
+      "strategia": {
+        "word": "Strategia",
+        "desc": "Definisco direzione e priorità: cosa fare, in che ordine, verso quali obiettivi."
+      },
+      "piano": {
+        "word": "Piano d’azione",
+        "desc": "Traduco la strategia in roadmap operativa: attività, responsabilità, tempi."
+      },
+      "affiancamento": {
+        "word": "Affiancamento",
+        "desc": "Resto accanto al team nell’esecuzione, finché il piano produce risultati."
+      }
+    }
   }
 }

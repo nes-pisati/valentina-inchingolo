@@ -29,5 +29,31 @@
         "line": "Roadmap, priorities, ownership. A plan the team can <em>execute</em>."
       }
     }
+  },
+  "metodo": {
+    "num": "05",
+    "occhiello": "method",
+    "items": {
+      "analisi": {
+        "word": "Analysis",
+        "desc": "I start from data and context: market, users, numbers, and what already exists."
+      },
+      "diagnosi": {
+        "word": "Diagnosis",
+        "desc": "I isolate the real problem, not the symptoms: where value leaks, and why."
+      },
+      "strategia": {
+        "word": "Strategy",
+        "desc": "I set direction and priorities: what to do, in what order, toward which goals."
+      },
+      "piano": {
+        "word": "Action plan",
+        "desc": "I turn strategy into an operational roadmap: tasks, ownership, timing."
+      },
+      "affiancamento": {
+        "word": "Support",
+        "desc": "I stay alongside the team through execution, until the plan delivers results."
+      }
+    }
   }
 }
