@@ -199,7 +199,8 @@
   }
 
   .wordmark {
-    font-size: 26vw;
+    font-size: 17vw;
+    letter-spacing: -0.06em;
   }
 
   .meta {

@@ -62,6 +62,7 @@ export default function ContattiCta() {
             href={`mailto:${EMAIL}`}
             text={EMAIL}
             rollColor="corallo"
+            nowrap
             className={styles.email}
           />
         </div>

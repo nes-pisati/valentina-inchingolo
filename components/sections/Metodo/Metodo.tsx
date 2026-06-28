@@ -24,13 +24,14 @@ export default function Metodo() {
       const steps = q('[data-step]')
       const words = q('[data-word]')
       const descs = q('[data-desc]')
+      const nums = q('[data-num]')
       const counter = q('[data-counter]')[0]
       const fill = q('[data-fill]')[0]
       if (!counter || !fill) return
 
       const mm = gsap.matchMedia()
 
-      mm.add('(min-width: 641px) and (prefers-reduced-motion: no-preference)', () => {
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
         gsap.from(head, {
           autoAlpha: 0,
           y: 20,
@@ -41,6 +42,7 @@ export default function Metodo() {
 
         gsap.set(words, { yPercent: 130 })
         gsap.set(descs, { autoAlpha: 0, y: 30 })
+        gsap.set(nums, { autoAlpha: 0, y: 20 })
         gsap.set(counter, { yPercent: 0 })
         gsap.set(fill, { scaleX: 0, transformOrigin: '0% 50%' })
 
@@ -65,16 +67,19 @@ export default function Metodo() {
         steps.forEach((_, i) => {
           const word = words[i]
           const desc = descs[i]
+          const num = nums[i]
           if (!word || !desc) return
           const at = i
 
           tl.to(word, { yPercent: 0, duration: 0.35 }, at)
           tl.to(desc, { autoAlpha: 1, y: 0, duration: 0.3 }, at + 0.12)
+          if (num) tl.to(num, { autoAlpha: 1, y: 0, duration: 0.3 }, at + 0.06)
           tl.to(counter, { yPercent: -(100 / KEYS.length) * i, duration: 0.25 }, at)
 
           if (i < KEYS.length - 1) {
             tl.to(word, { yPercent: -130, duration: 0.3 }, at + 0.72)
             tl.to(desc, { autoAlpha: 0, y: -30, duration: 0.3 }, at + 0.72)
+            if (num) tl.to(num, { autoAlpha: 0, y: -20, duration: 0.3 }, at + 0.72)
           }
         })
 
@@ -108,7 +113,7 @@ export default function Metodo() {
           <ol className={styles.steps}>
             {KEYS.map((key, i) => (
               <li key={key} className={styles.step} data-step>
-                <span className={styles.stepNum} aria-hidden="true">
+                <span className={styles.stepNum} data-num aria-hidden="true">
                   {pad(i + 1)}
                 </span>
                 <h3 className={styles.word}>

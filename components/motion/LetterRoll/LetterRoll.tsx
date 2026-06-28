@@ -11,10 +11,17 @@ type Props = {
   text: string
   href?: string
   rollColor?: 'corallo' | 'inchiostro'
+  nowrap?: boolean
   className?: string
 }
 
-export default function LetterRoll({ text, href, rollColor = 'corallo', className }: Props) {
+export default function LetterRoll({
+  text,
+  href,
+  rollColor = 'corallo',
+  nowrap = false,
+  className,
+}: Props) {
   const root = useRef<HTMLAnchorElement & HTMLSpanElement>(null)
   const chars = Array.from(text)
 
@@ -49,7 +56,9 @@ export default function LetterRoll({ text, href, rollColor = 'corallo', classNam
   )
 
   const rollClass = rollColor === 'corallo' ? styles.rollCorallo : styles.rollInchiostro
-  const cls = [styles.root, rollClass, className].filter(Boolean).join(' ')
+  const cls = [styles.root, rollClass, nowrap && styles.nowrap, className]
+    .filter(Boolean)
+    .join(' ')
 
   const content = (
     <span className={styles.inner} aria-hidden="true">

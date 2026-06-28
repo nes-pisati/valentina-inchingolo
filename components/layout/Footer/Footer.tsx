@@ -24,6 +24,28 @@ export default function Footer() {
   const [revealed, setRevealed] = useState(false)
   useEffect(() => onIntroComplete(() => setRevealed(true)), [])
 
+  useEffect(() => {
+    const el = footer.current?.querySelector<HTMLElement>(`.${styles.wordmark}`)
+    if (!el) return
+
+    const fit = () => {
+      const avail = el.clientWidth
+      if (!avail) return
+      el.style.fontSize = '100px'
+      el.style.justifyContent = 'flex-start'
+      const natural = el.scrollWidth
+      el.style.justifyContent = ''
+      el.style.fontSize = `${(100 * avail) / natural * 0.97}px`
+    }
+
+    fit()
+    const ro = new ResizeObserver(fit)
+    ro.observe(el)
+    if (document.fonts) document.fonts.ready.then(fit)
+
+    return () => ro.disconnect()
+  }, [])
+
   useGSAP(
     () => {
       const mm = gsap.matchMedia()

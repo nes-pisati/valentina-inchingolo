@@ -101,6 +101,40 @@ export default function ProgettiList() {
           list.removeEventListener('mouseleave', onLeave)
         }
       })
+
+      mm.add('(max-width: 767px)', () => {
+        const list = q('[data-list]')[0] as HTMLElement | undefined
+        const dots = q('[data-dot]')
+        const rows = q('[data-row]') as HTMLElement[]
+        if (!list || !dots.length || !rows.length) return
+        const activeCls = styles.dotActive ?? ''
+
+        let raf = 0
+        const update = () => {
+          raf = 0
+          const x = list.scrollLeft
+          let active = 0
+          let activeDist = Infinity
+          rows.forEach((r, idx) => {
+            const dist = Math.abs(r.offsetLeft - x)
+            if (dist < activeDist) {
+              activeDist = dist
+              active = idx
+            }
+          })
+          dots.forEach((d, j) => d.classList.toggle(activeCls, j === active))
+        }
+        const onScroll = () => {
+          if (!raf) raf = requestAnimationFrame(update)
+        }
+        list.addEventListener('scroll', onScroll, { passive: true })
+        update()
+
+        return () => {
+          list.removeEventListener('scroll', onScroll)
+          if (raf) cancelAnimationFrame(raf)
+        }
+      })
     },
     { scope: root },
   )
@@ -174,6 +208,12 @@ export default function ProgettiList() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className={styles.dots} aria-hidden="true">
+          {PROJECTS.map((p) => (
+            <span key={p.key} className={styles.dot} data-dot />
+          ))}
         </div>
       </div>
     </section>

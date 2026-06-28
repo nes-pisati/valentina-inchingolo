@@ -11,6 +11,10 @@
   flex-wrap: wrap;
 }
 
+.nowrap .inner {
+  flex-wrap: nowrap;
+}
+
 .char {
   display: inline-block;
   overflow: hidden;
