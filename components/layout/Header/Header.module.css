@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  pointer-events: none;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0px) saturate(1);
+  -webkit-backdrop-filter: blur(0px) saturate(1);
+  will-change: transform;
+  transition: background var(--duration-mid) var(--ease-out-expo),
+    border-color var(--duration-mid) var(--ease-out-expo),
+    transform var(--duration-mid) var(--ease-out-expo);
+}
+
+.scrolled {
+  background: rgba(244, 239, 233, 0.55);
+  border-bottom-color: rgba(20, 18, 16, 0.08);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(0.9rem, 2.2vh, 1.5rem) clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.wordmark {
+  pointer-events: auto;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-inchiostro);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.6rem, 4vw, 3rem);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 2.4vw, 2.2rem);
+}
+
+.link {
+  pointer-events: auto;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  letter-spacing: -0.01em;
+  color: var(--color-inchiostro);
+}
+
+.langs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lang {
+  pointer-events: auto;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--color-inchiostro);
+  opacity: 0.45;
+  transition: opacity var(--duration-fast) var(--ease-out-expo),
+    color var(--duration-fast) var(--ease-out-expo);
+}
+
+.lang:hover {
+  opacity: 1;
+}
+
+.langActive {
+  color: var(--color-corallo);
+  opacity: 1;
+}
+
+.langSep {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  color: var(--color-inchiostro);
+  opacity: 0.3;
+}
+
+@media (max-width: 640px) {
+  .list {
+    display: none;
+  }
+
+  .nav {
+    gap: 1.2rem;
+  }
+}
