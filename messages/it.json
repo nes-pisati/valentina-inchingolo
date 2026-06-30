@@ -116,6 +116,26 @@
     "question": "Hai un progetto da analizzare, lanciare o riposizionare?",
     "location": "Brescia / Milano / Remoto"
   },
+  "contact": {
+    "meta": {
+      "title": "Contatti — Valentina Inchingolo",
+      "description": "Scrivimi per analizzare, lanciare o riposizionare un progetto digitale. Email, telefono, LinkedIn e CV — direttamente, senza intermediari."
+    },
+    "index": "04 / 04",
+    "eyebrow": "Hai un progetto da analizzare, lanciare o riposizionare?",
+    "headline": "Parliamone.",
+    "rows": {
+      "email": { "label": "Email", "copy": "Copia", "copied": "Copiata", "copyAria": "Copia l’indirizzo email" },
+      "phone": { "label": "Telefono" },
+      "linkedin": { "label": "LinkedIn", "hint": "Profilo" },
+      "cv": { "label": "Curriculum", "value": "Scarica il CV", "hint": "PDF" }
+    },
+    "baseline": {
+      "locations": "Brescia / Milano / Remoto",
+      "availability": "disponibile per consulenze, audit e collaborazioni strategiche",
+      "clockPrefix": "Brescia"
+    }
+  },
   "footer": {
     "contactsLabel": "Contatti",
     "navLabel": "Naviga",

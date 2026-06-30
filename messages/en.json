@@ -116,6 +116,26 @@
     "question": "Got a project to analyse, launch or reposition?",
     "location": "Brescia / Milan / Remote"
   },
+  "contact": {
+    "meta": {
+      "title": "Contact — Valentina Inchingolo",
+      "description": "Reach out to analyse, launch or reposition a digital project. Email, phone, LinkedIn and CV — directly, no middlemen."
+    },
+    "index": "04 / 04",
+    "eyebrow": "Got a project to analyse, launch or reposition?",
+    "headline": "Let’s talk.",
+    "rows": {
+      "email": { "label": "Email", "copy": "Copy", "copied": "Copied", "copyAria": "Copy the email address" },
+      "phone": { "label": "Phone" },
+      "linkedin": { "label": "LinkedIn", "hint": "Profile" },
+      "cv": { "label": "Résumé", "value": "Download CV", "hint": "PDF" }
+    },
+    "baseline": {
+      "locations": "Brescia / Milan / Remote",
+      "availability": "available for consulting, audits and strategic collaborations",
+      "clockPrefix": "Brescia"
+    }
+  },
   "footer": {
     "contactsLabel": "Contact",
     "navLabel": "Navigate",

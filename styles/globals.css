@@ -31,3 +31,13 @@ body {
   background-color: var(--color-osso);
   box-shadow: 0 2rem 4rem rgba(20, 18, 16, 0.28);
 }
+
+.no-footer [data-intro-content] {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+.no-footer,
+.no-footer body {
+  overflow: hidden;
+}

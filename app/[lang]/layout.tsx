@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import Header from '../../components/layout/Header/Header'
 import Preloader from '../../components/layout/Preloader/Preloader'
 import CustomCursor from '../../components/layout/CustomCursor/CustomCursor'
-import Footer from '../../components/layout/Footer/Footer'
+import ConditionalFooter from '../../components/layout/ConditionalFooter'
 
 const locales = ['it', 'en']
 
@@ -30,7 +30,7 @@ export default async function LangLayout({
       <CustomCursor />
       <Header />
       <div data-intro-content>{children}</div>
-      <Footer />
+      <ConditionalFooter />
     </NextIntlClientProvider>
   )
 }

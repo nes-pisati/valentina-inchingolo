@@ -105,6 +105,13 @@
   opacity: 0.3;
 }
 
+.onDark .wordmark,
+.onDark .link,
+.onDark .lang,
+.onDark .langSep {
+  color: var(--color-osso);
+}
+
 @media (max-width: 640px) {
   .list {
     display: none;

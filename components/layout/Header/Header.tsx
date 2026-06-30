@@ -2,17 +2,21 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import styles from './Header.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
 
 const WORDMARK = 'VALEINK'
+const ON_DARK = /^\/(it|en)\/contatti\/?$/
 const SCROLL_THRESHOLD = 24
 const DELTA = 6
 
 export default function Header() {
   const tNav = useTranslations('nav')
   const locale = useLocale()
+  const pathname = usePathname()
+  const onDark = ON_DARK.test(pathname)
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
   const lastY = useRef(0)
@@ -38,7 +42,7 @@ export default function Header() {
     <header
       className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${
         hidden ? styles.hidden : ''
-      }`}
+      } ${onDark ? styles.onDark : ''}`}
     >
       <div className={styles.inner}>
         <Link href={`/${locale}`} className={styles.wordmark} aria-label={WORDMARK}>
@@ -65,7 +69,7 @@ export default function Header() {
             </li>
             <li>
               <LetterRoll
-                href="#contatti-head"
+                href={`/${locale}/contatti`}
                 text={tNav('contact')}
                 rollColor="corallo"
                 className={styles.link}
