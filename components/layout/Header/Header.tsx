@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import styles from './Header.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
 
@@ -11,6 +12,8 @@ const WORDMARK = 'VALEINK'
 const ON_DARK = /^\/(it|en)\/contatti\/?$/
 const SCROLL_THRESHOLD = 24
 const DELTA = 6
+const EASE_PANEL = [0.76, 0, 0.24, 1] as const
+const EASE_REVEAL = [0.16, 1, 0.3, 1] as const
 
 export default function Header() {
   const tNav = useTranslations('nav')
@@ -19,7 +22,15 @@ export default function Header() {
   const onDark = ON_DARK.test(pathname)
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [lastPathname, setLastPathname] = useState(pathname)
   const lastY = useRef(0)
+  const reduceMotion = useReducedMotion()
+
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname)
+    setMenuOpen(false)
+  }
 
   useEffect(() => {
     lastY.current = window.scrollY
@@ -37,6 +48,39 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [menuOpen])
+
+  const panelTransition = reduceMotion
+    ? { duration: 0.01 }
+    : { duration: 0.55, ease: EASE_PANEL }
+  const listVariants = {
+    open: {
+      transition: reduceMotion
+        ? { duration: 0.01 }
+        : { delayChildren: 0.15, staggerChildren: 0.07 },
+    },
+    closed: {},
+  }
+  const itemVariants = {
+    open: { y: 0, opacity: 1, transition: { duration: 0.45, ease: EASE_REVEAL } },
+    closed: { y: reduceMotion ? 0 : 20, opacity: 0 },
+  }
 
   return (
     <header
@@ -100,8 +144,118 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+
+          <button
+            type="button"
+            className={styles.burger}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? tNav('closeMenu') : tNav('openMenu')}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span className={`${styles.burgerBar} ${menuOpen ? styles.burgerBarOpen : ''}`} />
+            <span className={`${styles.burgerBar} ${menuOpen ? styles.burgerBarOpen : ''}`} />
+            <span className={`${styles.burgerBar} ${menuOpen ? styles.burgerBarOpen : ''}`} />
+          </button>
         </nav>
       </div>
+
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div
+              className={styles.backdrop}
+              onClick={() => setMenuOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={panelTransition}
+            />
+            <motion.div
+              id="mobile-menu"
+              className={styles.drawer}
+              role="dialog"
+              aria-modal="true"
+              aria-label={tNav('openMenu')}
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={panelTransition}
+            >
+              <motion.ul
+                className={styles.drawerList}
+                variants={listVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                <motion.li variants={itemVariants}>
+                  <a
+                    href="#progetti-head"
+                    className={styles.drawerLink}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {tNav('projects')}
+                  </a>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <a
+                    href="#chisono-head"
+                    className={styles.drawerLink}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {tNav('about')}
+                  </a>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <Link
+                    href={`/${locale}/contatti`}
+                    className={styles.drawerLink}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {tNav('contact')}
+                  </Link>
+                </motion.li>
+              </motion.ul>
+
+              <motion.ul
+                className={styles.drawerLangs}
+                aria-label="Lingua"
+                variants={itemVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                <li>
+                  <Link
+                    href="/it"
+                    className={`${styles.drawerLang} ${
+                      locale === 'it' ? styles.drawerLangActive : ''
+                    }`}
+                    aria-current={locale === 'it' ? 'true' : undefined}
+                  >
+                    IT
+                  </Link>
+                </li>
+                <li aria-hidden="true" className={styles.drawerLangSep}>
+                  /
+                </li>
+                <li>
+                  <Link
+                    href="/en"
+                    className={`${styles.drawerLang} ${
+                      locale === 'en' ? styles.drawerLangActive : ''
+                    }`}
+                    aria-current={locale === 'en' ? 'true' : undefined}
+                  >
+                    EN
+                  </Link>
+                </li>
+              </motion.ul>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

@@ -2,7 +2,9 @@
   "nav": {
     "projects": "Projects",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "taglineLead": "Digital strategy for teams that need",

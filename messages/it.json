@@ -2,7 +2,9 @@
   "nav": {
     "projects": "Progetti",
     "about": "Chi sono",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu"
   },
   "hero": {
     "taglineLead": "Strategia digitale per chi cerca",

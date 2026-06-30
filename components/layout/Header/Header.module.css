@@ -112,12 +112,162 @@
   color: var(--color-osso);
 }
 
+.burger {
+  display: none;
+  pointer-events: auto;
+  position: relative;
+  width: 1.5rem;
+  height: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.burgerBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-inchiostro);
+  transition: transform var(--duration-fast) var(--ease-out-expo),
+    opacity var(--duration-fast) var(--ease-out-expo),
+    background var(--duration-fast) var(--ease-out-expo);
+}
+
+.burgerBar:nth-child(1) {
+  top: 0;
+}
+
+.burgerBar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burgerBar:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.burgerBarOpen:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burgerBarOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerBarOpen:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.onDark .burgerBar {
+  background: var(--color-osso);
+}
+
+.burger .burgerBarOpen {
+  background: var(--color-osso);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100dvh;
+  z-index: 60;
+  pointer-events: auto;
+  background: rgba(20, 18, 16, 0.5);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  z-index: 61;
+  pointer-events: auto;
+  width: min(420px, 86vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: clamp(5rem, 14vh, 7rem) clamp(1.75rem, 6vw, 2.5rem) clamp(2.5rem, 6vh, 3.5rem);
+  background: var(--color-inchiostro);
+  box-shadow: -2rem 0 4rem rgba(20, 18, 16, 0.28);
+}
+
+.drawerList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.2rem, 4vh, 1.8rem);
+}
+
+.drawerLink {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 9vw, 2.6rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--color-corallo);
+}
+
+.drawerLangs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.drawerLang {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--color-osso);
+  opacity: 0.45;
+  transition: opacity var(--duration-fast) var(--ease-out-expo);
+}
+
+.drawerLang:hover {
+  opacity: 1;
+}
+
+.drawerLangActive {
+  color: var(--color-corallo);
+  opacity: 1;
+}
+
+.drawerLangSep {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-osso);
+  opacity: 0.3;
+}
+
 @media (max-width: 640px) {
-  .list {
+  .list,
+  .langs {
     display: none;
   }
 
   .nav {
     gap: 1.2rem;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .burgerBar {
+    transition: none;
   }
 }
