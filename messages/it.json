@@ -112,6 +112,97 @@
       }
     }
   },
+  "about": {
+    "meta": {
+      "title": "Chi sono — Valentina Inchingolo",
+      "description": "Dietro Valeink: il metodo, le lenti con cui leggo un progetto e il percorso di Valentina Inchingolo, consulente di digital strategy tra Brescia, Milano e remoto."
+    },
+    "wipe": "VALEINK — About",
+    "hero": {
+      "num": "(01)",
+      "occhiello": "chi dà direzione",
+      "titleAria": "Dietro Valeink",
+      "l1": "DIETRO",
+      "l2": "VALEINK",
+      "meta1": "Metodo prima di tutto",
+      "meta2": "Ordine nelle priorità",
+      "meta3": "Brescia / Milano / Remoto"
+    },
+    "bio": {
+      "num": "(02)",
+      "occhiello": "chi sono",
+      "alt": "Valentina Inchingolo, ritratto",
+      "p1": "Ho attraversato comunicazione, e-commerce, advertising, funnel, community e prodotto digitale. Non è una lista di mestieri: è il motivo per cui riesco a leggere un progetto intero, senza fermarmi al mio pezzo.",
+      "p2": "Valeink è il mio soprannome da sempre — ed è diventato il nome di questo lavoro: entrare nei progetti degli altri, mettere ordine e lasciare una direzione che resta.",
+      "claimLead": "Il mio valore non è “fare”. È aiutarti a scegliere",
+      "claimAccent": "cosa",
+      "claimTail": "fare, perché farlo, e in che ordine.",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "lenti": {
+      "num": "(03)",
+      "occhiello": "come leggo un progetto",
+      "title": "Le lenti",
+      "items": {
+        "business": { "name": "Business", "q": "Dove si genera valore, e dove si perde?" },
+        "utente": { "name": "Utente", "q": "Chi ha davanti il prodotto, e cosa sta cercando?" },
+        "contenuto": { "name": "Contenuto", "q": "Cosa dice il brand, e con quale voce?" },
+        "canali": { "name": "Canali", "q": "Dove vive il messaggio, e con che ritorno?" },
+        "processi": { "name": "Processi", "q": "Come lavora il team, e cosa lo rallenta?" },
+        "team": { "name": "Team", "q": "Quali competenze ci sono, e quali mancano?" }
+      }
+    },
+    "percorso": {
+      "num": "(04)",
+      "occhiello": "esperienze che hanno costruito il profilo",
+      "title": "Il percorso",
+      "watermark": "Esperienza — Esperienza",
+      "items": {
+        "treebee": {
+          "name": "3Bee",
+          "tag": "marketing · prodotto · PM",
+          "desc": "Dal marketing al prodotto: priorità, roadmap e coordinamento tra team su un prodotto in crescita."
+        },
+        "lordgun": {
+          "name": "LordGun",
+          "tag": "e-commerce",
+          "desc": "E-commerce internazionale: cataloghi, funnel e i numeri dietro ogni decisione di vendita."
+        },
+        "ideagency": {
+          "name": "Ideagency",
+          "tag": "SEO · contenuti",
+          "desc": "SEO e contenuti in agenzia: metodo, ritmo editoriale e risultati misurabili per clienti diversi."
+        },
+        "italtech": {
+          "name": "Italtech / Wintal",
+          "tag": "comunicazione B2B",
+          "desc": "Comunicazione B2B industriale: tradurre prodotti complessi in messaggi chiari."
+        }
+      }
+    },
+    "tools": {
+      "label": "Strumenti: GA4, Search Console, Figma, Notion, Meta Ads, Google Ads, Shopify, WordPress, Mailchimp, Hotjar",
+      "words": [
+        "GA4",
+        "Search Console",
+        "Figma",
+        "Notion",
+        "Meta Ads",
+        "Google Ads",
+        "Shopify",
+        "WordPress",
+        "Mailchimp",
+        "Hotjar"
+      ]
+    },
+    "cta": {
+      "eyebrow": "Hai un progetto da analizzare, lanciare o riposizionare?",
+      "title": "PARLIAMONE",
+      "badge": "consulenze · audit · strategia · roadmap · ",
+      "zones": "Brescia / Milano / Remoto"
+    }
+  },
   "contatti": {
     "num": "09",
     "eyebrow": "parliamone",

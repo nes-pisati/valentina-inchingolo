@@ -9,9 +9,15 @@ import styles from './Marquee.module.css'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
-export default function Marquee() {
+type Props = {
+  words?: string[]
+  variant?: 'corallo' | 'cipria'
+  label?: string
+}
+
+export default function Marquee({ words: wordsProp, variant = 'corallo', label }: Props = {}) {
   const t = useTranslations('marquee')
-  const words = t.raw('words') as string[]
+  const words = wordsProp ?? (t.raw('words') as string[])
   const root = useRef<HTMLElement>(null)
   const track = useRef<HTMLDivElement>(null)
 
@@ -74,8 +80,14 @@ export default function Marquee() {
     </div>
   )
 
+  const cls = variant === 'cipria' ? `${styles.marquee} ${styles.cipria}` : styles.marquee
+
   return (
-    <section ref={root} className={styles.marquee} aria-hidden="true">
+    <section
+      ref={root}
+      className={cls}
+      {...(label ? { 'aria-label': label } : { 'aria-hidden': 'true' })}
+    >
       <div ref={track} className={styles.track}>
         {group}
         {group}

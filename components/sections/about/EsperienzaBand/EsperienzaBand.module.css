@@ -1,0 +1,24 @@
+.band {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background: var(--color-inchiostro);
+  padding-block: clamp(4rem, 12vh, 9rem);
+  display: flex;
+  align-items: center;
+}
+
+.watermark {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(96px, 17vw, 240px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(244, 239, 233, 0.24);
+  pointer-events: none;
+  will-change: transform;
+}

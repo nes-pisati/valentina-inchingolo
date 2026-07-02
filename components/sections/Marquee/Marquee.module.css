@@ -57,6 +57,20 @@
   transform: rotate(45deg);
 }
 
+.cipria {
+  background: var(--color-cipria);
+  border-top-color: rgba(20, 18, 16, 0.14);
+  border-bottom-color: rgba(20, 18, 16, 0.14);
+}
+
+.cipria .wordAccent {
+  color: var(--color-corallo);
+}
+
+.cipria .sep {
+  background: var(--color-corallo);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .track {
     transform: none !important;

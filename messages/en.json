@@ -112,6 +112,97 @@
       }
     }
   },
+  "about": {
+    "meta": {
+      "title": "About — Valentina Inchingolo",
+      "description": "Behind Valeink: the method, the lenses I read a project through, and the path of Valentina Inchingolo, digital strategy consultant across Brescia, Milan and remote."
+    },
+    "wipe": "VALEINK — About",
+    "hero": {
+      "num": "(01)",
+      "occhiello": "the one who sets direction",
+      "titleAria": "Behind Valeink",
+      "l1": "BEHIND",
+      "l2": "VALEINK",
+      "meta1": "Method before anything",
+      "meta2": "Order in the priorities",
+      "meta3": "Brescia / Milan / Remote"
+    },
+    "bio": {
+      "num": "(02)",
+      "occhiello": "about",
+      "alt": "Valentina Inchingolo, portrait",
+      "p1": "I’ve moved through communication, e-commerce, advertising, funnels, community and digital product. It’s not a list of jobs: it’s why I can read a whole project without stopping at my own piece.",
+      "p2": "Valeink has always been my nickname — and it became the name of this work: stepping into other people’s projects, bringing order, and leaving behind a direction that lasts.",
+      "claimLead": "My value isn’t “doing”. It’s helping you choose",
+      "claimAccent": "what",
+      "claimTail": "to do, why, and in what order.",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "lenti": {
+      "num": "(03)",
+      "occhiello": "how I read a project",
+      "title": "The lenses",
+      "items": {
+        "business": { "name": "Business", "q": "Where is value created, and where does it leak?" },
+        "utente": { "name": "User", "q": "Who is in front of the product, and what are they looking for?" },
+        "contenuto": { "name": "Content", "q": "What does the brand say, and in which voice?" },
+        "canali": { "name": "Channels", "q": "Where does the message live, and at what return?" },
+        "processi": { "name": "Processes", "q": "How does the team work, and what slows it down?" },
+        "team": { "name": "Team", "q": "Which skills are there, and which are missing?" }
+      }
+    },
+    "percorso": {
+      "num": "(04)",
+      "occhiello": "the experiences that built the profile",
+      "title": "The path",
+      "watermark": "Experience — Experience",
+      "items": {
+        "treebee": {
+          "name": "3Bee",
+          "tag": "marketing · product · PM",
+          "desc": "From marketing to product: priorities, roadmap and cross-team coordination on a growing product."
+        },
+        "lordgun": {
+          "name": "LordGun",
+          "tag": "e-commerce",
+          "desc": "International e-commerce: catalogues, funnels and the numbers behind every sales decision."
+        },
+        "ideagency": {
+          "name": "Ideagency",
+          "tag": "SEO · content",
+          "desc": "SEO and content in an agency: method, editorial rhythm and measurable results across clients."
+        },
+        "italtech": {
+          "name": "Italtech / Wintal",
+          "tag": "B2B communication",
+          "desc": "Industrial B2B communication: turning complex products into clear messages."
+        }
+      }
+    },
+    "tools": {
+      "label": "Tools: GA4, Search Console, Figma, Notion, Meta Ads, Google Ads, Shopify, WordPress, Mailchimp, Hotjar",
+      "words": [
+        "GA4",
+        "Search Console",
+        "Figma",
+        "Notion",
+        "Meta Ads",
+        "Google Ads",
+        "Shopify",
+        "WordPress",
+        "Mailchimp",
+        "Hotjar"
+      ]
+    },
+    "cta": {
+      "eyebrow": "Got a project to analyse, launch or reposition?",
+      "title": "LET’S TALK",
+      "badge": "consulting · audit · strategy · roadmap · ",
+      "zones": "Brescia / Milan / Remote"
+    }
+  },
   "contatti": {
     "num": "09",
     "eyebrow": "let's talk",

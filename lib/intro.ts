@@ -25,6 +25,10 @@ export function signalIntroComplete() {
   completeListeners.clear()
 }
 
+export function introDone() {
+  return completed
+}
+
 export function onIntroComplete(cb: () => void): () => void {
   if (completed) {
     cb()

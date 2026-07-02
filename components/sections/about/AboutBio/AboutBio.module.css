@@ -1,0 +1,153 @@
+.bio {
+  position: relative;
+  z-index: 2;
+  background: var(--color-osso);
+  color: var(--color-fango);
+  padding: clamp(5rem, 14vh, 10rem) var(--container-padding);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.media {
+  position: relative;
+}
+
+.portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  will-change: transform;
+}
+
+.portraitImg {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  will-change: transform;
+}
+
+.side {
+  position: absolute;
+  right: -9%;
+  bottom: -14%;
+  width: 44%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba(20, 18, 16, 0.18);
+  will-change: transform;
+}
+
+.sideImg {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.side::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-cipria);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.text {
+  max-width: 60ch;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: clamp(1.75rem, 4vh, 3rem);
+  will-change: transform, opacity;
+}
+
+.num {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.occhiello {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--color-corallo);
+}
+
+.para {
+  margin-bottom: 1.4em;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.55;
+  will-change: transform, opacity;
+}
+
+.claim {
+  margin: clamp(2.25rem, 6vh, 4rem) 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 3.6vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--color-inchiostro);
+}
+
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  margin-right: 0.26em;
+}
+
+.wordInner {
+  display: inline-block;
+  will-change: transform;
+}
+
+.accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-corallo);
+}
+
+.links {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  will-change: transform, opacity;
+}
+
+.link {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-inchiostro);
+}
+
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    max-width: 420px;
+    margin-bottom: clamp(2rem, 8vw, 3rem);
+  }
+}
