@@ -7,6 +7,7 @@ import EsperienzaBand from '../../../components/sections/about/EsperienzaBand/Es
 import Percorso from '../../../components/sections/about/Percorso/Percorso'
 import AboutCta from '../../../components/sections/about/AboutCta/AboutCta'
 import Marquee from '../../../components/sections/Marquee/Marquee'
+import ScrollTop from '../../../components/ui/ScrollTop'
 
 export function generateStaticParams() {
   return [{ lang: 'it' }, { lang: 'en' }]
@@ -43,6 +44,7 @@ export default async function AboutPage({
 
   return (
     <main>
+      <ScrollTop />
       <AboutHero />
       <AboutBio />
       <Lenti />

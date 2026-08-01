@@ -6,10 +6,12 @@ import ProgettiList from '../../components/sections/ProgettiList/ProgettiList'
 import Marquee from '../../components/sections/Marquee/Marquee'
 import ChiSono from '../../components/sections/ChiSono/ChiSono'
 import ContattiCta from '../../components/sections/ContattiCta/ContattiCta'
+import ScrollTop from '../../components/ui/ScrollTop'
 
 export default function Home() {
   return (
     <main>
+      <ScrollTop />
       <Hero />
       <ExpandMedia />
       <Manifesto />

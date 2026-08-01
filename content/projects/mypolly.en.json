@@ -1,0 +1,104 @@
+{
+  "numero": "01",
+  "slug": "mypolly",
+  "titolo": "MyPolly",
+  "sottotitolo_riga1": "An e-commerce that sells impact:",
+  "sottotitolo_accento": "value before price.",
+  "meta": [
+    { "label": "Role", "valore": "Digital strategist" },
+    { "label": "Scope", "valore": "E-commerce · Go-to-market" },
+    { "label": "Activities", "valore": "Positioning, funnel, community" },
+    { "label": "Key result", "valore": "~80 orders a day at peak", "highlight": true }
+  ],
+  "badge_testo": "MYPOLLY · CASE STUDY · E-COMMERCE · GO-TO-MARKET · ",
+  "hero_media": "https://picsum.photos/id/431/1920/1080?grayscale",
+  "hero_alt": "MyPolly, a pollinator house in a garden",
+  "contesto_lead": [
+    "A pollinator house that turns",
+    "biodiversity into an",
+    "everyday gesture."
+  ],
+  "contesto_body": [
+    "MyPolly was born inside 3Bee: a physical product that brings pollinators into people’s gardens and balconies. A simple object, behind which sits a complex topic — biodiversity — that the audience barely knew.",
+    "The project started with no e-commerce history: no internal benchmarks, no existing funnel, an audience yet to be built."
+  ],
+  "contesto_img": "https://picsum.photos/id/306/900/1200?grayscale",
+  "contesto_caption": "One house, many pollinators.",
+  "marquee_parole": [
+    "Positioning",
+    "perceived value",
+    "Funnel",
+    "community",
+    "Customer education"
+  ],
+  "sfida_statement": "Selling a product people weren’t searching for: turning biodiversity into *an everyday purchase.*",
+  "sfida_body": [
+    "The price sat above the category average, and the benefit — more pollinators, more biodiversity — is neither immediate nor visible. The conversation had to move from the cost of the object to the value of the gesture: educate before selling, build trust before the funnel."
+  ],
+  "ruolo_lead": ["Not a channel to manage:", "a direction to build."],
+  "ruolo_attivita": [
+    {
+      "titolo": "Positioning & offer",
+      "descrizione": "Defining the message and the value proposition: what makes MyPolly a gesture for biodiversity, not a garden accessory."
+    },
+    {
+      "titolo": "Funnel & acquisition",
+      "descrizione": "Designing the purchase journey: educational content at the top, targeted advertising, landing pages built for people discovering the topic for the first time."
+    },
+    {
+      "titolo": "Customer education",
+      "descrizione": "An editorial plan that explains the why before the what: biodiversity as a story to understand, not a technical spec."
+    },
+    {
+      "titolo": "Community & retention",
+      "descrizione": "Activating the community: buyers join the project, with impact updates and reasons to come back."
+    }
+  ],
+  "materiali": [
+    {
+      "img": "https://picsum.photos/id/106/1200/900?grayscale",
+      "caption": "Editorial plan — customer education",
+      "duotone": "cipria",
+      "speed": 0
+    },
+    {
+      "img": "https://picsum.photos/id/366/900/1200?grayscale",
+      "caption": "Launch landing page",
+      "duotone": "ink",
+      "speed": -40
+    },
+    {
+      "img": "https://picsum.photos/id/342/900/1200?grayscale",
+      "caption": "Advertising — campaign creatives",
+      "duotone": "corallo",
+      "speed": 30
+    },
+    {
+      "img": "https://picsum.photos/id/292/1200/900?grayscale",
+      "caption": "Dashboard — reading the data",
+      "duotone": "grigio",
+      "speed": -20
+    }
+  ],
+  "strategia_lead": ["The strategy put value", "*before price.*"],
+  "strategia_paragrafo": "Instead of squeezing the price, we raised the perceived value: content that explains the impact, a funnel that educates before it asks, a community that turns customers into advocates. The results came when the audience stopped comparing MyPolly with other garden objects — and started comparing it with their own impact.",
+  "risultati": [
+    {
+      "prefisso": "~",
+      "valore": 80,
+      "unita": "orders / day",
+      "descrizione": "at the moments of highest campaign traction"
+    },
+    {
+      "valore": 3,
+      "unita": "×",
+      "descrizione": "growth of the active community during the launch period"
+    }
+  ],
+  "outline": "Results that *speak*",
+  "cosa_dimostra": "A high-value product isn’t sold by lowering the price, but by raising understanding: strategy, education and community can turn a niche topic into an everyday purchase.",
+  "seo": {
+    "title": "MyPolly — Case study · Valentina Inchingolo",
+    "description": "MyPolly’s go-to-market: positioning, funnel and customer education to sell biodiversity — up to ~80 orders a day at peak."
+  }
+}

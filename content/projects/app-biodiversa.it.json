@@ -1,0 +1,70 @@
+{
+  "numero": "02",
+  "slug": "app-biodiversa",
+  "titolo": "App Biodiversa",
+  "sottotitolo_riga1": "Dati di biodiversità che diventano",
+  "sottotitolo_accento": "azioni concrete.",
+  "meta": [
+    { "label": "Ruolo", "valore": "Product strategist" },
+    { "label": "Ambito", "valore": "Prodotto · UX" },
+    { "label": "Attività", "valore": "Discovery, UX, roadmap" },
+    { "label": "Cliente", "valore": "3Bee" }
+  ],
+  "badge_testo": "APP BIODIVERSA · CASE STUDY · PRODOTTO · UX · ",
+  "hero_media": "https://picsum.photos/id/1084/1920/1080?grayscale",
+  "hero_alt": "App Biodiversa, schermate del prodotto",
+  "contesto_lead": [
+    "Un’app che misura la biodiversità",
+    "e la racconta a chi può",
+    "fare qualcosa di concreto."
+  ],
+  "contesto_body": [
+    "App Biodiversa raccoglie dati ambientali da sensori e osservazioni sul campo e li restituisce a aziende e comunità. Il valore c’era: la scienza era solida, i dati abbondanti.",
+    "Il problema era il ponte tra i due mondi: chi usava l’app non era uno scienziato, e i numeri — da soli — non dicevano cosa fare."
+  ],
+  "contesto_img": "https://picsum.photos/id/137/900/1200?grayscale",
+  "contesto_caption": "Dal sensore alla decisione.",
+  "marquee_parole": ["Prodotto", "discovery", "UX", "dati leggibili", "Roadmap"],
+  "sfida_statement": "Tradurre dati scientifici complessi in *decisioni alla portata di tutti.*",
+  "sfida_body": [
+    "Ogni utente arrivava con una domanda diversa e una competenza diversa. Serviva capire chi aveva davvero davanti il prodotto, cosa cercava, e ridisegnare l’esperienza attorno alle sue decisioni — non attorno ai dati disponibili."
+  ],
+  "ruolo_lead": ["Dal dato grezzo", "al gesto concreto."],
+  "ruolo_attivita": [
+    {
+      "titolo": "Discovery e ascolto",
+      "descrizione": "Interviste e analisi d’uso per capire chi apre l’app, con quale domanda, e dove si perde."
+    },
+    {
+      "titolo": "UX e prioritizzazione",
+      "descrizione": "Ridisegno dei flussi chiave: dai grafici alle azioni, con un linguaggio leggibile da chi scienziato non è."
+    },
+    {
+      "titolo": "Roadmap di prodotto",
+      "descrizione": "Priorità e sequenza dei rilasci: cosa costruire prima, cosa dopo, e perché — condiviso con il team di sviluppo."
+    }
+  ],
+  "materiali": [
+    {
+      "img": "https://picsum.photos/id/219/1200/900?grayscale",
+      "caption": "Flussi — dal dato all’azione",
+      "duotone": "cipria",
+      "speed": 0
+    },
+    {
+      "img": "https://picsum.photos/id/250/900/1200?grayscale",
+      "caption": "Wireframe — gerarchia delle informazioni",
+      "duotone": "ink",
+      "speed": -40
+    }
+  ],
+  "strategia_lead": ["La strategia ha messo l’utente", "*prima del dato.*"],
+  "strategia_paragrafo": "Abbiamo ribaltato la gerarchia dell’app: non più i dati in primo piano con le azioni da cercare, ma le azioni in primo piano con i dati a sostegno. Ogni schermata risponde a una domanda dell’utente, non a una tabella del database. La roadmap ha dato al team un ordine di costruzione sostenibile, legato al valore per chi usa l’app.",
+  "risultati": [],
+  "outline": "Il dato che *decide*",
+  "cosa_dimostra": "Il valore di un prodotto data-driven non sta nella quantità di dati, ma nella qualità delle decisioni che permette: la UX è strategia, non decorazione.",
+  "seo": {
+    "title": "App Biodiversa — Case study · Valentina Inchingolo",
+    "description": "Discovery, UX e roadmap per App Biodiversa: dati scientifici di biodiversità tradotti in azioni concrete per chi usa il prodotto."
+  }
+}

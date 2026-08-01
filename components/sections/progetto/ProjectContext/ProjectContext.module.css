@@ -1,0 +1,131 @@
+.context {
+  background: var(--color-osso);
+  color: var(--color-fango);
+  padding-block: clamp(6rem, 14vh, 10rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.8fr) 1.5fr 1fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
+  padding-inline: var(--container-padding);
+}
+
+.labelCol {
+  align-self: stretch;
+}
+
+.label {
+  position: sticky;
+  top: 110px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-inchiostro);
+}
+
+.labelNum {
+  color: var(--color-corallo);
+}
+
+.lead {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-inchiostro);
+}
+
+.lead em {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-corallo);
+}
+
+.leadLine {
+  display: block;
+  overflow: hidden;
+}
+
+.leadInner {
+  display: block;
+  will-change: transform;
+}
+
+.body {
+  margin-top: clamp(2rem, 4.5vh, 3rem);
+  max-width: 46ch;
+}
+
+.bodyP {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.65;
+}
+
+.bodyP + .bodyP {
+  margin-top: 1.2em;
+}
+
+.figure {
+  margin: 0;
+}
+
+.imgBox {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  will-change: clip-path;
+}
+
+.imgInner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 118%;
+  will-change: transform;
+}
+
+.img {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-cipria);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.caption {
+  margin-top: 0.85rem;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: var(--color-corallo);
+}
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .label {
+    position: static;
+  }
+}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { CONTACTS } from '../../../lib/contacts'
 import ContactsView, { type RowData } from '../../../components/contatti/ContactsView'
+import ScrollTop from '../../../components/ui/ScrollTop'
 
 export function generateStaticParams() {
   return [{ lang: 'it' }, { lang: 'en' }]
@@ -84,6 +85,7 @@ export default async function ContattiPage({
 
   return (
     <main>
+      <ScrollTop />
       <ContactsView
         index={t('index')}
         eyebrow={t('eyebrow')}

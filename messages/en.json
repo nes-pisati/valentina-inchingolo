@@ -1,6 +1,7 @@
 {
   "nav": {
     "projects": "Projects",
+    "services": "Services",
     "about": "About",
     "contact": "Contact",
     "openMenu": "Open menu",
@@ -227,6 +228,19 @@
       "locations": "Brescia / Milan / Remote",
       "availability": "available for consulting, audits and strategic collaborations",
       "clockPrefix": "Brescia"
+    }
+  },
+  "progetto": {
+    "wipe": "VALEINK — Case study",
+    "back": "All projects",
+    "caseStudy": "Case study",
+    "demonstrates": "What it proves",
+    "sections": {
+      "contesto": "Context",
+      "sfida": "The challenge",
+      "ruolo": "My role",
+      "materiali": "Materials",
+      "strategia": "Strategy & outcome"
     }
   },
   "footer": {
