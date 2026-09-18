@@ -4,4 +4,5 @@ export const CONTACTS = {
   linkedinUrl: 'https://www.linkedin.com/in/valentinainchingolo',
   linkedinHandle: '/valentinainchingolo',
   cv: '/cv/valentina-inchingolo-cv.pdf',
+  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'mailto:valentina.inchingolo@gmail.com',
 } as const

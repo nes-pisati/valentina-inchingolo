@@ -1,0 +1,254 @@
+.section {
+  padding: clamp(100px, 11vw, 170px) 0 clamp(110px, 12vw, 180px);
+  background: var(--color-cipria);
+  color: var(--color-fango);
+}
+
+.head {
+  align-items: end;
+  margin-bottom: clamp(50px, 6vw, 90px);
+}
+
+.headTitle {
+  grid-column: 1 / 8;
+}
+
+.note {
+  grid-column: 8 / -1;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-inchiostro);
+}
+
+.table {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.62fr) 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  padding: 0 20px 0 36px;
+  border: 1.5px solid var(--color-inchiostro);
+  border-radius: 28px;
+  background: var(--color-osso);
+}
+
+.col {
+  position: relative;
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+
+.colDark {
+  isolation: isolate;
+  color: var(--color-grigio);
+}
+
+.bg {
+  position: absolute;
+  inset: -22px 0;
+  z-index: -1;
+  border-radius: 24px;
+  background: var(--color-inchiostro);
+}
+
+.cell {
+  padding: 22px 28px;
+  border-top: 1px solid var(--sol-rule-soft);
+}
+
+.colDark .cell {
+  border-top-color: rgba(217, 210, 197, 0.2);
+}
+
+.cellHead {
+  padding-top: 44px;
+  padding-bottom: 30px;
+  border-top: 0;
+}
+
+.colDark .cellHead {
+  border-top: 0;
+}
+
+.cellCta {
+  padding-top: 26px;
+  padding-bottom: 44px;
+}
+
+.colLabels .cell {
+  padding-left: 0;
+}
+
+.labelCell {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-inchiostro);
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 5px 12px;
+  border: 1.5px solid var(--color-inchiostro);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-inchiostro);
+}
+
+.colDark .tag {
+  border-color: var(--color-corallo);
+  color: var(--color-osso);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(34px, 3.3vw, 56px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  color: var(--color-inchiostro);
+}
+
+.colDark .title {
+  color: var(--color-osso);
+}
+
+.cLab {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.r1 {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(24px, 2.1vw, 32px);
+  line-height: 1.15;
+  color: var(--color-inchiostro);
+}
+
+.colDark .r1 {
+  color: var(--color-cipria);
+}
+
+.rText {
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.5;
+}
+
+.rList {
+  list-style: none;
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.5;
+}
+
+.rList li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.rList li + li {
+  margin-top: 8px;
+}
+
+.rList li::before {
+  content: '';
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-inchiostro);
+}
+
+.colDark .rList li::before {
+  background: var(--color-corallo);
+}
+
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .table[data-ready] .cell {
+    transition: opacity 0.35s;
+  }
+
+  .table[data-dim] .cell {
+    opacity: 0.32;
+  }
+
+  .table[data-dim] .cell[data-hl],
+  .table[data-dim] .cellHead {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+  .table .cell {
+    transition: opacity 0.35s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headTitle,
+  .note {
+    grid-column: 1 / -1;
+  }
+
+  .note {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 899px) {
+  .table {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .colLabels {
+    display: none;
+  }
+
+  [data-show='l'] .colDark,
+  [data-show='r'] .col:not(.colDark) {
+    display: none;
+  }
+
+  .bg {
+    inset: 0;
+    border-radius: 0;
+  }
+
+  .cell {
+    padding: 20px 22px;
+  }
+
+  .cellHead {
+    padding-top: 32px;
+  }
+
+  .cellCta {
+    padding-bottom: 32px;
+  }
+
+  .cLab {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 8px;
+    overflow: visible;
+    clip: auto;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-inchiostro);
+  }
+
+  .colDark .cLab {
+    color: var(--color-grigio);
+  }
+}

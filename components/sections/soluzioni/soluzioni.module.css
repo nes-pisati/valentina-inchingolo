@@ -1,0 +1,104 @@
+.page {
+  --pad: clamp(20px, 4vw, 56px);
+  --gap: 24px;
+  --sol-max: 1440px;
+  --sol-muted: #7d7468;
+  --sol-micro: #6f665a;
+  --sol-caption-dark: #a39a8c;
+  --sol-rule: rgba(20, 18, 16, 0.18);
+  --sol-rule-soft: rgba(20, 18, 16, 0.14);
+  --sol-rule-ink: rgba(217, 210, 197, 0.28);
+
+  position: relative;
+  background: var(--color-osso);
+  color: var(--color-fango);
+  font-family: var(--font-body);
+}
+
+.page::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 54;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.container {
+  width: 100%;
+  max-width: var(--sol-max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+}
+
+.occh {
+  margin-bottom: 18px;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(22px, 1.9vw, 28px);
+  line-height: 1.2;
+  color: var(--color-corallo);
+}
+
+.occhOnInk {
+  color: var(--color-cipria);
+}
+
+.occhOnCipria {
+  color: var(--color-inchiostro);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(44px, 6.2vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: var(--color-inchiostro);
+}
+
+.lead {
+  font-size: clamp(18px, 1.35vw, 21px);
+  line-height: 1.55;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.accent {
+  font-style: normal;
+  color: var(--color-corallo);
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+  padding: 0 0.1em 0.08em;
+  margin: 0 -0.1em -0.08em;
+}
+
+.li {
+  display: block;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

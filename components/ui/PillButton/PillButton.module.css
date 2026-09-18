@@ -1,0 +1,133 @@
+.btn {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  isolation: isolate;
+  padding: 19px 30px 19px 26px;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  background: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.25s,
+    border-color 0.25s;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 4px;
+}
+
+.fill {
+  position: absolute;
+  inset: -1.5px;
+  z-index: -1;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+  transition: background-color 0.25s;
+}
+
+.sm {
+  gap: 10px;
+  padding: 12px 20px 12px 17px;
+  font-size: 14px;
+}
+
+.sm .dot {
+  width: 7px;
+  height: 7px;
+}
+
+.default {
+  color: var(--color-inchiostro);
+}
+
+.default .fill {
+  background: var(--color-inchiostro);
+}
+
+.default[data-on] {
+  color: var(--color-osso);
+  border-color: var(--color-inchiostro);
+}
+
+.coral {
+  color: var(--color-inchiostro);
+  border: 2px solid var(--color-corallo);
+}
+
+.coral .fill,
+.lightCoral .fill {
+  inset: -2px;
+  background: var(--color-corallo);
+}
+
+.coral .dot,
+.lightCoral .dot {
+  background: var(--color-corallo);
+}
+
+.coral[data-on] .dot,
+.lightCoral[data-on] .dot {
+  background: var(--color-inchiostro);
+}
+
+.light {
+  color: var(--color-osso);
+}
+
+.light .fill {
+  background: var(--color-cipria);
+}
+
+.light[data-on] {
+  color: var(--color-inchiostro);
+  border-color: var(--color-cipria);
+}
+
+.lightCoral {
+  color: var(--color-osso);
+  border: 2px solid var(--color-corallo);
+}
+
+.lightCoral[data-on] {
+  color: var(--color-inchiostro);
+}
+
+.btn[data-busy] {
+  cursor: progress;
+}
+
+.btn[data-busy] .dot {
+  animation: busy 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes busy {
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn[data-busy] .dot {
+    animation: none;
+    opacity: 0.4;
+  }
+}

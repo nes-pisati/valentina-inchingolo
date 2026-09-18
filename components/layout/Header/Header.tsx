@@ -97,8 +97,8 @@ export default function Header() {
           <ul className={styles.list}>
             <li>
               <LetterRoll
-                href="#servizi"
-                text={tNav('services')}
+                href={`/${locale}/soluzioni`}
+                text={tNav('solutions')}
                 rollColor="corallo"
                 className={styles.link}
               />
@@ -190,13 +190,13 @@ export default function Header() {
                 exit="closed"
               >
                 <motion.li variants={itemVariants}>
-                  <a
-                    href="#servizi"
+                  <Link
+                    href={`/${locale}/soluzioni`}
                     className={styles.drawerLink}
                     onClick={() => setMenuOpen(false)}
                   >
-                    {tNav('services')}
-                  </a>
+                    {tNav('solutions')}
+                  </Link>
                 </motion.li>
                 <motion.li variants={itemVariants}>
                   <Link

@@ -1,0 +1,60 @@
+.figure {
+  margin: 0;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.in {
+  position: absolute;
+  inset: -8% 0;
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+}
+
+.img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.cipria .img::after {
+  background: var(--color-cipria);
+}
+
+.corallo .img::after {
+  background: var(--color-corallo);
+}
+
+.fango {
+  background: var(--color-fango);
+}
+
+.fango .img::after {
+  background: var(--color-fango);
+  opacity: 0.6;
+}
+
+.el {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.caption {
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--sol-muted, var(--color-fango));
+}

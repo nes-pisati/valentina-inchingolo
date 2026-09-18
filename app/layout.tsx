@@ -3,7 +3,7 @@ import '../styles/globals.css'
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
-  weight: ['400', '800'],
+  weight: ['400', '600', '700', '800'],
   variable: '--font-display',
 })
 

@@ -1,7 +1,7 @@
 {
   "nav": {
     "projects": "Progetti",
-    "services": "Servizi",
+    "solutions": "Soluzioni",
     "about": "Chi sono",
     "contact": "Contatti",
     "openMenu": "Apri menu",
@@ -250,5 +250,265 @@
     "location": "Brescia / Milano / Remoto",
     "rights": "© 2026 Valentina Inchingolo",
     "backToTop": "Torna su"
+  },
+  "soluzioni": {
+    "meta": {
+      "title": "Soluzioni — Valentina Inchingolo",
+      "description": "Quattro modi di lavorare insieme sul tuo prodotto: la Checklist gratuita, il Mini-Kit, il Check-up in 10 giorni e la consulenza su misura."
+    },
+    "hero": {
+      "kick": "Soluzioni per chi lancia un prodotto",
+      "title": "<line>Scegli da</line><line><ink>dove partire.</ink></line>",
+      "lead": "Che tu stia per lanciare o abbia già lanciato senza i risultati che speravi, qui trovi quattro modi di lavorare insieme: dal fai-da-te guidato all'affiancamento completo. Più sali, più cammino facciamo fianco a fianco.",
+      "idx": "Quattro livelli"
+    },
+    "idx": {
+      "1": {
+        "t": "La Checklist",
+        "k": "fai da te"
+      },
+      "2": {
+        "t": "Mini-Kit",
+        "k": "in un weekend"
+      },
+      "3": {
+        "t": "Check-up",
+        "k": "in 10 giorni"
+      },
+      "4": {
+        "t": "Consulenza",
+        "k": "insieme",
+        "p": "Su misura"
+      }
+    },
+    "marquee": {
+      "items": [
+        {
+          "name": "La Checklist",
+          "sub": "gratis"
+        },
+        {
+          "name": "Mini-Kit",
+          "sub": "in un weekend"
+        },
+        {
+          "name": "Check-up",
+          "sub": "in 10 giorni"
+        },
+        {
+          "name": "Consulenza",
+          "sub": "su misura"
+        }
+      ]
+    },
+    "livelli": {
+      "1": {
+        "k": "Gratis, fai da te",
+        "t": "La Checklist",
+        "p": "12 domande per capire se il tuo prodotto è pronto per il mercato. Nella tua inbox in un minuto.",
+        "priceLabel": "scarica subito",
+        "go": "Vai alla Checklist"
+      },
+      "2": {
+        "k": "Digitale, fai da te",
+        "t": "Mini-Kit Ink the Gap",
+        "p": "Il worksheet per costruire il tuo posizionamento in un weekend, passo dopo passo.",
+        "priceLabel": "prezzo di lancio",
+        "go": "Vai al Mini-Kit"
+      },
+      "3": {
+        "badge": "Novità",
+        "k": "Diagnosi, fatto per te",
+        "t": "Check-up Ink the Gap",
+        "p": "In 10 giorni sai perché non vendi e da dove ripartire. Report scritto e call di restituzione.",
+        "priceLabel": "tutto incluso",
+        "go": "Vai al Check-up"
+      },
+      "4": {
+        "k": "Percorso, insieme",
+        "t": "Consulenza su misura",
+        "p": "Dal piano d'azione all'affiancamento nel lancio: il metodo completo, cucito sul tuo prodotto.",
+        "priceLabel": "parti dalla call gratuita",
+        "go": "Vai alla consulenza"
+      },
+      "occh": "Quattro modi di lavorare insieme",
+      "h2": "<line>Più inchiostro,</line><line>più accompagnamento.</line>",
+      "note": "Dal fai-da-te guidato all'affiancamento completo. I segmenti in alto su ogni card indicano quanto cammino facciamo insieme."
+    },
+    "checklist": {
+      "occh": "Gratis",
+      "h2": "<line>Il tuo prodotto è</line><line>pronto per il mercato?</line>",
+      "lead": "Prima di investire un euro in lancio o pubblicità, rispondi a 12 domande. Sono le stesse che faccio nella prima call, e bastano dieci minuti per scoprire dove sono i buchi da colmare.",
+      "cta": "Scarica la checklist gratuita",
+      "micro": "PDF gratuito, nella tua inbox in un minuto",
+      "rowsTitle": "Cosa ricevi",
+      "rows": [
+        {
+          "title": "La checklist in PDF",
+          "text": "12 domande, subito nella tua inbox."
+        },
+        {
+          "title": "La chiave di lettura",
+          "text": "Cosa significa ogni risposta mancante."
+        },
+        {
+          "title": "Il passo successivo",
+          "text": "Cosa fare per ogni buco che trovi."
+        }
+      ],
+      "cap": "Placeholder: flat lay cipria con la checklist stampata"
+    },
+    "minikit": {
+      "occh": "Mini-Kit Ink the Gap",
+      "tag": "Prezzo di lancio, primi 50",
+      "h2": "<line>Il tuo posizionamento,</line><line>nero su bianco,</line><line><ink>in un weekend.</ink></line>",
+      "lead": "È il worksheet che uso con i clienti, adattato per lavorare in autonomia: ti guida a definire per chi è il tuo prodotto, contro cosa compete davvero e perché scegliere te. Con un esempio compilato da un caso reale, per non partire mai dal foglio bianco.",
+      "priceNote": "prezzo di lancio, accesso immediato",
+      "cta": "Acquista il Mini-Kit, {price}",
+      "rowsTitle": "Come funziona",
+      "rows": [
+        {
+          "title": "Acquisti online",
+          "text": "Pagamento sicuro, ricevi tutto via email in pochi minuti."
+        },
+        {
+          "title": "Compili il worksheet",
+          "text": "5 sezioni guidate, con un esempio reale accanto."
+        },
+        {
+          "title": "Esci con il posizionamento scritto",
+          "text": "Pronto da usare su sito, social e pitch."
+        }
+      ],
+      "cap": "Placeholder: macro corallo sul worksheet compilato"
+    },
+    "checkup": {
+      "drift": "10 giorni / 1 report / 1 call / ",
+      "occh": "Check-up Ink the Gap",
+      "h2": "<line>In 10 giorni sai</line><line>perché non vendi,</line><line><ink>e da dove ripartire.</ink></line>",
+      "lead": "Hai lanciato, ma i numeri non tornano. Oppure stai per lanciare e vuoi evitare di sbagliare strada. Il Check-up è una diagnosi completa del tuo go-to-market: analizzo prodotto, canali e prezzi, e ti restituisco le priorità su cui agire. Non un percorso lungo: un punto fermo.",
+      "cta": "Prenota il tuo Check-up",
+      "cap": "Placeholder: pagina del report di diagnosi",
+      "phasesTitle": "Tre fasi, un punto fermo",
+      "phases": [
+        {
+          "t": "Ascolto",
+          "p": "Un questionario mirato e l'accesso ai tuoi materiali: sito, social, dati di vendita. Non prepari nulla di nuovo, lavoro su quello che hai già."
+        },
+        {
+          "t": "Diagnosi",
+          "p": "Analizzo posizionamento, canali, prezzo e percorso d'acquisto. Cerco il punto esatto in cui il mercato ti perde per strada."
+        },
+        {
+          "t": "Direzione",
+          "p": "Ricevi un report scritto con le 3–5 priorità in ordine d'impatto, e una call di 90 minuti per attraversarlo insieme."
+        }
+      ],
+      "facts": [
+        {
+          "value": "10",
+          "unit": "giorni",
+          "label": "lavorativi dalla consegna dei materiali al report"
+        },
+        {
+          "value": "1+1",
+          "unit": "report e call",
+          "label": "diagnosi scritta e 90 minuti di restituzione"
+        },
+        {
+          "unit": "prezzo di lancio",
+          "label": "tutto incluso, report e call"
+        }
+      ],
+      "ponte": "<strong>E se poi vuoi continuare insieme?</strong> Se dopo il Check-up scegli il percorso di consulenza, l'intero costo del Check-up viene scalato dal pacchetto. La diagnosi non è un costo in più: è il primo passo del lavoro.",
+      "ponteCta": "Scopri la consulenza"
+    },
+    "confronto": {
+      "occh": "Quale fa per te?",
+      "h2": "<line>Call gratuita</line><line>o Check-up?</line>",
+      "note": "Sono i due punti di ingresso più vicini. Uno serve a conoscerci, l’altro a capire il problema.",
+      "switch": {
+        "l": "Call gratuita",
+        "r": "Check-up"
+      },
+      "labels": [
+        "Serve a",
+        "Come funziona",
+        "Cosa ottieni",
+        "Fa per te se"
+      ],
+      "call": {
+        "tag": "30 minuti, gratis",
+        "title": "La call esplorativa",
+        "rows": [
+          "conoscerci",
+          "Mi racconti il tuo prodotto e dove sei, io ti dico con sincerità se e come posso aiutarti.",
+          "Una risposta chiara. Nessun impegno, nessun deliverable.",
+          [
+            "Vuoi capire se la consulenza fa per te",
+            "Hai domande prima di scegliere"
+          ]
+        ],
+        "cta": "Prenota la call gratuita"
+      },
+      "checkup": {
+        "tag": "10 giorni, {price}",
+        "title": "Il Check-up",
+        "rows": [
+          "capire il problema",
+          "Analisi vera di prodotto, canali e prezzi sui tuoi materiali, senza preparare nulla di nuovo.",
+          "Report scritto con le priorità in ordine d'impatto e 90 minuti di call. Esci con un piano, non con un'opinione.",
+          [
+            "Hai lanciato e i numeri non tornano",
+            "Vuoi una diagnosi prima di investire ancora"
+          ]
+        ],
+        "cta": "Prenota il tuo Check-up"
+      }
+    },
+    "faq": {
+      "occh": "Domande frequenti",
+      "h2": "<line>Prima di</line><line>scegliere.</line>",
+      "items": [
+        {
+          "q": "Che differenza c’è tra la call gratuita e il Check-up?",
+          "a": "La call gratuita dura 30 minuti e serve a conoscerci: capiamo insieme se e come posso aiutarti. Il Check-up è una diagnosi vera, con report scritto e call di restituzione."
+        },
+        {
+          "q": "Cosa devo preparare per il Check-up?",
+          "a": "Nulla di nuovo. Compili un questionario mirato e mi dai accesso ai materiali che hai già: sito, social, dati di vendita."
+        },
+        {
+          "q": "Quanto tempo serve per ricevere il report?",
+          "a": "Dieci giorni lavorativi dalla consegna dei materiali. Poi fissiamo la call di 90 minuti per attraversarlo insieme."
+        },
+        {
+          "q": "Se dopo il Check-up voglio continuare con la consulenza?",
+          "a": "L'intero costo del Check-up viene scalato dal pacchetto di consulenza. La diagnosi diventa il primo passo del lavoro."
+        },
+        {
+          "q": "Come ricevo il Mini-Kit?",
+          "a": "Dopo il pagamento online ricevi tutto via email in pochi minuti: il worksheet in 5 sezioni e l'esempio compilato."
+        }
+      ]
+    },
+    "consulenza": {
+      "occh": "Consulenza su misura",
+      "h2": "<line>Il metodo completo,</line><line><ink>fianco a fianco.</ink></line>",
+      "steps": [
+        "Analisi",
+        "Diagnosi",
+        "Strategia",
+        "Piano d'azione",
+        "Affiancamento"
+      ],
+      "p": "Il percorso intero, costruito sul tuo prodotto e sul tuo mercato. Si parte sempre da una call gratuita: così capiamo insieme se è la strada giusta.",
+      "cta": "Prenota la call gratuita",
+      "alt": "Preferisci scrivere? <mail>{email}</mail>"
+    },
+    "dock": {
+      "text": "<b>Check-up in 10 giorni</b>, {price}",
+      "cta": "Prenota"
+    }
   }
 }
