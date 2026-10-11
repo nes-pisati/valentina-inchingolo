@@ -1,3 +1,8 @@
+// DISATTIVATO — Addendum 1.4 / handoff 1.2: i progetti escono dal sito in questa fase.
+// La cartella ha il prefisso `_` (private folder Next.js): la route /[lang]/progetti/[slug]
+// non viene piu generata. Per riattivarla: rinominare `_progetti` in `progetti`
+// e ripristinare <ProgettiList /> in app/[lang]/page.tsx e la voce nel Footer.
+
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getProject, getProjectSlugs, type Locale } from '../../../../lib/wp'

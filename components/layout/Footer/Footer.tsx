@@ -117,9 +117,10 @@ export default function Footer() {
             <nav className={styles.col} aria-label={t('navLabel')}>
               <span className={styles.label}>{t('navLabel')}</span>
               <ul className={styles.list}>
-                <li>
+                {/* DISATTIVATO — voce Progetti nascosta in questa fase */}
+                {/* <li>
                   <LetterRoll href="#progetti-head" text={tNav('projects')} className={styles.link} />
-                </li>
+                </li> */}
                 <li>
                   <LetterRoll href="#chisono-head" text={tNav('about')} className={styles.link} />
                 </li>
