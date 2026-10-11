@@ -9,7 +9,7 @@ import styles from './Percorso.module.css'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
-const STEPS = ['treebee', 'lordgun', 'ideagency', 'italtech'] as const
+const STEPS = ['prodotto', 'ecommerce', 'contenuto', 'comunicazione'] as const
 
 function Chars({ text }: { text: string }) {
   return (
@@ -95,7 +95,6 @@ export default function Percorso() {
               <div className={styles.rowTop}>
                 <span className={styles.n}>{String(i + 1).padStart(2, '0')}</span>
                 <span className={styles.t}>{t(`items.${key}.name`)}</span>
-                <span className={styles.tag}>{t(`items.${key}.tag`)}</span>
               </div>
               <p className={styles.desc}>{t(`items.${key}.desc`)}</p>
             </li>

@@ -82,7 +82,7 @@
 
 .rowTop {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: baseline;
   gap: clamp(1rem, 3vw, 2.5rem);
 }
@@ -106,16 +106,6 @@
   transition: transform 0.35s var(--ease-in-out);
 }
 
-.tag {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-cipria);
-  opacity: 0.85;
-}
-
 .desc {
   margin-top: 0.7rem;
   max-width: 52ch;
@@ -132,14 +122,4 @@
 
 .row:hover .t {
   transform: translateX(12px);
-}
-
-@media (max-width: 860px) {
-  .rowTop {
-    grid-template-columns: auto 1fr;
-  }
-
-  .tag {
-    grid-column: 2;
-  }
 }

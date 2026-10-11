@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { gsap } from 'gsap'
@@ -11,7 +11,7 @@ import { CONTACTS } from '../../../../lib/contacts'
 import styles from './AboutBio.module.css'
 
 import portraitImg from '../../../../public/hp-about.jpg'
-import sideImg from '../../../../public/hp-biodiversa.jpg'
+import sideImg from '../../../../public/images/vetrini-cipria.jpg'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -19,11 +19,14 @@ function Words({ text, accent = false }: { text: string; accent?: boolean }) {
   return (
     <>
       {text.split(' ').map((w, i) => (
-        <span key={i} className={styles.word}>
-          <span className={`${styles.wordInner} ${accent ? styles.accent : ''}`} data-word>
-            {w}
+        <Fragment key={i}>
+          {i > 0 ? ' ' : null}
+          <span className={styles.word}>
+            <span className={`${styles.wordInner} ${accent ? styles.accent : ''}`} data-word>
+              {w}
+            </span>
           </span>
-        </span>
+        </Fragment>
       ))}
     </>
   )
@@ -136,10 +139,13 @@ export default function AboutBio() {
           <p className={styles.para} data-reveal>
             {t('p2')}
           </p>
+          <p className={styles.para} data-reveal>
+            {t('p3')}
+          </p>
 
           <p className={styles.claim} data-claim>
-            <Words text={t('claimLead')} />
-            <Words text={t('claimAccent')} accent />
+            <Words text={t('claimLead')} />{' '}
+            <Words text={t('claimAccent')} accent />{' '}
             <Words text={t('claimTail')} />
           </p>
 

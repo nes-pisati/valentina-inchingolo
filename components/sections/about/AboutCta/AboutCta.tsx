@@ -1,11 +1,11 @@
 'use client'
 
-import { useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { Fragment, useRef } from 'react'
+import Link from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { CONTACTS } from '../../../../lib/contacts'
 import styles from './AboutCta.module.css'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
@@ -16,7 +16,7 @@ function Chars({ text }: { text: string }) {
       {Array.from(text).map((ch, i) => (
         <span key={i} className={styles.char}>
           <span className={styles.charInner} data-char>
-            {ch === ' ' ? '\u00A0' : ch}
+            {ch}
           </span>
         </span>
       ))}
@@ -24,8 +24,38 @@ function Chars({ text }: { text: string }) {
   )
 }
 
+/**
+ * Il reveal lettera per lettera rende ogni carattere un inline-block, quindi il
+ * browser puo' andare a capo in mezzo a una parola. Qui ogni parola e' un gruppo
+ * `nowrap`, separato da spazi reali: si va a capo solo tra le parole.
+ * La freccia viaggia dentro l'ultimo gruppo, cosi' non resta mai sola su una riga.
+ */
+function Lockup({ text }: { text: string }) {
+  const words = text.split(' ')
+  return (
+    <span aria-hidden="true">
+      {words.map((w, i) => (
+        <Fragment key={i}>
+          {i > 0 ? ' ' : null}
+          <span className={styles.word}>
+            <Chars text={w} />
+            {i === words.length - 1 ? (
+              <span className={`${styles.char} ${styles.arrowChar}`}>
+                <span className={styles.charInner} data-char>
+                  {'\u2192'}
+                </span>
+              </span>
+            ) : null}
+          </span>
+        </Fragment>
+      ))}
+    </span>
+  )
+}
+
 export default function AboutCta() {
   const t = useTranslations('about.cta')
+  const locale = useLocale()
   const root = useRef<HTMLElement>(null)
 
   useGSAP(
@@ -58,19 +88,19 @@ export default function AboutCta() {
 
         const spin = gsap.to(badge, { rotation: 360, duration: 18, ease: 'none', repeat: -1 })
 
-        const mailto = q('[data-mailto]')[0] as HTMLElement
+        const link = q('[data-link]')[0] as HTMLElement
         const speedUp = () => gsap.to(spin, { timeScale: 3, duration: 0.4, overwrite: true })
         const slowDown = () => gsap.to(spin, { timeScale: 1, duration: 0.6, overwrite: true })
-        mailto?.addEventListener('mouseenter', speedUp)
-        mailto?.addEventListener('mouseleave', slowDown)
+        link?.addEventListener('mouseenter', speedUp)
+        link?.addEventListener('mouseleave', slowDown)
 
         if (document.fonts) {
           document.fonts.ready.then(() => ScrollTrigger.refresh())
         }
 
         return () => {
-          mailto?.removeEventListener('mouseenter', speedUp)
-          mailto?.removeEventListener('mouseleave', slowDown)
+          link?.removeEventListener('mouseenter', speedUp)
+          link?.removeEventListener('mouseleave', slowDown)
           spin.kill()
         }
       })
@@ -123,21 +153,14 @@ export default function AboutCta() {
         </p>
 
         <div className={styles.magnetic} data-magnetic>
-          <a
-            className={styles.mailto}
-            data-mailto
-            href={`mailto:${CONTACTS.email}`}
+          <Link
+            className={styles.action}
+            data-link
+            href={`/${locale}/soluzioni`}
             aria-label={t('title')}
           >
-            <span aria-hidden="true">
-              <Chars text={t('title')} />
-            </span>
-          </a>
-        </div>
-
-        <div className={styles.sub} data-reveal>
-          <span className={styles.email}>{CONTACTS.email}</span>
-          <span className={styles.zones}>{t('zones')}</span>
+            <Lockup text={t('title')} />
+          </Link>
         </div>
       </div>
     </section>

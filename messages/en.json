@@ -115,93 +115,105 @@
   },
   "about": {
     "meta": {
-      "title": "About — Valentina Inchingolo",
-      "description": "Behind Valeink: the method, the lenses I read a project through, and the path of Valentina Inchingolo, digital strategy consultant across Brescia, Milan and remote."
+      "title": "About | Valentina Inchingolo · Ink the Gap",
+      "description": "The method I read a project through and the path of Valentina Inchingolo, go-to-market consultant for founders and product brands."
     },
-    "wipe": "VALEINK — About",
+    "wipe": "Ink the Gap · About",
     "hero": {
       "num": "(01)",
       "occhiello": "the one who sets direction",
-      "titleAria": "Behind Valeink",
+      "titleAria": "Behind Ink the Gap",
       "l1": "BEHIND",
-      "l2": "VALEINK",
+      "l2": "INK THE GAP",
       "meta1": "Method before anything",
       "meta2": "Order in the priorities",
-      "meta3": "Brescia / Milan / Remote"
+      "meta3": "I work remotely"
     },
     "bio": {
       "num": "(02)",
       "occhiello": "about",
       "alt": "Valentina Inchingolo, portrait",
       "p1": "I’ve moved through communication, e-commerce, advertising, funnels, community and digital product. It’s not a list of jobs: it’s why I can read a whole project without stopping at my own piece.",
-      "p2": "Valeink has always been my nickname — and it became the name of this work: stepping into other people’s projects, bringing order, and leaving behind a direction that lasts.",
+      "p2": "Vale has always been my nickname. Ink the Gap is what I do.",
       "claimLead": "My value isn’t “doing”. It’s helping you choose",
       "claimAccent": "what",
       "claimTail": "to do, why, and in what order.",
       "linkedin": "LinkedIn",
-      "email": "Email"
+      "email": "Email",
+      "p3": "Ink the Gap starts from a question I ask myself every time I open a new project: where, exactly, does this product get lost? Almost never in the product itself. Almost always in the distance between that product and the market that should already love it: confused positioning, a message that does not land, a channel chosen out of habit rather than strategy. I see that gap, I measure it, and I close it: with method, with clarity and with direction. I step into other people’s projects, I bring order, and I leave behind something that lasts."
     },
     "lenti": {
       "num": "(03)",
       "occhiello": "how I read a project",
       "title": "The lenses",
       "items": {
-        "business": { "name": "Business", "q": "Where is value created, and where does it leak?" },
-        "utente": { "name": "User", "q": "Who is in front of the product, and what are they looking for?" },
-        "contenuto": { "name": "Content", "q": "What does the brand say, and in which voice?" },
-        "canali": { "name": "Channels", "q": "Where does the message live, and at what return?" },
-        "processi": { "name": "Processes", "q": "How does the team work, and what slows it down?" },
-        "team": { "name": "Team", "q": "Which skills are there, and which are missing?" }
+        "business": {
+          "name": "Business",
+          "q": "Where is value created, and where does it leak?"
+        },
+        "utente": {
+          "name": "User",
+          "q": "Who is in front of the product, and what are they looking for?"
+        },
+        "contenuto": {
+          "name": "Content",
+          "q": "What does the brand say, and in which voice?"
+        },
+        "canali": {
+          "name": "Channels",
+          "q": "Where does the message live, and at what return?"
+        },
+        "processi": {
+          "name": "Processes",
+          "q": "How does the team work, and what slows it down?"
+        },
+        "team": {
+          "name": "Team",
+          "q": "Which skills are there, and which are missing?"
+        }
       }
     },
     "percorso": {
       "num": "(04)",
       "occhiello": "the experiences that built the profile",
       "title": "The path",
-      "watermark": "Experience — Experience",
+      "watermark": "Experience · Experience",
       "items": {
-        "treebee": {
-          "name": "3Bee",
-          "tag": "marketing · product · PM",
-          "desc": "From marketing to product: priorities, roadmap and cross-team coordination on a growing product."
+        "prodotto": {
+          "name": "Product and growth",
+          "desc": "Marketing, product and coordination at a growing scale: setting priorities, roadmap, and getting different teams to speak the same language."
         },
-        "lordgun": {
-          "name": "LordGun",
-          "tag": "e-commerce",
-          "desc": "International e-commerce: catalogues, funnels and the numbers behind every sales decision."
+        "ecommerce": {
+          "name": "E-commerce and numbers",
+          "desc": "Catalogues, funnels, digital marketing, international sales: every decision read through the data, not through instinct."
         },
-        "ideagency": {
-          "name": "Ideagency",
-          "tag": "SEO · content",
-          "desc": "SEO and content in an agency: method, editorial rhythm and measurable results across clients."
+        "contenuto": {
+          "name": "Content and visibility",
+          "desc": "SEO and editorial rhythm for different clients: measurable results, not vanity metrics."
         },
-        "italtech": {
-          "name": "Italtech / Wintal",
-          "tag": "B2B communication",
-          "desc": "Industrial B2B communication: turning complex products into clear messages."
+        "comunicazione": {
+          "name": "Complex communication",
+          "desc": "Translating technical B2B products into messages the market understands."
         }
       }
     },
     "tools": {
-      "label": "Tools: GA4, Search Console, Figma, Notion, Meta Ads, Google Ads, Shopify, WordPress, Mailchimp, Hotjar",
+      "label": "Skills: data analysis, user behaviour, advertising, SEO and content, e-commerce, email marketing, design, organisation and processes",
       "words": [
-        "GA4",
-        "Search Console",
-        "Figma",
-        "Notion",
-        "Meta Ads",
-        "Google Ads",
-        "Shopify",
-        "WordPress",
-        "Mailchimp",
-        "Hotjar"
+        "DATA ANALYSIS",
+        "User behaviour",
+        "ADVERTISING",
+        "SEO and content",
+        "E-COMMERCE",
+        "Email marketing",
+        "DESIGN",
+        "Organisation and processes"
       ]
     },
     "cta": {
-      "eyebrow": "Got a project to analyse, launch or reposition?",
-      "title": "LET’S TALK",
-      "badge": "consulting · audit · strategy · roadmap · ",
-      "zones": "Brescia / Milan / Remote"
+      "eyebrow": "The method, applied to your product.",
+      "title": "SEE THE SOLUTIONS",
+      "badge": "checklist · mini-kit · consulting · method · "
     }
   },
   "contatti": {

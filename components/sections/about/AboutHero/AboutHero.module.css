@@ -80,7 +80,9 @@
 }
 
 .l2 {
-  padding-left: clamp(40px, 14vw, 220px);
+  /* rientro contenuto: "INK THE GAP" occupa quasi tutta la misura,
+     con 14vw sforava e tagliava la P finale */
+  padding-left: clamp(16px, 4vw, 70px);
   margin-right: -0.5ch;
 }
 
@@ -172,11 +174,11 @@
   }
 
   .title {
-    font-size: clamp(52px, 17vw, 120px);
+    font-size: clamp(40px, 15vw, 110px);
   }
 
   .l2 {
-    padding-left: clamp(24px, 10vw, 80px);
+    padding-left: clamp(14px, 4vw, 40px);
   }
 }
 

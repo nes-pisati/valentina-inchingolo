@@ -9,8 +9,8 @@ import { useGSAP } from '@gsap/react'
 import { introDone, onIntro } from '../../../../lib/intro'
 import styles from './AboutHero.module.css'
 
-import imgA from '../../../../public/hero_placeholder.jpeg'
-import imgB from '../../../../public/hp-polly.jpg'
+import imgA from '../../../../public/images/fili-nebbia.jpg'
+import imgB from '../../../../public/images/nebbia-dall-alto.jpg'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 

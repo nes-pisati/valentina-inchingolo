@@ -49,11 +49,12 @@
   will-change: transform;
 }
 
-.mailto {
+.action {
   display: inline-block;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(56px, 13vw, 200px);
+  /* min 48px: a 320px "SOLUZIONI" a 56px sforava il contenitore */
+  font-size: clamp(48px, 13vw, 200px);
   line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -62,9 +63,14 @@
   transition: color 0.3s;
 }
 
-.mailto:hover,
-.mailto:focus-visible {
+.action:hover,
+.action:focus-visible {
   color: var(--color-corallo);
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .char {
@@ -74,34 +80,17 @@
   margin-right: -0.08em;
 }
 
+/* freccia a corpo ridotto: resta sulla riga di SOLUZIONI senza mandarla a capo */
+.arrowChar {
+  font-size: 0.34em;
+  vertical-align: 0.95em;
+  margin-left: 0.5em;
+  letter-spacing: 0;
+}
+
 .charInner {
   display: inline-block;
   will-change: transform;
-}
-
-.sub {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  margin-top: clamp(2.5rem, 7vh, 5rem);
-  will-change: transform, opacity;
-}
-
-.email {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
-}
-
-.zones {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  align-self: center;
-  color: var(--color-fango);
-  opacity: 0.7;
 }
 
 @media (max-width: 860px) {

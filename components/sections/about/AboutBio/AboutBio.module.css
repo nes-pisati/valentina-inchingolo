@@ -111,7 +111,7 @@
   vertical-align: bottom;
   padding-bottom: 0.08em;
   margin-bottom: -0.08em;
-  margin-right: 0.26em;
+  /* niente margin-right: lo spazio tra le parole e' un carattere reale nel DOM (bug 0.7) */
 }
 
 .wordInner {
