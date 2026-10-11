@@ -7,7 +7,7 @@ import { cx, lineTags } from '../richTags'
 import l from '../soluzioni.module.css'
 import p from '../product.module.css'
 import styles from './MiniKitSection.module.css'
-import img from '../../../../public/hp-polly.jpg'
+import img from '../../../../public/images/fogli-stratificati.jpg'
 
 type Row = { title: string; text: string }
 

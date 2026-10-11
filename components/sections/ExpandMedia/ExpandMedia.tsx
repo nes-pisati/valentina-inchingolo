@@ -57,7 +57,7 @@ export default function ExpandMedia() {
           <div className={styles.media} data-media>
             <Image
               className={styles.img}
-              src="/hero_placeholder.jpeg"
+              src="/images/orizzonte-filo-rosso.jpg"
               alt=""
               fill
               sizes="100vw"

@@ -4,7 +4,7 @@ import ChecklistButton from './ChecklistButton'
 import { cx, lineTags } from '../richTags'
 import l from '../soluzioni.module.css'
 import p from '../product.module.css'
-import img from '../../../../public/hp-about.jpg'
+import img from '../../../../public/images/griglia-inchiostro.jpg'
 
 type Row = { title: string; text: string }
 

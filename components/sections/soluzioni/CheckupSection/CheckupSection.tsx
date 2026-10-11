@@ -8,7 +8,7 @@ import type { Price } from '../../../../lib/prices'
 import { cx, lineTags } from '../richTags'
 import l from '../soluzioni.module.css'
 import styles from './CheckupSection.module.css'
-import img from '../../../../public/hp-biodiversa.jpg'
+import img from '../../../../public/images/traccia-rossa.jpg'
 
 type Phase = { t: string; p: string }
 type Fact = { value?: string; unit: string; label: string }
