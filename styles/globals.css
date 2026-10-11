@@ -41,3 +41,12 @@ body {
 .no-footer body {
   overflow: hidden;
 }
+
+/* Sotto questa soglia la videata unica non ci sta: riabilito lo scroll,
+   altrimenti meta' della pagina resta irraggiungibile. */
+@media (max-width: 900px), (max-height: 640px) {
+  .no-footer,
+  .no-footer body {
+    overflow: visible;
+  }
+}

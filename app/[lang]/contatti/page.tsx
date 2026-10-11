@@ -71,16 +71,6 @@ export default async function ContattiPage({
       external: true,
       hint: t('rows.linkedin.hint'),
     },
-    {
-      key: 'cv',
-      num: '04',
-      label: t('rows.cv.label'),
-      value: t('rows.cv.value'),
-      href: CONTACTS.cv,
-      kind: 'download',
-      download: true,
-      hint: t('rows.cv.hint'),
-    },
   ]
 
   return (
@@ -90,10 +80,10 @@ export default async function ContattiPage({
         index={t('index')}
         eyebrow={t('eyebrow')}
         headline={t('headline')}
+        subhead={t('subhead')}
         rows={rows}
         baseline={{
-          locations: t('baseline.locations'),
-          availability: t('baseline.availability'),
+          descriptor: t('baseline.descriptor'),
           clockPrefix: t('baseline.clockPrefix'),
         }}
       />

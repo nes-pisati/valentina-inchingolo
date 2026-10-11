@@ -224,22 +224,50 @@
   },
   "contact": {
     "meta": {
-      "title": "Contatti — Valentina Inchingolo",
-      "description": "Scrivimi per analizzare, lanciare o riposizionare un progetto digitale. Email, telefono, LinkedIn e CV — direttamente, senza intermediari."
+      "title": "Contatti | Valentina Inchingolo · Ink the Gap",
+      "description": "Parliamone: call esplorativa gratuita per capire se e come posso aiutarti a lanciare o rilanciare il tuo prodotto."
     },
     "index": "04 / 04",
-    "eyebrow": "Hai un progetto da analizzare, lanciare o riposizionare?",
+    "eyebrow": "Hai un progetto da lanciare, da analizzare, riposizionare o che non sta decollando?",
     "headline": "Parliamone.",
     "rows": {
-      "email": { "label": "Email", "copy": "Copia", "copied": "Copiata", "copyAria": "Copia l’indirizzo email" },
-      "phone": { "label": "Telefono" },
-      "linkedin": { "label": "LinkedIn", "hint": "Profilo" },
-      "cv": { "label": "Curriculum", "value": "Scarica il CV", "hint": "PDF" }
+      "email": {
+        "label": "Email",
+        "copy": "Copia",
+        "copied": "Copiata",
+        "copyAria": "Copia l’indirizzo email"
+      },
+      "phone": {
+        "label": "Telefono"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "hint": "Profilo"
+      }
     },
     "baseline": {
-      "locations": "Brescia / Milano / Remoto",
-      "availability": "disponibile per consulenze, audit e collaborazioni strategiche",
-      "clockPrefix": "Brescia"
+      "descriptor": "Lavoro in remoto. Aiuto founder e brand owner a lanciare i loro prodotti: diagnosi go-to-market, posizionamento, piano di lancio e affiancamento.",
+      "clockPrefix": "Ora locale"
+    },
+    "subhead": "La call esplorativa è gratuita. Capire se posso aiutarti non ti costa nulla.",
+    "booking": {
+      "index": "05",
+      "title": "Prenota la call gratuita.",
+      "text": "Trenta minuti, online, senza impegno. Mi racconti il tuo prodotto e dove sei, io ti dico con sincerità se e come posso aiutarti. Scegli il giorno e l’ora che ti tornano meglio.",
+      "facts": {
+        "duration": "30 minuti",
+        "price": "Gratis",
+        "where": "Online"
+      },
+      "calendarLabel": "Scegli il giorno",
+      "slotsLabel": "Scegli l’ora",
+      "slotsEmpty": "Seleziona un giorno per vedere gli orari disponibili.",
+      "noSlots": "Nessun orario disponibile in questo giorno.",
+      "prevMonth": "Mese precedente",
+      "nextMonth": "Mese successivo",
+      "timezone": "Orari in fuso Europa/Roma",
+      "cta": "Conferma la prenotazione",
+      "ctaPending": "Scegli giorno e ora"
     }
   },
   "progetto": {

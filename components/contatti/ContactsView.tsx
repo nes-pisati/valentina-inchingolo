@@ -3,13 +3,14 @@
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import CallBooking from '../sections/contatti/CallBooking/CallBooking'
 import LocalClock from './LocalClock'
 import styles from './ContactsView.module.css'
 
 gsap.registerPlugin(useGSAP)
 
 export type RowData = {
-  key: 'email' | 'phone' | 'linkedin' | 'cv'
+  key: 'email' | 'phone' | 'linkedin'
   num: string
   label: string
   value: string
@@ -25,8 +26,9 @@ type Props = {
   index: string
   eyebrow: string
   headline: string
+  subhead: string
   rows: RowData[]
-  baseline: { locations: string; availability: string; clockPrefix: string }
+  baseline: { descriptor: string; clockPrefix: string }
 }
 
 const ARROW: Record<RowData['kind'], string> = {
@@ -36,7 +38,14 @@ const ARROW: Record<RowData['kind'], string> = {
   download: '↓',
 }
 
-export default function ContactsView({ index, eyebrow, headline, rows, baseline }: Props) {
+export default function ContactsView({
+  index,
+  eyebrow,
+  headline,
+  subhead,
+  rows,
+  baseline,
+}: Props) {
   const root = useRef<HTMLDivElement>(null)
 
   useGSAP(
@@ -233,49 +242,57 @@ export default function ContactsView({ index, eyebrow, headline, rows, baseline 
 
   return (
     <div ref={root} className={styles.page}>
-      <header className={styles.head}>
-        <span className={styles.index} data-chrome aria-hidden="true">
-          {index}
-        </span>
-        <p className={styles.eyebrow}>{eyebrow}</p>
-        <h1 className={styles.headline}>
-          <span className={styles.mask}>
-            <span className={styles.maskInner} data-h1>
-              {headline}
+      <div className={styles.shell}>
+        <div className={styles.left}>
+          <header className={styles.head}>
+            <span className={styles.index} data-chrome aria-hidden="true">
+              {index}
             </span>
-          </span>
-        </h1>
-      </header>
-
-      <ul className={styles.rows}>
-        {rows.map(row => (
-          <li key={row.key} className={styles.row}>
-            <span className={styles.line} data-line aria-hidden="true" />
-            {row.href ? (
-              <a
-                className={styles.rowLink}
-                data-fade
-                href={row.href}
-                {...(row.external ? { target: '_blank', rel: 'noopener' } : {})}
-                {...(row.download ? { download: '' } : {})}
-              >
-                {renderInner(row)}
-              </a>
-            ) : (
-              <span className={styles.rowLink} data-fade aria-disabled="true">
-                {renderInner(row)}
+            <p className={styles.eyebrow}>{eyebrow}</p>
+            <h1 className={styles.headline}>
+              <span className={styles.mask}>
+                <span className={styles.maskInner} data-h1>
+                  {headline}
+                </span>
               </span>
-            )}
-          </li>
-        ))}
-      </ul>
+            </h1>
+            <p className={styles.subhead} data-chrome>
+              {subhead}
+            </p>
+          </header>
+
+          <ul className={styles.rows}>
+            {rows.map(row => (
+              <li key={row.key} className={styles.row}>
+                <span className={styles.line} data-line aria-hidden="true" />
+                {row.href ? (
+                  <a
+                    className={styles.rowLink}
+                    data-fade
+                    href={row.href}
+                    {...(row.external ? { target: '_blank', rel: 'noopener' } : {})}
+                    {...(row.download ? { download: '' } : {})}
+                  >
+                    {renderInner(row)}
+                  </a>
+                ) : (
+                  <span className={styles.rowLink} data-fade aria-disabled="true">
+                    {renderInner(row)}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <aside className={styles.right}>
+          <CallBooking />
+        </aside>
+      </div>
 
       <footer className={styles.baseline}>
-        <span className={styles.loc} data-chrome>
-          {baseline.locations}
-        </span>
-        <span className={styles.avail} data-chrome>
-          {baseline.availability}
+        <span className={styles.descriptor} data-chrome>
+          {baseline.descriptor}
         </span>
         <span className={styles.clock} data-chrome>
           <LocalClock prefix={baseline.clockPrefix} />

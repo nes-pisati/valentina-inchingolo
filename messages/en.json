@@ -224,22 +224,50 @@
   },
   "contact": {
     "meta": {
-      "title": "Contact — Valentina Inchingolo",
-      "description": "Reach out to analyse, launch or reposition a digital project. Email, phone, LinkedIn and CV — directly, no middlemen."
+      "title": "Contact | Valentina Inchingolo · Ink the Gap",
+      "description": "Let’s talk: a free intro call to work out whether and how I can help you launch or relaunch your product."
     },
     "index": "04 / 04",
-    "eyebrow": "Got a project to analyse, launch or reposition?",
+    "eyebrow": "Got a product to launch, to analyse, to reposition, or one that is not taking off?",
     "headline": "Let’s talk.",
     "rows": {
-      "email": { "label": "Email", "copy": "Copy", "copied": "Copied", "copyAria": "Copy the email address" },
-      "phone": { "label": "Phone" },
-      "linkedin": { "label": "LinkedIn", "hint": "Profile" },
-      "cv": { "label": "Résumé", "value": "Download CV", "hint": "PDF" }
+      "email": {
+        "label": "Email",
+        "copy": "Copy",
+        "copied": "Copied",
+        "copyAria": "Copy the email address"
+      },
+      "phone": {
+        "label": "Phone"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "hint": "Profile"
+      }
     },
     "baseline": {
-      "locations": "Brescia / Milan / Remote",
-      "availability": "available for consulting, audits and strategic collaborations",
-      "clockPrefix": "Brescia"
+      "descriptor": "I work remotely. I help founders and brand owners launch their products: go-to-market diagnosis, positioning, launch plan and hands-on support.",
+      "clockPrefix": "Local time"
+    },
+    "subhead": "The intro call is free. Finding out whether I can help costs you nothing.",
+    "booking": {
+      "index": "05",
+      "title": "Book the free call.",
+      "text": "Thirty minutes, online, no commitment. You tell me about your product and where you are, I tell you honestly whether and how I can help. Pick the day and time that suit you best.",
+      "facts": {
+        "duration": "30 minutes",
+        "price": "Free",
+        "where": "Online"
+      },
+      "calendarLabel": "Pick a day",
+      "slotsLabel": "Pick a time",
+      "slotsEmpty": "Select a day to see the available times.",
+      "noSlots": "No times available on this day.",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "timezone": "Times in Europe/Rome",
+      "cta": "Confirm the booking",
+      "ctaPending": "Pick a day and a time"
     }
   },
   "progetto": {
