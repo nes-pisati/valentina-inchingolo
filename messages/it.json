@@ -7,58 +7,6 @@
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu"
   },
-  "hero": {
-    "taglineLead": "Strategia digitale per chi cerca",
-    "taglineAccent": "direzione",
-    "taglineTail": "— non un altro fornitore.",
-    "cta": "Vedi i progetti ↓"
-  },
-  "manifesto": {
-    "items": {
-      "vision": {
-        "word": "VISION",
-        "line": "Leggo il progetto da più punti di vista: business, utente, contenuti, canali."
-      },
-      "strategy": {
-        "word": "STRATEGY",
-        "line": "Non cosa si <em>può</em> fare: cosa fare, perché, e in che ordine."
-      },
-      "ideas": {
-        "word": "IDEAS",
-        "line": "Direzioni concrete, non slide che restano nel cassetto."
-      },
-      "workflow": {
-        "word": "WORKFLOW",
-        "line": "Roadmap, priorità, responsabilità. Un piano che il team può <em>eseguire</em>."
-      }
-    }
-  },
-  "metodo": {
-    "num": "05",
-    "occhiello": "metodo",
-    "items": {
-      "analisi": {
-        "word": "Analisi",
-        "desc": "Parto dai dati e dal contesto: mercato, utenti, numeri, e ciò che già esiste."
-      },
-      "diagnosi": {
-        "word": "Diagnosi",
-        "desc": "Isolo il problema reale, non i sintomi: dove si perde valore e perché."
-      },
-      "strategia": {
-        "word": "Strategia",
-        "desc": "Definisco direzione e priorità: cosa fare, in che ordine, verso quali obiettivi."
-      },
-      "piano": {
-        "word": "Piano d’azione",
-        "desc": "Traduco la strategia in roadmap operativa: attività, responsabilità, tempi."
-      },
-      "affiancamento": {
-        "word": "Affiancamento",
-        "desc": "Resto accanto al team nell’esecuzione, finché il piano produce risultati."
-      }
-    }
-  },
   "progetti": {
     "num": "06",
     "occhiello": "progetti selezionati",
@@ -86,32 +34,6 @@
       "Roadmap",
       "Visione"
     ]
-  },
-  "chisono": {
-    "num": "08",
-    "occhiello": "chi sono",
-    "alt": "Valentina Inchingolo, ritratto",
-    "p1": "Ho lavorato su comunicazione, e-commerce, advertising, funnel, community e prodotti digitali. Questo mi permette di leggere un progetto da più punti di vista — e di capire in fretta <em>dove</em> c’è confusione e dove intervenire.",
-    "p2": "Non devo eseguire ogni attività: aiuto aziende e team a decidere meglio, costruire un piano chiaro e guidarne l’implementazione con metodo.",
-    "experiencesLabel": "Esperienze",
-    "experiences": {
-      "treebee": {
-        "name": "3Bee",
-        "role": "marketing · prodotto · PM"
-      },
-      "lordgun": {
-        "name": "LordGun",
-        "role": "e-commerce cycling"
-      },
-      "ideagency": {
-        "name": "Ideagency",
-        "role": "SEO · contenuti"
-      },
-      "italtech": {
-        "name": "Italtech",
-        "role": "comunicazione B2B"
-      }
-    }
   },
   "about": {
     "meta": {
@@ -549,6 +471,192 @@
     "dock": {
       "text": "<b>Check-up in 10 giorni</b>, {price}",
       "cta": "Prenota"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Valentina Inchingolo · Ink the Gap | Consulenza go-to-market per founder e brand di prodotto",
+      "description": "Aiuto founder e brand owner a lanciare, o rilanciare, i loro prodotti: pubblico giusto, messaggio che funziona, canali che rendono. Consulenza go-to-market e diagnosi strategica."
+    },
+    "intro": {
+      "sr": "Valentina Inchingolo, Ink the Gap",
+      "caption": "una parola sola, due letture",
+      "cue": "Scorri"
+    },
+    "hero": {
+      "kick": "Consulenza go-to-market",
+      "title": "<line>Il tuo prodotto merita</line><line>il mercato giusto.</line><line>Troviamolo <ink>insieme.</ink></line>",
+      "lead": "Aiuto founder e brand owner a lanciare, o rilanciare, i loro prodotti: trovando il pubblico giusto, il messaggio che funziona e i canali che rendono, prima di bruciare budget.",
+      "cta": "Scopri da dove partire ↓",
+      "idx": "Cosa troviamo insieme",
+      "items": [
+        {
+          "t": "Il pubblico giusto",
+          "k": "a chi parlare"
+        },
+        {
+          "t": "Il messaggio che funziona",
+          "k": "cosa dire"
+        },
+        {
+          "t": "I canali che rendono",
+          "k": "dove"
+        }
+      ]
+    },
+    "percorsi": {
+      "occh": "Due percorsi",
+      "h2": "<line>Da dove <ink>partiamo?</ink></line>",
+      "a": {
+        "k": "Prima del lancio",
+        "t": "Sto per lanciare",
+        "p": "Ho un prodotto pronto ma non voglio sbagliare il lancio. Voglio capire a chi parlare, cosa dire e dove, prima di investire.",
+        "go": "Parti da qui",
+        "dest": "La Checklist"
+      },
+      "b": {
+        "k": "Dopo il lancio",
+        "t": "Ho lanciato, ma non decolla",
+        "p": "Il prodotto c’è. Le vendite, ancora no. Voglio capire dove si rompe il percorso tra me e il cliente, e cosa sistemare prima.",
+        "go": "Parti da qui",
+        "dest": "Il Mini-Kit"
+      }
+    },
+    "marquee": [
+      {
+        "name": "Pubblico",
+        "sub": "giusto"
+      },
+      {
+        "name": "Messaggio",
+        "sub": "che funziona"
+      },
+      {
+        "name": "Canali",
+        "sub": "che rendono"
+      },
+      {
+        "name": "Go-to-market",
+        "sub": "con metodo"
+      }
+    ],
+    "approccio": {
+      "occh": "Il mio approccio",
+      "items": [
+        {
+          "word": "Visione",
+          "line": "Il mercato non vede quello che vedi tu. Ti aiuto a guardare il tuo prodotto <ink>con i suoi occhi.</ink>"
+        },
+        {
+          "word": "Strategia",
+          "line": "Non cosa potresti fare: <ink>cosa fare prima</ink>, e perché. Ogni scelta ha una ragione."
+        },
+        {
+          "word": "Idee",
+          "line": "Niente che non puoi eseguire. Tutto quello che serve per <ink>muoverti domani mattina.</ink>"
+        },
+        {
+          "word": "Workflow",
+          "line": "Un piano con attività, tempi e priorità. Non una slide, ma una tabella di marcia che <ink>il giorno dopo sai già come usare.</ink>"
+        }
+      ]
+    },
+    "metodo": {
+      "occh": "Cinque fasi",
+      "h2": "<line>Il metodo</line><line><ink>Ink the Gap.</ink></line>",
+      "drift": "Ascolto · Diagnosi · Direzione · Piano · Affiancamento ·",
+      "steps": [
+        {
+          "t": "Ascolto",
+          "p": "Capisco il prodotto, il mercato, le persone a cui vuoi parlare e quello che hai già provato. Parto da qui, non da zero."
+        },
+        {
+          "t": "Diagnosi",
+          "p": "Identifico dove si nasconde il gap: posizionamento, messaggio, canale, o tutto insieme."
+        },
+        {
+          "t": "Direzione",
+          "p": "Definisco cosa fare, in che ordine e perché. Non una lista infinita: le tre mosse che cambiano la situazione."
+        },
+        {
+          "t": "Piano",
+          "p": "Traduco la strategia in un piano operativo concreto: attività, priorità, tempi. Qualcosa che si può eseguire davvero."
+        },
+        {
+          "t": "Affiancamento",
+          "p": "Resto vicina durante l’esecuzione. Il lavoro vero inizia dopo il piano. E io ci sono anche lì."
+        }
+      ]
+    },
+    "soluzioni": {
+      "occh": "Soluzioni",
+      "h2": "<line>Ogni prodotto ha</line><line><ink>la sua strada.</ink></line>",
+      "note": "Tre modi di lavorare insieme, dal fai da te guidato all’affiancamento completo. Più inchiostro, più cammino facciamo fianco a fianco.",
+      "caption": "↑ Più inchiostro, più accompagnamento.",
+      "cta": "Vedi tutte le soluzioni →",
+      "cards": [
+        {
+          "k": "Gratis · Fai da te",
+          "t": "La Checklist",
+          "p": "12 domande per capire se il tuo prodotto è pronto per il mercato.",
+          "go": "Vai alla Checklist"
+        },
+        {
+          "k": "Digitale · Fai da te",
+          "t": "Mini-Kit Ink the Gap",
+          "p": "Il tuo posizionamento nero su bianco, in un weekend.",
+          "go": "Vai al Mini-Kit"
+        },
+        {
+          "k": "Percorso · Insieme",
+          "t": "Consulenza su misura",
+          "p": "Il metodo completo, cucito sul tuo prodotto.",
+          "price": "Su misura",
+          "go": "Vai alla consulenza"
+        }
+      ]
+    },
+    "checklist": {
+      "occh": "Checklist gratuita",
+      "h2": "<line>Il tuo prodotto</line><line>è <ink>pronto</ink> per</line><line>il mercato?</line>",
+      "lead": "12 domande da farti prima di lanciare, o di investire ancora. Le stesse che faccio ai miei clienti nella prima call. Dieci minuti, e sai dove sono i buchi da colmare.",
+      "label": "La tua email",
+      "placeholder": "nome@esempio.it",
+      "consent": "Accetto la <privacy>privacy policy</privacy> e voglio ricevere la checklist via email.",
+      "cta": "Ricevi la checklist",
+      "micro": "PDF gratuito. Niente spam, ti scrivo solo quando ho qualcosa di utile.",
+      "errorEmail": "Controlla l’indirizzo email.",
+      "errorConsent": "Serve il tuo consenso per inviarti la checklist.",
+      "sentTitle": "Ci siamo quasi.",
+      "sentText": "Ti ho scritto un’email: conferma con un clic e la checklist arriva nella tua inbox.",
+      "facts": [
+        {
+          "value": "12",
+          "unit": "domande",
+          "label": "le stesse della prima call"
+        },
+        {
+          "value": "10",
+          "unit": "minuti",
+          "label": "per sapere dove sono i buchi"
+        }
+      ]
+    },
+    "chisono": {
+      "occh": "Chi sono",
+      "h2": "<line>Chi <ink>sono.</ink></line>",
+      "lead": "Sono Valentina Inchingolo, consulente go-to-market.",
+      "p": "Ho lavorato su comunicazione, e-commerce, advertising, funnel, community e prodotti digitali. Abbastanza da capire dove si nasconde il gap tra un buon prodotto e il mercato che non lo trova. Non eseguo tutto: aiuto a capire cosa fare prima, costruire un piano chiaro e seguire chi lo mette in pratica.",
+      "quote": "Il gap si colma così, con metodo, non con fortuna.",
+      "cta": "Il percorso completo →"
+    },
+    "parliamone": {
+      "occh": "Call esplorativa gratuita",
+      "title": "Parliamone.",
+      "p": "Se hai un prodotto che stai per lanciare, o uno che non sta decollando come vorresti, scrivimi. Iniziamo con una call esplorativa gratuita: capire se posso aiutarti non ti costa nulla.",
+      "cta": "Prenota la call gratuita →",
+      "or": "oppure",
+      "badge": "call gratuita · 30 minuti · nessun impegno · "
     }
   }
 }

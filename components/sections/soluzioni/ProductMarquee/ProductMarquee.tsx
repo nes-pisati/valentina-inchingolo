@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import styles from './ProductMarquee.module.css'
 
-type Item = { name: string; sub: string }
+export type MarqueeItem = { name: string; sub: string }
 
 const STAR_POINTS = Array.from({ length: 24 }, (_, i) => {
   const r = i % 2 === 0 ? 50 : 24
@@ -9,9 +9,14 @@ const STAR_POINTS = Array.from({ length: 24 }, (_, i) => {
   return `${(50 + r * Math.cos(a)).toFixed(2)},${(50 + r * Math.sin(a)).toFixed(2)}`
 }).join(' ')
 
-export default async function ProductMarquee({ lang }: { lang: string }) {
+type Props = {
+  lang: string
+  items?: MarqueeItem[]
+}
+
+export default async function ProductMarquee({ lang, items: itemsProp }: Props) {
   const t = await getTranslations({ locale: lang, namespace: 'soluzioni' })
-  const items = t.raw('marquee.items') as Item[]
+  const items = itemsProp ?? (t.raw('marquee.items') as MarqueeItem[])
 
   return (
     <div className={styles.band} aria-hidden="true">

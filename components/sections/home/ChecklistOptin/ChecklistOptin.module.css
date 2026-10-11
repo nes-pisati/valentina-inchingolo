@@ -1,0 +1,229 @@
+.section {
+  overflow: hidden;
+  padding: clamp(100px, 12vw, 190px) 0;
+  background: var(--color-cipria);
+  color: var(--color-inchiostro);
+}
+
+.inner {
+  align-items: end;
+}
+
+.text {
+  grid-column: 1 / 8;
+}
+
+.h2 {
+  margin-bottom: 30px;
+  font-size: clamp(46px, 7.2vw, 124px);
+}
+
+/* Su cipria il corallo non regge il contrasto: accento in Bodoni inchiostro. */
+.h2 em {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--color-inchiostro);
+}
+
+.lead {
+  max-width: 34em;
+  margin-bottom: 40px;
+}
+
+/* --- Form ---------------------------------------------------------------- */
+
+.form {
+  max-width: 620px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.input {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 18px 26px;
+  border: 1.5px solid var(--color-inchiostro);
+  border-radius: 999px;
+  background: var(--color-osso);
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-inchiostro);
+  transition: border-color 0.25s;
+}
+
+.input::placeholder {
+  color: var(--sol-micro);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 3px;
+}
+
+.input[aria-invalid] {
+  border-color: var(--color-corallo);
+  border-width: 2px;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--color-inchiostro);
+  cursor: pointer;
+}
+
+.check:focus-visible {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 3px;
+}
+
+.link {
+  font-weight: 700;
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-inchiostro);
+  outline-offset: 2px;
+}
+
+.error {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-inchiostro);
+}
+
+.error::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--color-corallo);
+  vertical-align: 1px;
+}
+
+.micro {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--color-fango);
+}
+
+.sent {
+  max-width: 620px;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1.5px solid var(--color-inchiostro);
+  border-radius: 22px;
+  background: var(--color-osso);
+  animation: sent 0.8s var(--ease-out-expo) both;
+}
+
+.sentTitle {
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 2.6vw, 40px);
+  letter-spacing: -0.04em;
+}
+
+.sentText {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+@keyframes sent {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+/* --- Numeri -------------------------------------------------------------- */
+
+.facts {
+  grid-column: 9 / -1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  border-top: 1.5px solid var(--color-inchiostro);
+}
+
+.factNum {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(96px, 12vw, 210px);
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+  font-variant-numeric: tabular-nums;
+}
+
+.factUnit {
+  margin-top: 14px;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.factLabel {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .text,
+  .facts {
+    grid-column: 1 / -1;
+  }
+
+  .facts {
+    flex-direction: row;
+    margin-top: 72px;
+  }
+
+  .fact {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sent {
+    animation: none;
+  }
+}

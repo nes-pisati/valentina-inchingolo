@@ -32,6 +32,11 @@
   --expand-dwell: 60svh;
   --expand-hold: 100svh;
 
+  /* Intro home: scroll extra per la transizione, e quanto la hero ci scorre sopra.
+     La transizione dura (--intro-scroll - --intro-overlap): vedi introScroll(). */
+  --intro-scroll: 100svh;
+  --intro-overlap: 20svh;
+
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:   cubic-bezier(0.87, 0, 0.13, 1);

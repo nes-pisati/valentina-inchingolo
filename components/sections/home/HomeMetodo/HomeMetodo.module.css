@@ -1,0 +1,121 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(80px, 9vw, 140px) 0 clamp(90px, 10vw, 160px);
+  background: var(--color-inchiostro);
+  color: var(--color-grigio);
+}
+
+.drift {
+  margin-bottom: clamp(50px, 6vw, 90px);
+  white-space: nowrap;
+}
+
+.driftTrack {
+  display: inline-flex;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(96px, 15vw, 260px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(244, 201, 208, 0.6);
+}
+
+.driftTrack span {
+  padding-right: 0.3em;
+}
+
+.head {
+  margin-bottom: clamp(50px, 6vw, 90px);
+}
+
+.h2 {
+  color: var(--color-osso);
+}
+
+.h2 em {
+  color: var(--color-cipria);
+}
+
+.phaseList {
+  list-style: none;
+  border-bottom: 1px solid var(--sol-rule-ink);
+}
+
+.phase {
+  position: relative;
+  align-items: baseline;
+  padding: clamp(30px, 3.4vw, 48px) 0;
+}
+
+.rule,
+.draw {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.rule {
+  height: 1px;
+  background: var(--sol-rule-ink);
+}
+
+.draw {
+  height: 2px;
+  background: var(--color-corallo);
+  transform-origin: left;
+}
+
+.phNum {
+  grid-column: 1 / 3;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 5vw, 84px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--color-cipria);
+}
+
+.phTitle {
+  grid-column: 3 / 7;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(30px, 3.4vw, 56px);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  color: var(--color-osso);
+}
+
+.phText {
+  grid-column: 7 / -1;
+  max-width: 46ch;
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .phTitle,
+  .phText {
+    grid-column: 3 / -1;
+  }
+
+  .phText {
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .phNum {
+    grid-column: 1 / -1;
+    margin-bottom: 14px;
+    font-size: 44px;
+  }
+
+  .phTitle,
+  .phText {
+    grid-column: 1 / -1;
+  }
+}

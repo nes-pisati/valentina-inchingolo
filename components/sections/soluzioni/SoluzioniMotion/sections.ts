@@ -96,31 +96,31 @@ function buildCardsTimeline(cards: HTMLElement[]) {
 }
 
 export function livelliDesktop(root: Element) {
-  const ladder = root.querySelector('[data-ladder]')
-  if (!ladder) return
-  const cards = all(ladder, '[data-card]')
+  all(root, '[data-ladder]').forEach(ladder => {
+    const cards = all(ladder, '[data-card]')
 
-  prepareCards(cards, true)
-  const tl = buildCardsTimeline(cards)
-  ScrollTrigger.create({ trigger: ladder, start: 'top 80%', once: true, onEnter: () => tl.play() })
+    prepareCards(cards, true)
+    const tl = buildCardsTimeline(cards)
+    ScrollTrigger.create({ trigger: ladder, start: 'top 80%', once: true, onEnter: () => tl.play() })
+  })
 }
 
 export function livelliMobile(root: Element) {
-  const ladder = root.querySelector('[data-ladder]')
-  if (!ladder) return
-  const cards = all(ladder, '[data-card]')
+  all(root, '[data-ladder]').forEach(ladder => {
+    const cards = all(ladder, '[data-card]')
 
-  prepareCards(cards, false)
-  const timelines = new Map(cards.map(card => [card, buildCardsTimeline([card])]))
+    prepareCards(cards, false)
+    const timelines = new Map(cards.map(card => [card, buildCardsTimeline([card])]))
 
-  ScrollTrigger.batch(cards, {
-    start: 'top 88%',
-    once: true,
-    onEnter: batch => {
-      batch.forEach((card, i) => {
-        timelines.get(card as HTMLElement)?.delay(i * 0.13).play()
-      })
-    },
+    ScrollTrigger.batch(cards, {
+      start: 'top 88%',
+      once: true,
+      onEnter: batch => {
+        batch.forEach((card, i) => {
+          timelines.get(card as HTMLElement)?.delay(i * 0.13).play()
+        })
+      },
+    })
   })
 }
 

@@ -9,6 +9,7 @@ type Props = {
   variant?: Variant
   size?: 'md' | 'sm'
   href?: string
+  type?: 'button' | 'submit'
   onClick?: MouseEventHandler<HTMLButtonElement>
   busy?: boolean
   className?: string
@@ -26,6 +27,7 @@ export default function PillButton({
   variant = 'default',
   size = 'md',
   href,
+  type = 'button',
   onClick,
   busy = false,
   className,
@@ -58,7 +60,7 @@ export default function PillButton({
 
   return (
     <button
-      type="button"
+      type={type}
       className={cls}
       data-hover="pill"
       onClick={onClick}

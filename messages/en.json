@@ -7,58 +7,6 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
-  "hero": {
-    "taglineLead": "Digital strategy for teams that need",
-    "taglineAccent": "direction",
-    "taglineTail": "— not another vendor.",
-    "cta": "See the projects ↓"
-  },
-  "manifesto": {
-    "items": {
-      "vision": {
-        "word": "VISION",
-        "line": "I read the project from multiple angles: business, user, content, channels."
-      },
-      "strategy": {
-        "word": "STRATEGY",
-        "line": "Not what <em>can</em> be done: what to do, why, and in what order."
-      },
-      "ideas": {
-        "word": "IDEAS",
-        "line": "Concrete directions, not slides that stay in a drawer."
-      },
-      "workflow": {
-        "word": "WORKFLOW",
-        "line": "Roadmap, priorities, ownership. A plan the team can <em>execute</em>."
-      }
-    }
-  },
-  "metodo": {
-    "num": "05",
-    "occhiello": "method",
-    "items": {
-      "analisi": {
-        "word": "Analysis",
-        "desc": "I start from data and context: market, users, numbers, and what already exists."
-      },
-      "diagnosi": {
-        "word": "Diagnosis",
-        "desc": "I isolate the real problem, not the symptoms: where value leaks, and why."
-      },
-      "strategia": {
-        "word": "Strategy",
-        "desc": "I set direction and priorities: what to do, in what order, toward which goals."
-      },
-      "piano": {
-        "word": "Action plan",
-        "desc": "I turn strategy into an operational roadmap: tasks, ownership, timing."
-      },
-      "affiancamento": {
-        "word": "Support",
-        "desc": "I stay alongside the team through execution, until the plan delivers results."
-      }
-    }
-  },
   "progetti": {
     "num": "06",
     "occhiello": "selected projects",
@@ -86,32 +34,6 @@
       "Roadmap",
       "Vision"
     ]
-  },
-  "chisono": {
-    "num": "08",
-    "occhiello": "about",
-    "alt": "Valentina Inchingolo, portrait",
-    "p1": "I’ve worked across communication, e-commerce, advertising, funnels, community and digital products. That lets me read a project from multiple angles — and quickly see <em>where</em> things get tangled and where to step in.",
-    "p2": "I don’t have to run every task myself: I help companies and teams decide better, build a clear plan, and guide its execution with method.",
-    "experiencesLabel": "Experience",
-    "experiences": {
-      "treebee": {
-        "name": "3Bee",
-        "role": "marketing · product · PM"
-      },
-      "lordgun": {
-        "name": "LordGun",
-        "role": "cycling e-commerce"
-      },
-      "ideagency": {
-        "name": "Ideagency",
-        "role": "SEO · content"
-      },
-      "italtech": {
-        "name": "Italtech",
-        "role": "B2B communication"
-      }
-    }
   },
   "about": {
     "meta": {
@@ -549,6 +471,192 @@
     "dock": {
       "text": "<b>10-day Check-up</b>, {price}",
       "cta": "Book"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Valentina Inchingolo · Ink the Gap | Go-to-market consulting for founders and product brands",
+      "description": "I help founders and brand owners launch, or relaunch, their products: the right audience, a message that works, channels that pay off. Go-to-market consulting and strategic diagnosis."
+    },
+    "intro": {
+      "sr": "Valentina Inchingolo, Ink the Gap",
+      "caption": "one word, two readings",
+      "cue": "Scroll"
+    },
+    "hero": {
+      "kick": "Go-to-market consulting",
+      "title": "<line>Your product deserves</line><line>the right market.</line><line>Let’s find it <ink>together.</ink></line>",
+      "lead": "I help founders and brand owners launch, or relaunch, their products: finding the right audience, the message that works and the channels that pay off, before burning budget.",
+      "cta": "Find where to start ↓",
+      "idx": "What we find together",
+      "items": [
+        {
+          "t": "The right audience",
+          "k": "who to talk to"
+        },
+        {
+          "t": "The message that works",
+          "k": "what to say"
+        },
+        {
+          "t": "Channels that pay off",
+          "k": "where"
+        }
+      ]
+    },
+    "percorsi": {
+      "occh": "Two paths",
+      "h2": "<line>Where do we <ink>start?</ink></line>",
+      "a": {
+        "k": "Before launch",
+        "t": "I’m about to launch",
+        "p": "My product is ready but I don’t want to get the launch wrong. I want to know who to talk to, what to say and where, before investing.",
+        "go": "Start here",
+        "dest": "The Checklist"
+      },
+      "b": {
+        "k": "After launch",
+        "t": "I launched, but it’s not taking off",
+        "p": "The product is there. The sales, not yet. I want to understand where the path between me and the customer breaks, and what to fix first.",
+        "go": "Start here",
+        "dest": "The Mini-Kit"
+      }
+    },
+    "marquee": [
+      {
+        "name": "Audience",
+        "sub": "the right one"
+      },
+      {
+        "name": "Message",
+        "sub": "that works"
+      },
+      {
+        "name": "Channels",
+        "sub": "that pay off"
+      },
+      {
+        "name": "Go-to-market",
+        "sub": "with method"
+      }
+    ],
+    "approccio": {
+      "occh": "My approach",
+      "items": [
+        {
+          "word": "Vision",
+          "line": "The market doesn’t see what you see. I help you look at your product <ink>through its eyes.</ink>"
+        },
+        {
+          "word": "Strategy",
+          "line": "Not what you could do: <ink>what to do first</ink>, and why. Every choice has a reason."
+        },
+        {
+          "word": "Ideas",
+          "line": "Nothing you can’t execute. Everything you need to <ink>move tomorrow morning.</ink>"
+        },
+        {
+          "word": "Workflow",
+          "line": "A plan with tasks, timing and priorities. Not a slide, but a roadmap that <ink>the next day you already know how to use.</ink>"
+        }
+      ]
+    },
+    "metodo": {
+      "occh": "Five phases",
+      "h2": "<line>The Ink the Gap</line><line><ink>method.</ink></line>",
+      "drift": "Listening · Diagnosis · Direction · Plan · Support ·",
+      "steps": [
+        {
+          "t": "Listening",
+          "p": "I get to know the product, the market, the people you want to reach and what you have already tried. I start here, not from zero."
+        },
+        {
+          "t": "Diagnosis",
+          "p": "I find where the gap hides: positioning, message, channel, or all of them."
+        },
+        {
+          "t": "Direction",
+          "p": "I define what to do, in what order and why. Not an endless list: the three moves that change the situation."
+        },
+        {
+          "t": "Plan",
+          "p": "I turn the strategy into a concrete operating plan: tasks, priorities, timing. Something that can actually be executed."
+        },
+        {
+          "t": "Support",
+          "p": "I stay close during execution. The real work starts after the plan. And I am there too."
+        }
+      ]
+    },
+    "soluzioni": {
+      "occh": "Solutions",
+      "h2": "<line>Every product has</line><line><ink>its own path.</ink></line>",
+      "note": "Three ways to work together, from guided DIY to full support. More ink, more of the way we walk side by side.",
+      "caption": "↑ More ink, more support.",
+      "cta": "See all solutions →",
+      "cards": [
+        {
+          "k": "Free · DIY",
+          "t": "The Checklist",
+          "p": "12 questions to find out if your product is ready for the market.",
+          "go": "Go to the Checklist"
+        },
+        {
+          "k": "Digital · DIY",
+          "t": "Ink the Gap Mini-Kit",
+          "p": "Your positioning in black and white, over a weekend.",
+          "go": "Go to the Mini-Kit"
+        },
+        {
+          "k": "Path · Together",
+          "t": "Tailored consulting",
+          "p": "The complete method, tailored to your product.",
+          "price": "Tailored",
+          "go": "Go to consulting"
+        }
+      ]
+    },
+    "checklist": {
+      "occh": "Free checklist",
+      "h2": "<line>Is your product</line><line><ink>ready</ink> for</line><line>the market?</line>",
+      "lead": "12 questions to ask yourself before launching, or investing more. The same ones I ask my clients on the first call. Ten minutes, and you know where the gaps are.",
+      "label": "Your email",
+      "placeholder": "name@example.com",
+      "consent": "I accept the <privacy>privacy policy</privacy> and want to receive the checklist by email.",
+      "cta": "Get the checklist",
+      "micro": "Free PDF. No spam, I only write when I have something useful.",
+      "errorEmail": "Please check your email address.",
+      "errorConsent": "I need your consent to send you the checklist.",
+      "sentTitle": "Almost there.",
+      "sentText": "I sent you an email: confirm with one click and the checklist lands in your inbox.",
+      "facts": [
+        {
+          "value": "12",
+          "unit": "questions",
+          "label": "the same as the first call"
+        },
+        {
+          "value": "10",
+          "unit": "minutes",
+          "label": "to know where the gaps are"
+        }
+      ]
+    },
+    "chisono": {
+      "occh": "About me",
+      "h2": "<line>About <ink>me.</ink></line>",
+      "lead": "I’m Valentina Inchingolo, go-to-market consultant.",
+      "p": "I have worked on communication, e-commerce, advertising, funnels, communities and digital products. Enough to understand where the gap hides between a good product and the market that can’t find it. I don’t execute everything: I help you understand what to do first, build a clear plan and support whoever puts it into practice.",
+      "quote": "That’s how the gap gets filled: with method, not luck.",
+      "cta": "The full story →"
+    },
+    "parliamone": {
+      "occh": "Free discovery call",
+      "title": "Let’s talk.",
+      "p": "If you have a product you are about to launch, or one that isn’t taking off the way you hoped, write to me. We start with a free discovery call: finding out if I can help costs you nothing.",
+      "cta": "Book the free call →",
+      "or": "or",
+      "badge": "free call · 30 minutes · no commitment · "
     }
   }
 }
