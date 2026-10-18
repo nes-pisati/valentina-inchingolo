@@ -52,9 +52,10 @@ export default function ConfrontoSwitch({ left, right, children }: Props) {
         },
       )
 
-      if (show === 'r') {
+      const bg = root.querySelector(`[data-col="${show}"] [data-ct-bg]`)
+      if (bg) {
         gsap.fromTo(
-          root.querySelector('[data-ct-bg]'),
+          bg,
           { clipPath: 'inset(0% 100% 0% 0%)' },
           { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.7, ease: 'expo.inOut' },
         )

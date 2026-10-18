@@ -9,7 +9,7 @@ import styles from './Header.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
 import { EN_PUBLISHED } from '../../../lib/locales'
 
-const WORDMARK = 'VALEINK'
+const WORDMARK = 'Valentina Inchingolo · Ink the Gap'
 const ON_DARK = /^\/(it|en)\/contatti\/?$/
 const SCROLL_THRESHOLD = 24
 const DELTA = 6
@@ -91,7 +91,9 @@ export default function Header() {
     >
       <div className={styles.inner}>
         <Link href={`/${locale}`} className={styles.wordmark} aria-label={WORDMARK}>
-          {WORDMARK}
+          Valentina Inchingolo <span className={styles.wordmarkAccent}>
+            <span className={styles.wordmarkDot}>· </span>Ink the Gap
+          </span>
         </Link>
 
         <nav className={styles.nav} aria-label="Naviga">

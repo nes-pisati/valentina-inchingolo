@@ -94,6 +94,37 @@
   line-height: 1.55;
 }
 
+/* Variante su Inchiostro: il blocco dominante della pagina (addendum 1.4, §3.4) */
+.dark {
+  background: var(--color-inchiostro);
+  color: var(--color-grigio);
+}
+
+.dark .h2 {
+  color: var(--color-osso);
+}
+
+.dark .micro {
+  color: var(--sol-caption-dark);
+}
+
+.dark .listTitle {
+  color: var(--color-cipria);
+}
+
+.dark .row {
+  border-top-color: var(--sol-rule-ink);
+}
+
+.dark .row:first-child {
+  border-top-color: var(--color-corallo);
+}
+
+.dark .rowNum,
+.dark .rowTitle {
+  color: var(--color-osso);
+}
+
 @media (max-width: 1024px) {
   .text,
   .media {

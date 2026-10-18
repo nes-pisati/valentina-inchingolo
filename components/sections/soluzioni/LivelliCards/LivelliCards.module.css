@@ -71,17 +71,6 @@
   font-weight: 700;
 }
 
-.badge {
-  padding: 4px 10px;
-  border: 1.5px solid var(--color-corallo);
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--color-osso);
-  transition: border-color 0.3s, color 0.3s;
-}
-
 .segs {
   display: flex;
   gap: 4px;
@@ -225,7 +214,7 @@
 }
 
 .featured .seg[data-filled] {
-  background: var(--color-cipria);
+  background: var(--color-corallo);
 }
 
 .featured .foot {
@@ -234,13 +223,8 @@
 
 .featured[data-on],
 .featured[data-on] .p,
-.featured[data-on] .was,
-.featured[data-on] .badge {
+.featured[data-on] .was {
   color: var(--color-inchiostro);
-}
-
-.featured[data-on] .badge {
-  border-color: var(--color-inchiostro);
 }
 
 .featured[data-on] .seg {
@@ -256,10 +240,6 @@
 }
 
 @media (max-width: 1180px) {
-  .cols {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .card {
     min-height: 420px;
   }
@@ -276,43 +256,7 @@
   }
 }
 
-@media (max-width: 760px) {
-  .highlight {
-    background: var(--color-corallo);
-    color: var(--color-inchiostro);
-  }
-
-  .highlight .k,
-  .highlight .t,
-  .highlight .amount,
-  .highlight .go {
-    color: var(--color-osso);
-  }
-
-  .highlight .p,
-  .highlight .priceLabel,
-  .highlight .num {
-    color: var(--color-inchiostro);
-  }
-
-  .highlight .was {
-    color: rgba(244, 239, 233, 0.75);
-  }
-
-  .highlight .seg {
-    background: rgba(20, 18, 16, 0.25);
-  }
-
-  .highlight .seg[data-filled] {
-    background: var(--color-osso);
-  }
-
-  .highlight .foot {
-    border-top-color: rgba(20, 18, 16, 0.3);
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .cols {
     grid-template-columns: minmax(0, 1fr);
   }

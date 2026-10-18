@@ -62,26 +62,6 @@
   gap: 22px;
 }
 
-.alt {
-  font-size: 15px;
-}
-
-.mail {
-  color: var(--color-inchiostro);
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.25s;
-}
-
-.mail:hover {
-  color: var(--color-corallo);
-}
-
-.mail:focus-visible {
-  outline: 2px solid var(--color-inchiostro);
-  outline-offset: 3px;
-}
-
 @media (max-width: 1024px) {
   .lead,
   .actions {

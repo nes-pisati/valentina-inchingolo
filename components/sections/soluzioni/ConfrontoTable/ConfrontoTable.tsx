@@ -14,6 +14,7 @@ type Rows = [string, string, string, string[]]
 
 type ColumnProps = {
   side: 'l' | 'r'
+  featured?: boolean
   tag: string
   title: string
   rows: Rows
@@ -21,11 +22,15 @@ type ColumnProps = {
   cta: ReactNode
 }
 
-function Column({ side, tag, title, rows, labels, cta }: ColumnProps) {
-  const dark = side === 'r'
+function Column({ side, featured = false, tag, title, rows, labels, cta }: ColumnProps) {
   return (
-    <div className={cx(styles.col, dark && styles.colDark)} data-col={side} role="group" aria-label={title}>
-      {dark && <span className={styles.bg} data-ct-bg aria-hidden="true" />}
+    <div
+      className={cx(styles.col, featured && styles.colFeatured)}
+      data-col={side}
+      role="group"
+      aria-label={title}
+    >
+      {featured && <span className={styles.bg} data-ct-bg aria-hidden="true" />}
 
       <div className={cx(styles.cell, styles.cellHead)} data-ct-cell data-row="0">
         <span className={styles.tag}>{tag}</span>
@@ -75,7 +80,7 @@ export default async function ConfrontoTable({ lang, price }: Props) {
       <div className={l.container}>
         <header className={cx(l.grid, styles.head)}>
           <div className={styles.headTitle}>
-            <p className={cx(l.occh, l.occhOnCipria)}>{t('occh')}</p>
+            <p className={l.occh}>{t('occh')}</p>
             <h2 className={l.h2} data-rv="lines">
               {t.rich('h2', lineTags())}
             </h2>
@@ -102,15 +107,7 @@ export default async function ConfrontoTable({ lang, price }: Props) {
 
             <Column
               side="l"
-              tag={t('call.tag')}
-              title={t('call.title')}
-              rows={t.raw('call.rows') as Rows}
-              labels={labels}
-              cta={<PillButton variant="default" href={CONTACTS.calendlyUrl} label={t('call.cta')} />}
-            />
-
-            <Column
-              side="r"
+              featured
               tag={t('minikit.tag', { price: amount })}
               title={t('minikit.title')}
               rows={t.raw('minikit.rows') as Rows}
@@ -118,10 +115,19 @@ export default async function ConfrontoTable({ lang, price }: Props) {
               cta={
                 <CheckoutButton
                   product="minikit"
-                  variant="light-coral"
+                  variant="coral"
                   label={t('minikit.cta', { price: amount })}
                 />
               }
+            />
+
+            <Column
+              side="r"
+              tag={t('call.tag')}
+              title={t('call.title')}
+              rows={t.raw('call.rows') as Rows}
+              labels={labels}
+              cta={<PillButton variant="default" href={CONTACTS.calendlyUrl} label={t('call.cta')} />}
             />
           </div>
         </ConfrontoSwitch>

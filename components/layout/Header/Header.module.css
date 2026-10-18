@@ -39,12 +39,27 @@
   pointer-events: auto;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(1.05rem, 1.35vw, 1.4rem);
+  letter-spacing: -0.035em;
   line-height: 1;
-  text-transform: uppercase;
+  white-space: nowrap;
   text-decoration: none;
   color: var(--color-inchiostro);
+}
+
+.wordmarkAccent {
+  color: var(--color-corallo);
+}
+
+@media (max-width: 560px) {
+  .wordmarkAccent {
+    display: block;
+    margin-top: 0.12em;
+  }
+
+  .wordmarkDot {
+    display: none;
+  }
 }
 
 .nav {

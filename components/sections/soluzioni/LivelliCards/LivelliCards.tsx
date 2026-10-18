@@ -41,12 +41,11 @@ export default async function LivelliCards({ lang, prices }: Props) {
         <div className={styles.cols} data-ladder>
           {levels.map(level => {
             const featured = level.n === 2
-            const highlight = level.n === levels.length
             return (
               <a
                 key={level.n}
                 href={`#${level.anchor}`}
-                className={cx(styles.card, featured && styles.featured, highlight && styles.highlight)}
+                className={cx(styles.card, featured && styles.featured)}
                 data-card
                 data-hover="card"
               >

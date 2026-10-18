@@ -47,7 +47,6 @@ export default async function ChecklistSection({ lang }: { lang: string }) {
         <MediaReveal
           className={p.media}
           src={img}
-          caption={t('cap')}
           sizes="(max-width: 1024px) 100vw, 40vw"
           tone="cipria"
         />

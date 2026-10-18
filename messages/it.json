@@ -300,8 +300,7 @@
           "title": "Il passo successivo",
           "text": "Cosa fare per ogni buco che trovi."
         }
-      ],
-      "cap": "Placeholder: flat lay cipria con la checklist stampata"
+      ]
     },
     "minikit": {
       "occh": "Mini-Kit Ink the Gap · {price}",
@@ -339,16 +338,15 @@
           "title": "Esci con il posizionamento scritto",
           "text": "Pronto da usare su sito, social e pitch."
         }
-      ],
-      "cap": "Placeholder: macro corallo sul worksheet compilato"
+      ]
     },
     "confronto": {
       "occh": "Quale fa per te?",
       "h2": "<line>Mini-Kit o</line><line>call gratuita?</line>",
       "note": "Sono i due modi di iniziare. Uno lo fai tu, l’altro lo facciamo insieme.",
       "switch": {
-        "l": "Call gratuita",
-        "r": "Mini-Kit"
+        "l": "Mini-Kit",
+        "r": "Call gratuita"
       },
       "labels": [
         "Serve a",

@@ -300,8 +300,7 @@
           "title": "The next step",
           "text": "What to do about each gap you find."
         }
-      ],
-      "cap": "Placeholder: blush flat lay with the printed checklist"
+      ]
     },
     "minikit": {
       "occh": "Ink the Gap Mini-Kit · {price}",
@@ -339,16 +338,15 @@
           "title": "Walk away with written positioning",
           "text": "Ready for your site, socials and pitch."
         }
-      ],
-      "cap": "Placeholder: coral macro on the filled-in worksheet"
+      ]
     },
     "confronto": {
       "occh": "Which one is for you?",
       "h2": "<line>Mini-Kit or</line><line>free call?</line>",
       "note": "They’re the two ways to get started. One you do on your own, the other we do together.",
       "switch": {
-        "l": "Free call",
-        "r": "Mini-Kit"
+        "l": "Mini-Kit",
+        "r": "Free call"
       },
       "labels": [
         "It’s for",

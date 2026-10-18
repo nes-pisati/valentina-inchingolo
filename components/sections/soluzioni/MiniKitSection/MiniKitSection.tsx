@@ -23,10 +23,10 @@ export default async function MiniKitSection({ lang, price }: Props) {
   const amount = formatPrice(price.amount, lang)
 
   return (
-    <section id="minikit" className={cx(p.section, styles.section)}>
+    <section id="minikit" className={cx(p.section, p.dark)}>
       <div className={cx(l.container, l.grid, p.inner)}>
         <div className={cx(p.text, styles.text)}>
-          <p className={l.occh}>{t('occh', { price: amount })}</p>
+          <p className={cx(l.occh, l.occhOnInk)}>{t('occh', { price: amount })}</p>
           <h2 className={cx(l.h2, p.h2)} data-rv="lines">
             {t.rich('h2', lineTags())}
           </h2>
@@ -43,7 +43,7 @@ export default async function MiniKitSection({ lang, price }: Props) {
           </div>
 
           <div className={p.ctaRow} data-rv="fade">
-            <CheckoutButton product="minikit" variant="coral" label={t('cta', { price: amount })} />
+            <CheckoutButton product="minikit" variant="light-coral" label={t('cta', { price: amount })} />
             <p className={p.micro}>{t('ctaMicro')}</p>
           </div>
 
@@ -81,7 +81,6 @@ export default async function MiniKitSection({ lang, price }: Props) {
         <MediaReveal
           className={cx(p.media, styles.media)}
           src={img}
-          caption={t('cap')}
           sizes="(max-width: 1024px) 100vw, 36vw"
           tone="corallo"
         />

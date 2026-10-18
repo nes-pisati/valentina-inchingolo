@@ -20,7 +20,7 @@
   margin-bottom: clamp(48px, 6vw, 90px);
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(58px, 13.4vw, 232px);
+  font-size: clamp(58px, 12.7vw, 216px);
   line-height: 0.84;
   letter-spacing: -0.055em;
   color: var(--color-inchiostro);

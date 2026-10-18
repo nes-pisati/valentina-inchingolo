@@ -1,7 +1,3 @@
-.section {
-  padding-top: 0;
-}
-
 .text {
   grid-column: 7 / -1;
   grid-row: 1;
@@ -10,17 +6,6 @@
 .media {
   grid-column: 1 / 6;
   grid-row: 1;
-}
-
-.tag {
-  display: inline-block;
-  margin-bottom: 24px;
-  padding: 6px 14px;
-  border: 1.5px solid var(--color-corallo);
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--color-inchiostro);
 }
 
 .priceBlock {
@@ -37,7 +22,7 @@
   font-size: clamp(72px, 8vw, 132px);
   line-height: 0.85;
   letter-spacing: -0.06em;
-  color: var(--color-inchiostro);
+  color: var(--color-osso);
   font-variant-numeric: tabular-nums;
 }
 
