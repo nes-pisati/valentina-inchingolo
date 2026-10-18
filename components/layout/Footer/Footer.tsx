@@ -7,13 +7,15 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { onIntroComplete } from '../../../lib/intro'
+import { CONTACTS } from '../../../lib/contacts'
+import { EN_PUBLISHED } from '../../../lib/locales'
 import styles from './Footer.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
-const EMAIL = 'valentina.inchingolo@gmail.com'
-const WORDMARK = 'VALEINK'
+const WORDMARK = 'Valentina Inchingolo · Ink the Gap'
+const WORDMARK_ACCENT_FROM = WORDMARK.indexOf('·') - 1
 
 export default function Footer() {
   const t = useTranslations('footer')
@@ -73,7 +75,7 @@ export default function Footer() {
           footer.current!.querySelectorAll(`.${styles.letterCol}`),
         )
         gsap.from(cols, {
-          yPercent: 115,
+          yPercent: 140,
           duration: 1,
           ease: 'expo.out',
           stagger: 0.055,
@@ -106,60 +108,89 @@ export default function Footer() {
             <div className={styles.col}>
               <span className={styles.label}>{t('contactsLabel')}</span>
               <LetterRoll
-                href={`mailto:${EMAIL}`}
-                text={EMAIL}
+                href={`mailto:${CONTACTS.email}`}
+                text={CONTACTS.email}
                 rollColor="corallo"
                 className={styles.email}
               />
-              <span className={styles.location}>{t('location')}</span>
+              <a
+                href={CONTACTS.linkedinUrl}
+                className={styles.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+              <p className={styles.tagline}>{t('tagline')}</p>
             </div>
 
             <nav className={styles.col} aria-label={t('navLabel')}>
               <span className={styles.label}>{t('navLabel')}</span>
               <ul className={styles.list}>
-                {/* DISATTIVATO — voce Progetti nascosta in questa fase */}
+                <li>
+                  <LetterRoll
+                    href={`/${locale}/soluzioni`}
+                    text={tNav('solutions')}
+                    className={styles.link}
+                  />
+                </li>
+                {/* DISATTIVATO: voce Progetti nascosta in questa fase */}
                 {/* <li>
-                  <LetterRoll href="#progetti-head" text={tNav('projects')} className={styles.link} />
+                  <LetterRoll href={`/${locale}/progetti`} text={tNav('projects')} className={styles.link} />
                 </li> */}
                 <li>
-                  <LetterRoll href="#chisono-head" text={tNav('about')} className={styles.link} />
+                  <LetterRoll
+                    href={`/${locale}/about`}
+                    text={tNav('about')}
+                    className={styles.link}
+                  />
                 </li>
                 <li>
-                  <LetterRoll href="#contatti-head" text={tNav('contact')} className={styles.link} />
+                  <LetterRoll
+                    href={`/${locale}/contatti`}
+                    text={tNav('contact')}
+                    className={styles.link}
+                  />
                 </li>
               </ul>
             </nav>
 
-            <div className={styles.col}>
-              <span className={styles.label}>{t('langLabel')}</span>
-              <ul className={styles.list}>
-                <li>
-                  <Link
-                    href="/it"
-                    className={`${styles.lang} ${locale === 'it' ? styles.langActive : ''}`}
-                    aria-current={locale === 'it' ? 'true' : undefined}
-                  >
-                    IT
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/en"
-                    className={`${styles.lang} ${locale === 'en' ? styles.langActive : ''}`}
-                    aria-current={locale === 'en' ? 'true' : undefined}
-                  >
-                    EN
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {EN_PUBLISHED && (
+              <div className={styles.col}>
+                <span className={styles.label}>{t('langLabel')}</span>
+                <ul className={styles.list}>
+                  <li>
+                    <Link
+                      href="/it"
+                      className={`${styles.lang} ${locale === 'it' ? styles.langActive : ''}`}
+                      aria-current={locale === 'it' ? 'true' : undefined}
+                    >
+                      IT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/en"
+                      className={`${styles.lang} ${locale === 'en' ? styles.langActive : ''}`}
+                      aria-current={locale === 'en' ? 'true' : undefined}
+                    >
+                      EN
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className={styles.wordmarkWrap}>
             <span id="footer-wordmark" className={styles.wordmark} aria-label={WORDMARK}>
               {Array.from(WORDMARK).map((c, i) => (
-                <span key={i} className={styles.letter} aria-hidden="true">
-                  <span className={styles.letterCol}>{c}</span>
+                <span
+                  key={i}
+                  className={`${styles.letter} ${i >= WORDMARK_ACCENT_FROM ? styles.letterAccent : ''}`}
+                  aria-hidden="true"
+                >
+                  <span className={styles.letterCol}>{c === ' ' ? '\u00a0' : c}</span>
                 </span>
               ))}
             </span>

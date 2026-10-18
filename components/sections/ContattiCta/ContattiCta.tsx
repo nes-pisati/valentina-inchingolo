@@ -35,7 +35,6 @@ export default function ContattiCta() {
         tl.from(q('[data-eyebrow]'), { autoAlpha: 0, y: 20, duration: 0.7 }, 0)
           .from(q('[data-question]'), { autoAlpha: 0, y: 30, duration: 0.9 }, 0.05)
           .from(q('[data-email]'), { autoAlpha: 0, y: 30, duration: 0.9 }, 0.25)
-          .from(q('[data-location]'), { autoAlpha: 0, y: 30, duration: 0.9 }, 0.4)
 
         if (document.fonts) {
           document.fonts.ready.then(() => ScrollTrigger.refresh())
@@ -66,10 +65,6 @@ export default function ContattiCta() {
             className={styles.email}
           />
         </div>
-
-        <p className={styles.location} data-location>
-          {t('location')}
-        </p>
       </div>
     </section>
   )

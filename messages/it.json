@@ -141,8 +141,7 @@
   "contatti": {
     "num": "09",
     "eyebrow": "parliamone",
-    "question": "Hai un progetto da analizzare, lanciare o riposizionare?",
-    "location": "Brescia / Milano / Remoto"
+    "question": "Hai un progetto da analizzare, lanciare o riposizionare?"
   },
   "contact": {
     "meta": {
@@ -209,7 +208,7 @@
     "contactsLabel": "Contatti",
     "navLabel": "Naviga",
     "langLabel": "Lingua",
-    "location": "Brescia / Milano / Remoto",
+    "tagline": "Consulenza go-to-market per founder e brand di prodotto. Lavoro in remoto.",
     "rights": "© 2026 Valentina Inchingolo",
     "backToTop": "Torna su"
   },

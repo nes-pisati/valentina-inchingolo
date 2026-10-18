@@ -141,8 +141,7 @@
   "contatti": {
     "num": "09",
     "eyebrow": "let's talk",
-    "question": "Got a project to analyse, launch or reposition?",
-    "location": "Brescia / Milan / Remote"
+    "question": "Got a project to analyse, launch or reposition?"
   },
   "contact": {
     "meta": {
@@ -209,7 +208,7 @@
     "contactsLabel": "Contact",
     "navLabel": "Navigate",
     "langLabel": "Language",
-    "location": "Brescia / Milan / Remote",
+    "tagline": "Go-to-market consulting for founders and product brands. I work remotely.",
     "rights": "© 2026 Valentina Inchingolo",
     "backToTop": "Back to top"
   },
