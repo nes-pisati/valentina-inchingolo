@@ -68,6 +68,7 @@ type Props = {
 export default async function ConfrontoTable({ lang, price }: Props) {
   const t = await getTranslations({ locale: lang, namespace: 'soluzioni.confronto' })
   const labels = t.raw('labels') as string[]
+  const amount = formatPrice(price.amount, lang)
 
   return (
     <section id="confronto" className={styles.section}>
@@ -110,11 +111,17 @@ export default async function ConfrontoTable({ lang, price }: Props) {
 
             <Column
               side="r"
-              tag={t('checkup.tag', { price: formatPrice(price.amount, lang) })}
-              title={t('checkup.title')}
-              rows={t.raw('checkup.rows') as Rows}
+              tag={t('minikit.tag', { price: amount })}
+              title={t('minikit.title')}
+              rows={t.raw('minikit.rows') as Rows}
               labels={labels}
-              cta={<CheckoutButton product="checkup" variant="light-coral" label={t('checkup.cta')} />}
+              cta={
+                <CheckoutButton
+                  product="minikit"
+                  variant="light-coral"
+                  label={t('minikit.cta', { price: amount })}
+                />
+              }
             />
           </div>
         </ConfrontoSwitch>

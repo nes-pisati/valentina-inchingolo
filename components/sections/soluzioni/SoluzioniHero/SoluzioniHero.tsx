@@ -17,8 +17,7 @@ export default async function SoluzioniHero({ lang, prices }: Props) {
   const items = [
     { n: 1, anchor: 'checklist', price: formatPrice(0, lang) },
     { n: 2, anchor: 'minikit', price: formatPrice(prices.minikit.amount, lang) },
-    { n: 3, anchor: 'checkup', price: formatPrice(prices.checkup.amount, lang) },
-    { n: 4, anchor: 'consulenza', price: t('idx.4.p') },
+    { n: 3, anchor: 'consulenza', price: t('idx.3.p') },
   ]
 
   return (

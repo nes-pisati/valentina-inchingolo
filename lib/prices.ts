@@ -1,4 +1,4 @@
-export type ProductKey = 'minikit' | 'checkup'
+export type ProductKey = 'minikit'
 
 export type Price = {
   amount: number
@@ -7,17 +7,17 @@ export type Price = {
 
 export type Prices = Record<ProductKey, Price>
 
-export const PRODUCT_KEYS: readonly ProductKey[] = ['minikit', 'checkup']
+export const PRODUCT_KEYS: readonly ProductKey[] = ['minikit']
 
 export function stripePriceId(product: ProductKey): string | undefined {
-  return product === 'minikit'
-    ? process.env.STRIPE_PRICE_MINIKIT
-    : process.env.STRIPE_PRICE_CHECKUP
+  switch (product) {
+    case 'minikit':
+      return process.env.STRIPE_PRICE_MINIKIT
+  }
 }
 
 const PLACEHOLDER_PRICES: Prices = {
-  minikit: { amount: 49, compareAt: 97 },
-  checkup: { amount: 390, compareAt: 590 },
+  minikit: { amount: 49, compareAt: null },
 }
 
 type StripePrice = {
@@ -51,12 +51,8 @@ async function fetchStripePrice(product: ProductKey): Promise<Price | null> {
 }
 
 export async function getPrices(): Promise<Prices> {
-  const [minikit, checkup] = await Promise.all([
-    fetchStripePrice('minikit'),
-    fetchStripePrice('checkup'),
-  ])
+  const minikit = await fetchStripePrice('minikit')
   return {
     minikit: minikit ?? PLACEHOLDER_PRICES.minikit,
-    checkup: checkup ?? PLACEHOLDER_PRICES.checkup,
   }
 }

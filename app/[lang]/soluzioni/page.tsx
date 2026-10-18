@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import SoluzioniMotion from '../../../components/sections/soluzioni/SoluzioniMotion/SoluzioniMotion'
@@ -7,14 +6,11 @@ import ProductMarquee from '../../../components/sections/soluzioni/ProductMarque
 import LivelliCards from '../../../components/sections/soluzioni/LivelliCards/LivelliCards'
 import ChecklistSection from '../../../components/sections/soluzioni/ChecklistSection/ChecklistSection'
 import MiniKitSection from '../../../components/sections/soluzioni/MiniKitSection/MiniKitSection'
-import CheckupSection from '../../../components/sections/soluzioni/CheckupSection/CheckupSection'
 import ConfrontoTable from '../../../components/sections/soluzioni/ConfrontoTable/ConfrontoTable'
-import FaqSection from '../../../components/sections/soluzioni/FaqSection/FaqSection'
 import ConsulenzaCta from '../../../components/sections/soluzioni/ConsulenzaCta/ConsulenzaCta'
-import ConversionDock from '../../../components/sections/soluzioni/ConversionDock/ConversionDock'
+import FaqSection from '../../../components/sections/soluzioni/FaqSection/FaqSection'
 import ScrollTop from '../../../components/ui/ScrollTop'
 import { getPrices } from '../../../lib/prices'
-import { formatPrice } from '../../../lib/formatPrice'
 import styles from '../../../components/sections/soluzioni/soluzioni.module.css'
 
 export const revalidate = 3600
@@ -50,10 +46,7 @@ export default async function SoluzioniPage({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
-  const [t, prices] = await Promise.all([
-    getTranslations({ locale: lang, namespace: 'soluzioni.dock' }),
-    getPrices(),
-  ])
+  const prices = await getPrices()
 
   return (
     <SoluzioniMotion className={styles.page}>
@@ -63,16 +56,9 @@ export default async function SoluzioniPage({
       <LivelliCards lang={lang} prices={prices} />
       <ChecklistSection lang={lang} />
       <MiniKitSection lang={lang} price={prices.minikit} />
-      <CheckupSection lang={lang} price={prices.checkup} />
-      <ConfrontoTable lang={lang} price={prices.checkup} />
-      <FaqSection lang={lang} />
+      <ConfrontoTable lang={lang} price={prices.minikit} />
       <ConsulenzaCta lang={lang} />
-      <ConversionDock cta={t('cta')}>
-        {t.rich('text', {
-          price: formatPrice(prices.checkup.amount, lang),
-          b: (chunks: ReactNode) => <b>{chunks}</b>,
-        })}
-      </ConversionDock>
+      <FaqSection lang={lang} />
     </SoluzioniMotion>
   )
 }

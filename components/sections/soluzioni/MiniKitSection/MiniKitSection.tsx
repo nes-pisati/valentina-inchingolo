@@ -18,6 +18,7 @@ type Props = {
 
 export default async function MiniKitSection({ lang, price }: Props) {
   const t = await getTranslations({ locale: lang, namespace: 'soluzioni.minikit' })
+  const receive = t.raw('receive') as Row[]
   const rows = t.raw('rows') as Row[]
   const amount = formatPrice(price.amount, lang)
 
@@ -25,8 +26,7 @@ export default async function MiniKitSection({ lang, price }: Props) {
     <section id="minikit" className={cx(p.section, styles.section)}>
       <div className={cx(l.container, l.grid, p.inner)}>
         <div className={cx(p.text, styles.text)}>
-          <p className={l.occh}>{t('occh')}</p>
-          <p className={styles.tag}>{t('tag')}</p>
+          <p className={l.occh}>{t('occh', { price: amount })}</p>
           <h2 className={cx(l.h2, p.h2)} data-rv="lines">
             {t.rich('h2', lineTags())}
           </h2>
@@ -44,6 +44,22 @@ export default async function MiniKitSection({ lang, price }: Props) {
 
           <div className={p.ctaRow} data-rv="fade">
             <CheckoutButton product="minikit" variant="coral" label={t('cta', { price: amount })} />
+            <p className={p.micro}>{t('ctaMicro')}</p>
+          </div>
+
+          <div className={p.list}>
+            <p className={p.listTitle}>{t('receiveTitle')}</p>
+            <ul className={p.rows} data-rv="rows">
+              {receive.map(row => (
+                <li key={row.title} className={p.row}>
+                  <span className={p.dot} aria-hidden="true" />
+                  <div>
+                    <p className={p.rowTitle}>{row.title}</p>
+                    <p className={p.rowText}>{row.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className={p.list}>

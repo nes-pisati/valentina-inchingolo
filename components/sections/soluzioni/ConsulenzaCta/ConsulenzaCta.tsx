@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import PillButton from '../../../ui/PillButton/PillButton'
 import { CONTACTS } from '../../../../lib/contacts'
@@ -33,16 +32,6 @@ export default async function ConsulenzaCta({ lang }: { lang: string }) {
           </p>
           <div className={styles.actions} data-rv="fade">
             <PillButton variant="default" href={CONTACTS.calendlyUrl} label={t('cta')} />
-            <p className={styles.alt}>
-              {t.rich('alt', {
-                email: CONTACTS.email,
-                mail: (chunks: ReactNode) => (
-                  <a className={styles.mail} href={`mailto:${CONTACTS.email}`}>
-                    {chunks}
-                  </a>
-                ),
-              })}
-            </p>
           </div>
         </div>
       </div>

@@ -14,7 +14,6 @@ import {
   REVEAL_STARTS_MOBILE,
 } from '../../../motion/reveals'
 import {
-  checkup,
   confronto,
   faq,
   heroIntro,
@@ -62,7 +61,6 @@ export default function SoluzioniMotion({ className, children }: Props) {
           revealMedia(el, starts.media)
           const restoreCounts = countUp(el, starts.fade)
           marquee(el)
-          checkup(el)
           confronto(el)
           method(el)
           const offFaq = faq(el)

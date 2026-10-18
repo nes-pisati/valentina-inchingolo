@@ -11,7 +11,7 @@ type Props = {
 }
 
 type Level = {
-  n: 1 | 2 | 3 | 4
+  n: 1 | 2 | 3
   anchor: string
   price: Price | null
 }
@@ -22,8 +22,7 @@ export default async function LivelliCards({ lang, prices }: Props) {
   const levels: Level[] = [
     { n: 1, anchor: 'checklist', price: { amount: 0, compareAt: null } },
     { n: 2, anchor: 'minikit', price: prices.minikit },
-    { n: 3, anchor: 'checkup', price: prices.checkup },
-    { n: 4, anchor: 'consulenza', price: null },
+    { n: 3, anchor: 'consulenza', price: null },
   ]
 
   return (
@@ -41,8 +40,8 @@ export default async function LivelliCards({ lang, prices }: Props) {
 
         <div className={styles.cols} data-ladder>
           {levels.map(level => {
-            const featured = level.n === 3
-            const highlight = level.n === 4
+            const featured = level.n === 2
+            const highlight = level.n === levels.length
             return (
               <a
                 key={level.n}
@@ -55,9 +54,8 @@ export default async function LivelliCards({ lang, prices }: Props) {
 
                 <div className={styles.top} data-card-part>
                   <span className={styles.num}>{`0${level.n}`}</span>
-                  {featured && <span className={styles.badge}>{t('livelli.3.badge')}</span>}
                   <span className={styles.segs} aria-hidden="true">
-                    {[1, 2, 3, 4].map(i => (
+                    {levels.map(({ n: i }) => (
                       <span
                         key={i}
                         className={styles.seg}
@@ -78,7 +76,7 @@ export default async function LivelliCards({ lang, prices }: Props) {
                   <div className={styles.price}>
                     <span className={styles.amountRow}>
                       <span className={styles.amount}>
-                        {level.price ? formatPrice(level.price.amount, lang) : t('idx.4.p')}
+                        {level.price ? formatPrice(level.price.amount, lang) : t('idx.3.p')}
                       </span>
                       {level.price?.compareAt && (
                         <s className={styles.was}>{formatPrice(level.price.compareAt, lang)}</s>
