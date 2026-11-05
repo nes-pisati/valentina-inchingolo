@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server'
 import PillButton from '../../../ui/PillButton/PillButton'
-import { CONTACTS } from '../../../../lib/contacts'
 import { cx, lineTags } from '../richTags'
 import l from '../soluzioni.module.css'
 import styles from './ConsulenzaCta.module.css'
@@ -31,7 +30,7 @@ export default async function ConsulenzaCta({ lang }: { lang: string }) {
             {t('p')}
           </p>
           <div className={styles.actions} data-rv="fade">
-            <PillButton variant="default" href={CONTACTS.calendlyUrl} label={t('cta')} />
+            <PillButton variant="default" href={`/${lang}/contatti`} label={t('cta')} />
           </div>
         </div>
       </div>

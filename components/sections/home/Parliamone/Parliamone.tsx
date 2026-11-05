@@ -29,8 +29,6 @@ export default async function Parliamone({ lang }: { lang: string }) {
         <p className={l.occh}>{t('occh')}</p>
 
         <h2 id="parliamone-head" className={styles.title} data-big-title aria-label={title}>
-          {/* Una sola maschera per tutta la riga: con il letter-spacing negativo una
-              maschera per lettera taglierebbe il lato destro dei glifi. */}
           <span className={styles.mask} aria-hidden="true">
             {Array.from(title).map((ch, i) => (
               <span key={i} className={styles.char} data-big-char>
@@ -45,7 +43,6 @@ export default async function Parliamone({ lang }: { lang: string }) {
             {t('p')}
           </p>
           <div className={styles.actions} data-rv="fade">
-            {/* La call si prenota dal calendario della pagina Contatti. */}
             <PillButton variant="coral" href={`/${lang}/contatti`} label={t('cta')} />
             <p className={styles.alt}>
               <span>{t('or')}</span>

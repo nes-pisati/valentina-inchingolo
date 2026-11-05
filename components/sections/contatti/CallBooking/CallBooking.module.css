@@ -43,9 +43,9 @@
 
 .text {
   font-family: var(--font-body);
-  font-size: clamp(0.72rem, 1.45vh, 0.86rem);
+  font-size: clamp(0.78rem, 1.5vh, 0.9rem);
   line-height: 1.5;
-  opacity: 0.72;
+  opacity: 0.78;
 }
 
 .facts {
@@ -72,204 +72,108 @@
   background-color: rgba(244, 239, 233, 0.18);
 }
 
-/* ---- Calendario ---- */
+/* ---- Form ---- */
 
-.calendarHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: clamp(0.9rem, 2.4vh, 1.6rem);
-}
-
-.panelLabel {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.54rem, 1.1vh, 0.64rem);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.55;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.month {
-  min-width: 9ch;
-  text-align: center;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(0.8rem, 1.6vh, 0.98rem);
-  letter-spacing: -0.02em;
-  text-transform: capitalize;
-}
-
-.navBtn {
-  display: grid;
-  place-items: center;
-  width: clamp(22px, 3.2vh, 28px);
-  height: clamp(22px, 3.2vh, 28px);
-  border: 1px solid rgba(244, 239, 233, 0.3);
-  border-radius: 999px;
-  background: none;
-  color: var(--color-osso);
-  font-size: 0.75rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: color 0.3s var(--ease-out-expo), border-color 0.3s var(--ease-out-expo);
-}
-
-.navBtn:hover:not(:disabled),
-.navBtn:focus-visible:not(:disabled) {
-  color: var(--color-corallo);
-  border-color: var(--color-corallo);
-}
-
-.navBtn:disabled {
-  opacity: 0.25;
-  cursor: not-allowed;
-}
-
-.weekdays,
-.grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 1px;
-}
-
-.weekday {
-  padding-bottom: 0.3rem;
-  text-align: center;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.5rem, 1.05vh, 0.6rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.4;
-}
-
-.day,
-.pad {
-  display: grid;
-  place-items: center;
-  height: clamp(22px, 3.9vh, 32px);
-  border: 0;
-  background: none;
-  font-family: var(--font-body);
-  font-size: clamp(0.72rem, 1.5vh, 0.88rem);
-  font-weight: 400;
-  color: var(--color-osso);
-}
-
-.day {
-  position: relative;
-  cursor: pointer;
-  border-radius: 999px;
-  transition: color 0.25s var(--ease-out-expo), background-color 0.25s var(--ease-out-expo);
-}
-
-.day:not(:disabled)::after {
-  content: '';
-  position: absolute;
-  bottom: 11%;
-  width: 3px;
-  height: 3px;
-  border-radius: 999px;
-  background-color: var(--color-corallo);
-}
-
-.day:disabled {
-  opacity: 0.22;
-  cursor: not-allowed;
-}
-
-.day:not(:disabled):hover,
-.day:not(:disabled):focus-visible {
-  color: var(--color-corallo);
-}
-
-.daySelected,
-.daySelected:hover,
-.daySelected:not(:disabled):hover {
-  background-color: var(--color-osso);
-  color: var(--color-inchiostro);
-  font-weight: 700;
-}
-
-.daySelected::after {
-  opacity: 0;
-}
-
-/* ---- Slot orari ---- */
-
-.slots {
+.form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(0.35rem, 0.9vh, 0.6rem);
-  min-height: clamp(62px, 8.6vh, 78px);
+  gap: clamp(0.6rem, 1.6vh, 1.1rem);
 }
 
-.slotsNote {
-  font-family: var(--font-body);
-  font-size: clamp(0.7rem, 1.4vh, 0.82rem);
-  line-height: 1.4;
-  opacity: 0.5;
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.6vh, 1.1rem) clamp(0.8rem, 1.6vw, 1.4rem);
 }
 
-.slotList {
+.field {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  list-style: none;
+  flex-direction: column;
+  min-width: 0;
 }
 
-.slot {
-  padding: 0.3rem 0.7rem;
-  border: 1px solid rgba(244, 239, 233, 0.3);
-  border-radius: 999px;
+.wide {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0.4rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(244, 239, 233, 0.45);
+  border-radius: 0;
   background: none;
   font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.66rem, 1.35vh, 0.78rem);
-  font-variant-numeric: tabular-nums;
+  /* 16px: sotto questa soglia iOS zooma la pagina al focus */
+  font-size: 1rem;
   color: var(--color-osso);
-  cursor: pointer;
-  transition: color 0.3s var(--ease-out-expo), border-color 0.3s var(--ease-out-expo),
-    background-color 0.3s var(--ease-out-expo);
+  transition: border-color 0.3s var(--ease-out-expo);
 }
 
-.slot:hover,
-.slot:focus-visible {
-  color: var(--color-corallo);
-  border-color: var(--color-corallo);
+.input:hover {
+  border-bottom-color: var(--color-osso);
 }
 
-.slotActive,
-.slotActive:hover {
-  background-color: var(--color-osso);
-  border-color: var(--color-osso);
-  color: var(--color-inchiostro);
+.input:focus-visible {
+  /* il rettangolo di outline coprirebbe la label: si ispessisce la riga */
+  border-bottom-color: var(--color-corallo);
+  outline: none;
+  box-shadow: 0 1px 0 0 var(--color-corallo);
 }
 
-.slotsFoot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.25rem 1rem;
+.input[aria-invalid] {
+  border-bottom-color: var(--color-corallo);
 }
 
-.tz {
+.textarea {
+  display: block;
+  resize: none;
+  line-height: 1.4;
+}
+
+.error {
+  margin-top: 0.3rem;
   font-family: var(--font-body);
-  font-size: clamp(0.5rem, 1.05vh, 0.6rem);
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0.4;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--color-corallo);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.privacy {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.78;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-corallo);
 }
 
 /* ---- Conferma ---- */
@@ -280,30 +184,20 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem 0.9rem;
-  margin-top: auto;
   padding-top: clamp(0.5rem, 1.4vh, 0.9rem);
   border-top: 1px solid rgba(244, 239, 233, 0.18);
 }
 
-.summary {
-  flex: 1 1 14ch;
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(0.76rem, 1.5vh, 0.92rem);
-  line-height: 1.25;
-  color: var(--color-corallo);
-}
-
 .cta {
-  padding: 0.5rem 1.2rem;
+  min-height: 44px;
+  padding: 0.5rem 1.4rem;
   border: 1px solid var(--color-osso);
   border-radius: 999px;
   background: none;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: clamp(0.56rem, 1.15vh, 0.66rem);
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--color-osso);
@@ -311,23 +205,56 @@
   transition: background-color 0.35s var(--ease-out-expo), color 0.35s var(--ease-out-expo);
 }
 
-.cta:hover:not(:disabled),
-.cta:focus-visible:not(:disabled) {
+.cta:hover,
+.cta:focus-visible {
   background-color: var(--color-osso);
   color: var(--color-inchiostro);
 }
 
-.cta:disabled {
-  border-color: rgba(244, 239, 233, 0.3);
-  opacity: 0.45;
-  cursor: not-allowed;
+.cta:focus-visible {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 3px;
+}
+
+.cta[data-busy] {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+/* ---- Richiesta inviata ---- */
+
+.sent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(1rem, 4vh, 2.5rem) 0;
+}
+
+.sentTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.4rem, min(3vw, 4vh), 2.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  outline: none;
+}
+
+.sentText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.78;
+}
+
+@media (max-width: 480px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .day,
-  .slot,
-  .cta,
-  .navBtn {
+  .input,
+  .cta {
     transition: none;
   }
 }

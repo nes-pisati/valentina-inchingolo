@@ -21,7 +21,7 @@
 
 .shell {
   display: grid;
-  /* a sinistra il discorso, a destra il blocco denso del calendario */
+  /* a sinistra il discorso, a destra il form di richiesta call */
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   align-items: center;

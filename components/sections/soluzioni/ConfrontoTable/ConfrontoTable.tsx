@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server'
 import PillButton from '../../../ui/PillButton/PillButton'
 import CheckoutButton from '../CheckoutButton/CheckoutButton'
 import ConfrontoSwitch from './ConfrontoSwitch'
-import { CONTACTS } from '../../../../lib/contacts'
 import { formatPrice } from '../../../../lib/formatPrice'
 import type { Price } from '../../../../lib/prices'
 import { cx, lineTags } from '../richTags'
@@ -127,7 +126,7 @@ export default async function ConfrontoTable({ lang, price }: Props) {
               title={t('call.title')}
               rows={t.raw('call.rows') as Rows}
               labels={labels}
-              cta={<PillButton variant="default" href={CONTACTS.calendlyUrl} label={t('call.cta')} />}
+              cta={<PillButton variant="default" href={`/${lang}/contatti`} label={t('call.cta')} />}
             />
           </div>
         </ConfrontoSwitch>

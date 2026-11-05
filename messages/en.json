@@ -173,22 +173,29 @@
     "subhead": "The intro call is free. Finding out whether I can help costs you nothing.",
     "booking": {
       "index": "05",
-      "title": "Book the free call.",
-      "text": "Thirty minutes, online, no commitment. You tell me about your product and where you are, I tell you honestly whether and how I can help. Pick the day and time that suit you best.",
+      "title": "Request the free call.",
+      "text": "Thirty minutes, online, no commitment. You tell me about your product and where you are, I tell you honestly whether and how I can help. Leave me your details and I’ll write to you to set the appointment.",
       "facts": {
         "duration": "30 minutes",
         "price": "Free",
         "where": "Online"
       },
-      "calendarLabel": "Pick a day",
-      "slotsLabel": "Pick a time",
-      "slotsEmpty": "Select a day to see the available times.",
-      "noSlots": "No times available on this day.",
-      "prevMonth": "Previous month",
-      "nextMonth": "Next month",
-      "timezone": "Times in Europe/Rome",
-      "cta": "Confirm the booking",
-      "ctaPending": "Pick a day and a time"
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "note": "Note (optional)"
+      },
+      "errors": {
+        "firstName": "Please enter your first name.",
+        "lastName": "Please enter your last name.",
+        "email": "Please check your email address.",
+        "send": "I couldn’t send your request. Please try again, or email me directly."
+      },
+      "privacy": "I only use your details to reply to your request. <privacy>Privacy policy</privacy>",
+      "cta": "Send the request",
+      "sentTitle": "Request sent.",
+      "sentText": "I’ll email you to confirm the appointment."
     }
   },
   "progetto": {

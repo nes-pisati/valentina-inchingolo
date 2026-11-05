@@ -173,22 +173,29 @@
     "subhead": "La call esplorativa è gratuita. Capire se posso aiutarti non ti costa nulla.",
     "booking": {
       "index": "05",
-      "title": "Prenota la call gratuita.",
-      "text": "Trenta minuti, online, senza impegno. Mi racconti il tuo prodotto e dove sei, io ti dico con sincerità se e come posso aiutarti. Scegli il giorno e l’ora che ti tornano meglio.",
+      "title": "Richiedi la call gratuita.",
+      "text": "Trenta minuti, online, senza impegno. Mi racconti il tuo prodotto e dove sei, io ti dico con sincerità se e come posso aiutarti. Lasciami i tuoi dati: ti scrivo io per fissare l’appuntamento.",
       "facts": {
         "duration": "30 minuti",
         "price": "Gratis",
         "where": "Online"
       },
-      "calendarLabel": "Scegli il giorno",
-      "slotsLabel": "Scegli l’ora",
-      "slotsEmpty": "Seleziona un giorno per vedere gli orari disponibili.",
-      "noSlots": "Nessun orario disponibile in questo giorno.",
-      "prevMonth": "Mese precedente",
-      "nextMonth": "Mese successivo",
-      "timezone": "Orari in fuso Europa/Roma",
-      "cta": "Conferma la prenotazione",
-      "ctaPending": "Scegli giorno e ora"
+      "fields": {
+        "firstName": "Nome",
+        "lastName": "Cognome",
+        "email": "Email",
+        "note": "Nota (facoltativa)"
+      },
+      "errors": {
+        "firstName": "Inserisci il tuo nome.",
+        "lastName": "Inserisci il tuo cognome.",
+        "email": "Controlla l’indirizzo email.",
+        "send": "Non sono riuscita a inviare la richiesta. Riprova, oppure scrivimi via email."
+      },
+      "privacy": "Uso i tuoi dati solo per rispondere alla richiesta. <privacy>Privacy policy</privacy>",
+      "cta": "Invia la richiesta",
+      "sentTitle": "Richiesta inviata.",
+      "sentText": "Ti scrivo io via email per confermare l’appuntamento."
     }
   },
   "progetto": {
