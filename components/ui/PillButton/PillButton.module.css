@@ -55,6 +55,29 @@
   height: 7px;
 }
 
+@media (max-width: 760px) {
+  .btn {
+    gap: 10px;
+    padding: 14px 22px 14px 19px;
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .sm {
+    padding: 11px 18px 11px 15px;
+    font-size: 13px;
+  }
+
+  .sm .dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
 .default {
   color: var(--color-inchiostro);
 }
