@@ -16,7 +16,7 @@ import styles from '../../../components/sections/soluzioni/soluzioni.module.css'
 export const revalidate = 3600
 
 export function generateStaticParams() {
-  return [{ lang: 'it' }, { lang: 'en' }]
+  return [{ lang: 'it' }]
 }
 
 export async function generateMetadata({
@@ -31,7 +31,6 @@ export async function generateMetadata({
     description: t('meta.description'),
     alternates: {
       canonical: `/${lang}/soluzioni`,
-      languages: { it: '/it/soluzioni', en: '/en/soluzioni' },
     },
     openGraph: {
       title: t('meta.title'),

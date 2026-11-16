@@ -1,14 +1,12 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
-import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { onIntroComplete } from '../../../lib/intro'
 import { CONTACTS } from '../../../lib/contacts'
-import { EN_PUBLISHED } from '../../../lib/locales'
 import styles from './Footer.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
 
@@ -155,31 +153,6 @@ export default function Footer() {
               </ul>
             </nav>
 
-            {EN_PUBLISHED && (
-              <div className={styles.col}>
-                <span className={styles.label}>{t('langLabel')}</span>
-                <ul className={styles.list}>
-                  <li>
-                    <Link
-                      href="/it"
-                      className={`${styles.lang} ${locale === 'it' ? styles.langActive : ''}`}
-                      aria-current={locale === 'it' ? 'true' : undefined}
-                    >
-                      IT
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/en"
-                      className={`${styles.lang} ${locale === 'en' ? styles.langActive : ''}`}
-                      aria-current={locale === 'en' ? 'true' : undefined}
-                    >
-                      EN
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
           </div>
 
           <div className={styles.wordmarkWrap}>

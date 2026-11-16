@@ -11,67 +11,6 @@
   will-change: transform, opacity;
 }
 
-/* ---- Testa del pannello ---- */
-
-.panelHead {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.4rem, 1vh, 0.7rem);
-}
-
-.title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.1rem, min(2vw, 2.9vh), 1.65rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  color: var(--color-corallo);
-}
-
-.titleMask {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
-}
-
-.titleLine {
-  display: inline-block;
-  will-change: transform;
-}
-
-.text {
-  font-family: var(--font-body);
-  font-size: clamp(0.78rem, 1.5vh, 0.9rem);
-  line-height: 1.5;
-  opacity: 0.78;
-}
-
-.facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  list-style: none;
-}
-
-.fact {
-  padding: 0.28rem 0.7rem;
-  border: 1px solid rgba(244, 239, 233, 0.3);
-  border-radius: 999px;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(0.56rem, 1.15vh, 0.66rem);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.rule {
-  height: 1px;
-  background-color: rgba(244, 239, 233, 0.18);
-}
-
 /* ---- Form ---- */
 
 .form {
@@ -102,6 +41,17 @@
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.req {
+  margin-left: 0.2em;
+  color: var(--color-corallo);
+}
+
+.reqNote {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   opacity: 0.78;
 }
 
@@ -158,10 +108,98 @@
   overflow: hidden;
 }
 
-.privacy {
+.fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fieldset .label {
+  margin-bottom: 0.55rem;
+  padding: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  position: relative;
+  cursor: pointer;
+}
+
+.chipInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chipLabel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid rgba(244, 239, 233, 0.35);
+  border-radius: 999px;
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  line-height: 1.4;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: background-color 0.3s var(--ease-out-expo), color 0.3s var(--ease-out-expo),
+    border-color 0.3s var(--ease-out-expo);
+}
+
+.chip:hover .chipLabel {
+  border-color: var(--color-osso);
+}
+
+.chipInput:checked + .chipLabel {
+  border-color: var(--color-osso);
+  background-color: var(--color-osso);
+  color: var(--color-inchiostro);
+}
+
+.chipInput:focus-visible + .chipLabel {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 3px;
+}
+
+.chipInput[data-invalid] + .chipLabel {
+  border-color: var(--color-corallo);
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--color-corallo);
+  cursor: pointer;
+}
+
+.check:focus-visible {
+  outline: 2px solid var(--color-corallo);
+  outline-offset: 3px;
+}
+
+.micro {
+  flex: 1 1 16rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.45;
   opacity: 0.78;
 }
 
@@ -182,8 +220,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem 0.9rem;
+  gap: 0.75rem 1.2rem;
   padding-top: clamp(0.5rem, 1.4vh, 0.9rem);
   border-top: 1px solid rgba(244, 239, 233, 0.18);
 }
@@ -254,7 +291,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .input,
-  .cta {
+  .cta,
+  .chipLabel {
     transition: none;
   }
 }

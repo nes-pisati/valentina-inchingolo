@@ -1,6 +1,5 @@
-import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
-import ChecklistForm from './ChecklistForm'
+import OptinForm from '../../../ui/OptinForm/OptinForm'
 import { cx, lineTags } from '../../soluzioni/richTags'
 import l from '../../soluzioni/soluzioni.module.css'
 import styles from './ChecklistOptin.module.css'
@@ -10,25 +9,6 @@ type Fact = { value: string; unit: string; label: string }
 export default async function ChecklistOptin({ lang }: { lang: string }) {
   const t = await getTranslations({ locale: lang, namespace: 'home.checklist' })
   const facts = t.raw('facts') as Fact[]
-
-  const copy = {
-    label: t('label'),
-    placeholder: t('placeholder'),
-    cta: t('cta'),
-    micro: t('micro'),
-    errorEmail: t('errorEmail'),
-    errorConsent: t('errorConsent'),
-    sentTitle: t('sentTitle'),
-    sentText: t('sentText'),
-  }
-
-  const consent = t.rich('consent', {
-    privacy: (chunks: ReactNode) => (
-      <a className={styles.link} href={`/${lang}/privacy`}>
-        {chunks}
-      </a>
-    ),
-  })
 
   return (
     <section id="checklist" className={styles.section}>
@@ -42,7 +22,7 @@ export default async function ChecklistOptin({ lang }: { lang: string }) {
             {t('lead')}
           </p>
           <div data-rv="fade">
-            <ChecklistForm copy={copy} consent={consent} />
+            <OptinForm kind="checklist" source="home" />
           </div>
         </div>
 

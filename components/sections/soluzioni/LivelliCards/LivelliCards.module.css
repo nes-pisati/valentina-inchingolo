@@ -167,6 +167,21 @@
   transition: color 0.3s;
 }
 
+.goWrap {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.goText {
+  max-width: 9em;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: right;
+}
+
 .go {
   display: grid;
   flex: none;

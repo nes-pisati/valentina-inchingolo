@@ -10,7 +10,7 @@ import Marquee from '../../../components/sections/Marquee/Marquee'
 import ScrollTop from '../../../components/ui/ScrollTop'
 
 export function generateStaticParams() {
-  return [{ lang: 'it' }, { lang: 'en' }]
+  return [{ lang: 'it' }]
 }
 
 export async function generateMetadata({
@@ -25,7 +25,6 @@ export async function generateMetadata({
     description: t('meta.description'),
     alternates: {
       canonical: `/${lang}/about`,
-      languages: { it: '/it/about', en: '/en/about' },
     },
     openGraph: {
       title: t('meta.title'),

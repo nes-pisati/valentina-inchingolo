@@ -83,10 +83,17 @@ export default async function LivelliCards({ lang, prices }: Props) {
                     </span>
                     <span className={styles.priceLabel}>{t(`livelli.${level.n}.priceLabel`)}</span>
                   </div>
-                  <span className={styles.go} aria-hidden="true">
-                    <svg className={styles.arrow} data-arrow viewBox="0 0 16 16">
-                      <path d="M3 13 13 3M5 3h8v8" />
-                    </svg>
+                  <span className={styles.goWrap}>
+                    {featured && (
+                      <span className={styles.goText} aria-hidden="true">
+                        {t('livelli.2.cta')}
+                      </span>
+                    )}
+                    <span className={styles.go} aria-hidden="true">
+                      <svg className={styles.arrow} data-arrow viewBox="0 0 16 16">
+                        <path d="M3 13 13 3M5 3h8v8" />
+                      </svg>
+                    </span>
                   </span>
                   <span className={l.srOnly}>{t(`livelli.${level.n}.go`)}</span>
                 </div>

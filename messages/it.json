@@ -148,54 +148,52 @@
       "title": "Contatti | Valentina Inchingolo · Ink the Gap",
       "description": "Parliamone: call esplorativa gratuita per capire se e come posso aiutarti a lanciare o rilanciare il tuo prodotto."
     },
-    "index": "04 / 04",
-    "eyebrow": "Hai un progetto da lanciare, da analizzare, riposizionare o che non sta decollando?",
+    "eyebrow": "Call esplorativa · 30 minuti · Gratis",
     "headline": "Parliamone.",
-    "rows": {
-      "email": {
-        "label": "Email",
-        "copy": "Copia",
-        "copied": "Copiata",
-        "copyAria": "Copia l’indirizzo email"
-      },
-      "phone": {
-        "label": "Telefono"
-      },
-      "linkedin": {
-        "label": "LinkedIn",
-        "hint": "Profilo"
-      }
-    },
-    "baseline": {
-      "descriptor": "Lavoro in remoto. Aiuto founder e brand owner a lanciare i loro prodotti: diagnosi go-to-market, posizionamento, piano di lancio e affiancamento.",
-      "clockPrefix": "Ora locale"
-    },
-    "subhead": "La call esplorativa è gratuita. Capire se posso aiutarti non ti costa nulla.",
-    "booking": {
-      "index": "05",
-      "title": "Richiedi la call gratuita.",
-      "text": "Trenta minuti, online, senza impegno. Mi racconti il tuo prodotto e dove sei, io ti dico con sincerità se e come posso aiutarti. Lasciami i tuoi dati: ti scrivo io per fissare l’appuntamento.",
-      "facts": {
-        "duration": "30 minuti",
-        "price": "Gratis",
-        "where": "Online"
-      },
+    "lead": "Raccontami in due minuti il tuo prodotto e a che punto sei. Ti scrivo io per fissare la call, così parte già dal punto giusto.",
+    "clockPrefix": "Ora locale",
+    "other": "Per tutto il resto:",
+    "form": {
       "fields": {
-        "firstName": "Nome",
-        "lastName": "Cognome",
-        "email": "Email",
-        "note": "Nota (facoltativa)"
+        "name": {
+          "label": "Nome",
+          "placeholder": "Come ti chiami?"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "La tua email"
+        },
+        "product": {
+          "label": "Il tuo prodotto in una riga: cos’è e a chi si rivolge?",
+          "placeholder": "Es. una linea di cosmetici solidi per chi viaggia"
+        },
+        "stage": {
+          "label": "A che punto sei?",
+          "options": {
+            "pre": "Non ho ancora lanciato",
+            "lt6": "Ho lanciato da meno di 6 mesi",
+            "gt6": "Ho lanciato da più di 6 mesi"
+          }
+        },
+        "goal": {
+          "label": "Cosa vorresti capire nella call?"
+        },
+        "privacy": "Ho letto la <privacy>Privacy policy</privacy>."
       },
       "errors": {
-        "firstName": "Inserisci il tuo nome.",
-        "lastName": "Inserisci il tuo cognome.",
-        "email": "Controlla l’indirizzo email.",
-        "send": "Non sono riuscita a inviare la richiesta. Riprova, oppure scrivimi via email."
+        "name": "Mi serve il tuo nome.",
+        "email": "Controlla l’email: sembra incompleta.",
+        "product": "Massimo 150 caratteri.",
+        "stage": "Scegli una delle tre opzioni.",
+        "goal": "Massimo 600 caratteri.",
+        "privacy": "Serve la conferma per poterti rispondere."
       },
-      "privacy": "Uso i tuoi dati solo per rispondere alla richiesta. <privacy>Privacy policy</privacy>",
       "cta": "Invia la richiesta",
-      "sentTitle": "Richiesta inviata.",
-      "sentText": "Ti scrivo io via email per confermare l’appuntamento."
+      "micro": "Le tue risposte arrivano solo a me e servono a preparare la call.",
+      "sentTitle": "Grazie, {name}. La tua richiesta è arrivata.",
+      "sentText": "Ti scrivo io a {email} per fissare giorno e ora della call.",
+      "sentSpam": "Se non mi trovi nella posta in arrivo, controlla nello spam.",
+      "required": "* Campo obbligatorio"
     }
   },
   "progetto": {
@@ -214,7 +212,6 @@
   "footer": {
     "contactsLabel": "Contatti",
     "navLabel": "Naviga",
-    "langLabel": "Lingua",
     "tagline": "Consulenza go-to-market per founder e brand di prodotto. Lavoro in remoto.",
     "rights": "© 2026 Valentina Inchingolo",
     "backToTop": "Torna su"
@@ -222,7 +219,7 @@
   "soluzioni": {
     "meta": {
       "title": "Soluzioni | Valentina Inchingolo · Ink the Gap",
-      "description": "Tre modi di lavorare sul tuo go-to-market: la Checklist gratuita, il Mini-Kit per costruire il posizionamento in un weekend, la consulenza su misura."
+      "description": "Tre modi di lavorare sul tuo go-to-market: la Checklist gratuita, il Mini-Kit (in arrivo, con lista d’attesa) per costruire il posizionamento in un weekend, la consulenza su misura."
     },
     "hero": {
       "kick": "Soluzioni",
@@ -237,7 +234,7 @@
       },
       "2": {
         "t": "Mini-Kit",
-        "k": "in un weekend"
+        "k": "in arrivo"
       },
       "3": {
         "t": "Consulenza",
@@ -270,11 +267,12 @@
         "go": "Vai alla Checklist"
       },
       "2": {
-        "k": "Digitale, fai da te",
+        "k": "In arrivo, lista d’attesa",
         "t": "Mini-Kit Ink the Gap",
-        "p": "Il worksheet per costruire il tuo posizionamento in un weekend, passo dopo passo.",
-        "priceLabel": "due PDF, subito dopo l’acquisto",
-        "go": "Vai al Mini-Kit"
+        "p": "Il worksheet per costruire il tuo posizionamento in un weekend. Non è ancora acquistabile: entra in lista e ti scrivo appena apre.",
+        "priceLabel": "all’apertura · non ancora acquistabile",
+        "go": "Entra in lista d’attesa",
+        "cta": "Entra in lista d’attesa"
       },
       "3": {
         "k": "Percorso, insieme",
@@ -291,8 +289,6 @@
       "occh": "Gratis",
       "h2": "<line>Il tuo prodotto è</line><line>pronto per il mercato?</line>",
       "lead": "Prima di investire un euro in lancio o pubblicità, rispondi a 12 domande. Sono le stesse che faccio nella prima call, e bastano dieci minuti per scoprire dove sono i buchi da colmare.",
-      "cta": "Scarica la checklist gratuita",
-      "micro": "PDF gratuito, nella tua inbox in un minuto. Niente spam, ti scrivo solo quando ho qualcosa di utile.",
       "rowsTitle": "Cosa ricevi",
       "rows": [
         {
@@ -310,12 +306,9 @@
       ]
     },
     "minikit": {
-      "occh": "Mini-Kit Ink the Gap · {price}",
+      "occh": "Mini-Kit Ink the Gap · In arrivo",
       "h2": "<line>Il tuo posizionamento,</line><line>nero su bianco,</line><line><ink>in un weekend.</ink></line>",
       "lead": "È il worksheet che uso con i clienti, adattato per lavorare in autonomia: ti guida a definire contro cosa compete davvero il tuo prodotto, cosa ha che le alternative non hanno, e per chi quel valore conta abbastanza da pagarlo. Con un esempio svolto per intero accanto, per non partire mai dal foglio bianco.",
-      "priceNote": "due PDF, subito dopo l’acquisto",
-      "cta": "Acquista il Mini-Kit, {price}",
-      "ctaMicro": "Due PDF, nella tua inbox in pochi minuti. Pagamento con Stripe.",
       "receiveTitle": "Cosa ricevi",
       "receive": [
         {
@@ -334,8 +327,12 @@
       "rowsTitle": "Come funziona",
       "rows": [
         {
-          "title": "Acquisti online",
-          "text": "Pagamento sicuro, ricevi i due file via email in pochi minuti."
+          "title": "Entri in lista d’attesa",
+          "text": "Lasci la tua email qui sopra e confermi con un clic. Nessun pagamento, nessun impegno."
+        },
+        {
+          "title": "Ti scrivo quando apre",
+          "text": "Appena il Mini-Kit è disponibile ricevi un’email con il link per averlo."
         },
         {
           "title": "Compili il worksheet",
@@ -345,6 +342,18 @@
           "title": "Esci con il posizionamento scritto",
           "text": "Pronto da usare su sito, social e pitch."
         }
+      ],
+      "status": {
+        "title": "Non è ancora acquistabile.",
+        "text": "Il Mini-Kit apre a breve. Lasciami la tua email ed entri nella lista d’attesa: appena è disponibile ti scrivo, con il link per averlo. Iscriversi è gratis e non ti impegna a comprare."
+      },
+      "specsTitle": "Il kit in breve",
+      "specs": [
+        "2 file PDF",
+        "28 pagine",
+        "5 sezioni guidate",
+        "Circa 4 ore",
+        "Compilabile a schermo o stampabile"
       ]
     },
     "confronto": {
@@ -373,10 +382,10 @@
             "Vuoi un percorso costruito sul tuo caso"
           ]
         ],
-        "cta": "Prenota la call gratuita"
+        "cta": "Richiedi la call gratuita"
       },
       "minikit": {
-        "tag": "Un weekend, {price}",
+        "tag": "In arrivo · {price} all’apertura",
         "title": "Il Mini-Kit",
         "rows": [
           "scriverlo in autonomia",
@@ -387,7 +396,7 @@
             "Vuoi partire subito, con il tuo ritmo"
           ]
         ],
-        "cta": "Acquista il Mini-Kit, {price}"
+        "cta": "Entra in lista d’attesa"
       }
     },
     "consulenza": {
@@ -401,15 +410,19 @@
         "Affiancamento"
       ],
       "p": "Il percorso intero, costruito sul tuo prodotto e sul tuo mercato. Si parte sempre da una call gratuita, così capiamo insieme se è la strada giusta.",
-      "cta": "Prenota la call gratuita"
+      "cta": "Richiedi la call gratuita"
     },
     "faq": {
       "occh": "Domande frequenti",
       "h2": "<line>Prima di</line><line>scegliere.</line>",
       "items": [
         {
+          "q": "Posso già acquistare il Mini-Kit?",
+          "a": "Non ancora. Per ora c’è la lista d’attesa: lasci la tua email nel blocco del Mini-Kit e ti scrivo appena è disponibile, con il link per averlo. Iscriversi non ti impegna a comprare."
+        },
+        {
           "q": "Cosa ricevo esattamente con il Mini-Kit?",
-          "a": "Due file PDF, subito dopo il pagamento: il worksheet da compilare, 17 pagine con i campi scrivibili a schermo, e l’esempio svolto per intero, 11 pagine. Si tengono aperti accanto."
+          "a": "Due file PDF: il worksheet da compilare, 17 pagine con i campi scrivibili a schermo, e l’esempio svolto per intero, 11 pagine. Si tengono aperti accanto."
         },
         {
           "q": "Quanto tempo serve per completarlo?",
@@ -426,10 +439,6 @@
         {
           "q": "Il Mini-Kit basta, o mi serve la consulenza?",
           "a": "Il Mini-Kit risolve il posizionamento. Se il blocco è altrove, nell’offerta, nel prezzo, nei canali o nel percorso d’acquisto, serve un lavoro costruito sul tuo caso: si parte dalla call gratuita, che è gratis proprio per questo."
-        },
-        {
-          "q": "Posso chiedere il rimborso?",
-          "a": "Il Mini-Kit si scarica subito dopo il pagamento. Al momento dell’acquisto rinunci al diritto di recesso, ed è la spunta che trovi in cassa."
         },
         {
           "q": "Come ricevo la checklist gratuita?",
@@ -567,10 +576,12 @@
           "go": "Vai alla Checklist"
         },
         {
-          "k": "Digitale · Fai da te",
+          "k": "In arrivo · Lista d’attesa",
           "t": "Mini-Kit Ink the Gap",
-          "p": "Il tuo posizionamento nero su bianco, in un weekend.",
-          "go": "Vai al Mini-Kit"
+          "p": "Il tuo posizionamento nero su bianco, in un weekend. Non è ancora acquistabile: entra in lista e ti avviso quando apre.",
+          "go": "Entra in lista d’attesa",
+          "priceLabel": "all’apertura · non ancora acquistabile",
+          "cta": "Entra in lista d’attesa"
         },
         {
           "k": "Percorso · Insieme",
@@ -585,15 +596,6 @@
       "occh": "Checklist gratuita",
       "h2": "<line>Il tuo prodotto</line><line>è <ink>pronto</ink> per</line><line>il mercato?</line>",
       "lead": "12 domande da farti prima di lanciare, o di investire ancora. Le stesse che faccio ai miei clienti nella prima call. Dieci minuti, e sai dove sono i buchi da colmare.",
-      "label": "La tua email",
-      "placeholder": "nome@esempio.it",
-      "consent": "Accetto la <privacy>privacy policy</privacy> e voglio ricevere la checklist via email.",
-      "cta": "Ricevi la checklist",
-      "micro": "PDF gratuito. Niente spam, ti scrivo solo quando ho qualcosa di utile.",
-      "errorEmail": "Controlla l’indirizzo email.",
-      "errorConsent": "Serve il tuo consenso per inviarti la checklist.",
-      "sentTitle": "Ci siamo quasi.",
-      "sentText": "Ti ho scritto un’email: conferma con un clic e la checklist arriva nella tua inbox.",
       "facts": [
         {
           "value": "12",
@@ -619,9 +621,34 @@
       "occh": "Call esplorativa gratuita",
       "title": "Parliamone.",
       "p": "Se hai un prodotto che stai per lanciare, o uno che non sta decollando come vorresti, scrivimi. Iniziamo con una call esplorativa gratuita: capire se posso aiutarti non ti costa nulla.",
-      "cta": "Prenota la call gratuita →",
-      "or": "oppure",
+      "cta": "Richiedi la call gratuita →",
       "badge": "call gratuita · 30 minuti · nessun impegno · "
+    }
+  },
+  "forms": {
+    "errorEmail": "Controlla l’email: sembra incompleta.",
+    "errorTechnical": "Qualcosa non ha funzionato. Riprova tra un minuto, oppure scrivimi a {email}.",
+    "updates": "Voglio ricevere anche le email di Valentina su posizionamento e go-to-market. Puoi cancellarti quando vuoi.",
+    "privacyNote": "Come uso i tuoi dati: <privacy>Privacy policy</privacy>.",
+    "spam": "Se non la vedi, controlla nello spam."
+  },
+  "optin": {
+    "checklist": {
+      "emailLabel": "La tua email",
+      "emailPlaceholder": "nome@esempio.it",
+      "cta": "Scarica la checklist gratuita",
+      "note": "Ti mando la checklist e ti chiedo di confermare l’email.",
+      "sent": "Ci sei quasi. Ti ho mandato un’email: conferma l’indirizzo con un clic e ti arriva la checklist."
+    },
+    "minikit": {
+      "price": "Prezzo all’apertura: {price}",
+      "emailLabel": "La tua email",
+      "emailPlaceholder": "nome@esempio.it",
+      "productLabel": "Che prodotto vuoi posizionare?",
+      "productPlaceholder": "Es. una linea di tè biologici in capsule",
+      "cta": "Entra in lista d’attesa",
+      "note": "Iscriversi non vuol dire comprare: è solo un avviso.",
+      "sent": "Ci sei quasi. Ti ho mandato un’email: conferma l’indirizzo con un clic e sei in lista."
     }
   }
 }

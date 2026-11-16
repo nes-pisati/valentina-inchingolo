@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Footer from './Footer/Footer'
 
-const HIDE_FOOTER = /^\/(it|en)\/contatti\/?$/
+const HIDE_FOOTER = /^\/it\/contatti\/?$/
 
 export default function ConditionalFooter() {
   const pathname = usePathname()

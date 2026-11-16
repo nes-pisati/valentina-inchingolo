@@ -7,10 +7,9 @@ import { useTranslations, useLocale } from 'next-intl'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import styles from './Header.module.css'
 import LetterRoll from '../../motion/LetterRoll/LetterRoll'
-import { EN_PUBLISHED } from '../../../lib/locales'
 
 const WORDMARK = 'Valentina Inchingolo · Ink the Gap'
-const ON_DARK = /^\/(it|en)\/contatti\/?$/
+const ON_DARK = /^\/it\/contatti\/?$/
 const SCROLL_THRESHOLD = 24
 const DELTA = 6
 const EASE_PANEL = [0.76, 0, 0.24, 1] as const
@@ -124,32 +123,6 @@ export default function Header() {
             </li>
           </ul>
 
-          {EN_PUBLISHED && (
-            <ul className={styles.langs} aria-label="Lingua">
-              <li>
-                <Link
-                  href="/it"
-                  className={`${styles.lang} ${locale === 'it' ? styles.langActive : ''}`}
-                  aria-current={locale === 'it' ? 'true' : undefined}
-                >
-                  IT
-                </Link>
-              </li>
-              <li aria-hidden="true" className={styles.langSep}>
-                /
-              </li>
-              <li>
-                <Link
-                  href="/en"
-                  className={`${styles.lang} ${locale === 'en' ? styles.langActive : ''}`}
-                  aria-current={locale === 'en' ? 'true' : undefined}
-                >
-                  EN
-                </Link>
-              </li>
-            </ul>
-          )}
-
           <button
             type="button"
             className={styles.burger}
@@ -222,43 +195,6 @@ export default function Header() {
                   </Link>
                 </motion.li>
               </motion.ul>
-
-              {EN_PUBLISHED && (
-                <motion.ul
-                  className={styles.drawerLangs}
-                  aria-label="Lingua"
-                  variants={itemVariants}
-                  initial="closed"
-                  animate="open"
-                  exit="closed"
-                >
-                  <li>
-                    <Link
-                      href="/it"
-                      className={`${styles.drawerLang} ${
-                        locale === 'it' ? styles.drawerLangActive : ''
-                      }`}
-                      aria-current={locale === 'it' ? 'true' : undefined}
-                    >
-                      IT
-                    </Link>
-                  </li>
-                  <li aria-hidden="true" className={styles.drawerLangSep}>
-                    /
-                  </li>
-                  <li>
-                    <Link
-                      href="/en"
-                      className={`${styles.drawerLang} ${
-                        locale === 'en' ? styles.drawerLangActive : ''
-                      }`}
-                      aria-current={locale === 'en' ? 'true' : undefined}
-                    >
-                      EN
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
             </motion.div>
           </>
         )}

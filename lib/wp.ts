@@ -1,6 +1,6 @@
 // Dati dei progetti — mock locali con la stessa forma del CPT in attesa del CMS.
 
-export type Locale = 'it' | 'en'
+export type Locale = 'it'
 
 export type ProjectMeta = {
   label: string
@@ -58,13 +58,10 @@ export type Project = {
 }
 
 import mypollyIt from '../content/projects/mypolly.it.json'
-import mypollyEn from '../content/projects/mypolly.en.json'
 import biodiversaIt from '../content/projects/app-biodiversa.it.json'
-import biodiversaEn from '../content/projects/app-biodiversa.en.json'
 
 const MOCK: Record<Locale, Project[]> = {
   it: [mypollyIt, biodiversaIt] as Project[],
-  en: [mypollyEn, biodiversaEn] as Project[],
 }
 
 export async function getProject(locale: Locale, slug: string): Promise<Project | null> {

@@ -34,7 +34,6 @@ export async function generateMetadata({
     description: t('description'),
     alternates: {
       canonical: `/${lang}`,
-      languages: { it: '/it', en: '/en' },
     },
     openGraph: {
       title: t('title'),

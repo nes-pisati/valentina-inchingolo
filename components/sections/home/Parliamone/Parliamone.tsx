@@ -1,7 +1,5 @@
 import { getTranslations } from 'next-intl/server'
 import PillButton from '../../../ui/PillButton/PillButton'
-import LetterRoll from '../../../motion/LetterRoll/LetterRoll'
-import { CONTACTS } from '../../../../lib/contacts'
 import { cx } from '../../soluzioni/richTags'
 import l from '../../soluzioni/soluzioni.module.css'
 import styles from './Parliamone.module.css'
@@ -44,14 +42,6 @@ export default async function Parliamone({ lang }: { lang: string }) {
           </p>
           <div className={styles.actions} data-rv="fade">
             <PillButton variant="coral" href={`/${lang}/contatti`} label={t('cta')} />
-            <p className={styles.alt}>
-              <span>{t('or')}</span>
-              <LetterRoll
-                href={`mailto:${CONTACTS.email}`}
-                text={CONTACTS.email}
-                className={styles.mail}
-              />
-            </p>
           </div>
         </div>
       </div>

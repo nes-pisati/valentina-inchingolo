@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import MediaReveal from '../../../ui/MediaReveal/MediaReveal'
-import CheckoutButton from '../CheckoutButton/CheckoutButton'
+import OptinForm from '../../../ui/OptinForm/OptinForm'
 import { formatPrice } from '../../../../lib/formatPrice'
 import type { Price } from '../../../../lib/prices'
 import { cx, lineTags } from '../richTags'
@@ -18,15 +18,17 @@ type Props = {
 
 export default async function MiniKitSection({ lang, price }: Props) {
   const t = await getTranslations({ locale: lang, namespace: 'soluzioni.minikit' })
+  const tOptin = await getTranslations({ locale: lang, namespace: 'optin.minikit' })
   const receive = t.raw('receive') as Row[]
   const rows = t.raw('rows') as Row[]
+  const specs = t.raw('specs') as string[]
   const amount = formatPrice(price.amount, lang)
 
   return (
     <section id="minikit" className={cx(p.section, p.dark)}>
       <div className={cx(l.container, l.grid, p.inner)}>
         <div className={cx(p.text, styles.text)}>
-          <p className={cx(l.occh, l.occhOnInk)}>{t('occh', { price: amount })}</p>
+          <p className={cx(l.occh, l.occhOnInk)}>{t('occh')}</p>
           <h2 className={cx(l.h2, p.h2)} data-rv="lines">
             {t.rich('h2', lineTags())}
           </h2>
@@ -34,17 +36,24 @@ export default async function MiniKitSection({ lang, price }: Props) {
             {t('lead')}
           </p>
 
-          <div className={styles.priceBlock} data-rv="fade">
-            <span className={styles.amount}>{amount}</span>
-            {price.compareAt && (
-              <s className={styles.was}>{formatPrice(price.compareAt, lang)}</s>
-            )}
-            <span className={styles.priceNote}>{t('priceNote')}</span>
+          <div className={styles.specs} data-rv="fade">
+            <p className={p.listTitle}>{t('specsTitle')}</p>
+            <ul className={styles.specList}>
+              {specs.map(spec => (
+                <li key={spec} className={styles.spec}>
+                  {spec}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className={p.ctaRow} data-rv="fade">
-            <CheckoutButton product="minikit" variant="light-coral" label={t('cta', { price: amount })} />
-            <p className={p.micro}>{t('ctaMicro')}</p>
+          <div className={styles.waitlist} data-rv="fade">
+            <div className={styles.status}>
+              <p className={styles.statusTitle}>{t('status.title')}</p>
+              <p className={styles.statusText}>{t('status.text')}</p>
+            </div>
+            <p className={styles.priceLine}>{tOptin('price', { price: amount })}</p>
+            <OptinForm kind="minikit" tone="dark" />
           </div>
 
           <div className={p.list}>

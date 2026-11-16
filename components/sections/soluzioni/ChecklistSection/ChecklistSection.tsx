@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import MediaReveal from '../../../ui/MediaReveal/MediaReveal'
-import ChecklistButton from './ChecklistButton'
+import OptinForm from '../../../ui/OptinForm/OptinForm'
 import { cx, lineTags } from '../richTags'
 import l from '../soluzioni.module.css'
 import p from '../product.module.css'
@@ -23,9 +23,8 @@ export default async function ChecklistSection({ lang }: { lang: string }) {
           <p className={cx(l.lead, p.lead)} data-rv="fade">
             {t('lead')}
           </p>
-          <div className={p.ctaRow} data-rv="fade">
-            <ChecklistButton label={t('cta')} />
-            <p className={p.micro}>{t('micro')}</p>
+          <div data-rv="fade">
+            <OptinForm kind="checklist" source="soluzioni" />
           </div>
 
           <div className={p.list}>

@@ -7,7 +7,15 @@ import l from '../../soluzioni/soluzioni.module.css'
 import c from '../../soluzioni/LivelliCards/LivelliCards.module.css'
 import styles from './SoluzioniSintesi.module.css'
 
-type Card = { k: string; t: string; p: string; go: string; price?: string }
+type Card = {
+  k: string
+  t: string
+  p: string
+  go: string
+  price?: string
+  priceLabel?: string
+  cta?: string
+}
 
 type Props = {
   lang: string
@@ -72,11 +80,21 @@ export default async function SoluzioniSintesi({ lang, prices }: Props) {
                 </div>
 
                 <div className={c.foot} data-card-part>
-                  <span className={c.amount}>{amounts[i]}</span>
-                  <span className={c.go} aria-hidden="true">
-                    <svg className={c.arrow} data-arrow viewBox="0 0 16 16">
-                      <path d="M3 13 13 3M5 3h8v8" />
-                    </svg>
+                  <div className={c.price}>
+                    <span className={c.amount}>{amounts[i]}</span>
+                    {card.priceLabel && <span className={c.priceLabel}>{card.priceLabel}</span>}
+                  </div>
+                  <span className={c.goWrap}>
+                    {card.cta && (
+                      <span className={c.goText} aria-hidden="true">
+                        {card.cta}
+                      </span>
+                    )}
+                    <span className={c.go} aria-hidden="true">
+                      <svg className={c.arrow} data-arrow viewBox="0 0 16 16">
+                        <path d="M3 13 13 3M5 3h8v8" />
+                      </svg>
+                    </span>
                   </span>
                   <span className={l.srOnly}>{card.go}</span>
                 </div>

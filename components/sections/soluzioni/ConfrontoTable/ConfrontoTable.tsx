@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import PillButton from '../../../ui/PillButton/PillButton'
-import CheckoutButton from '../CheckoutButton/CheckoutButton'
 import ConfrontoSwitch from './ConfrontoSwitch'
 import { formatPrice } from '../../../../lib/formatPrice'
 import type { Price } from '../../../../lib/prices'
@@ -112,11 +111,7 @@ export default async function ConfrontoTable({ lang, price }: Props) {
               rows={t.raw('minikit.rows') as Rows}
               labels={labels}
               cta={
-                <CheckoutButton
-                  product="minikit"
-                  variant="coral"
-                  label={t('minikit.cta', { price: amount })}
-                />
+                <PillButton variant="coral" href="#minikit" label={t('minikit.cta')} />
               }
             />
 
