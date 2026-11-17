@@ -223,7 +223,7 @@
     },
     "hero": {
       "kick": "Soluzioni",
-      "title": "<line>Ogni prodotto</line><line>ha la sua strada.</line><line>Scegli <ink>da</ink></line><line><ink>dove partire.</ink></line>",
+      "title": "<line>Ogni prodotto</line><line>ha la sua strada.</line><line>Scegli</line><line><ink>da dove partire.</ink></line>",
       "lead": "Che tu stia per lanciare o abbia già lanciato senza i risultati che speravi, qui trovi tre modi di lavorare insieme: dal fai da te guidato all’affiancamento completo. Più sali, più cammino facciamo fianco a fianco.",
       "idx": "Tre livelli"
     },
@@ -270,7 +270,7 @@
         "k": "In arrivo, lista d’attesa",
         "t": "Mini-Kit Ink the Gap",
         "p": "Il worksheet per costruire il tuo posizionamento in un weekend. Non è ancora acquistabile: entra in lista e ti scrivo appena apre.",
-        "priceLabel": "all’apertura · non ancora acquistabile",
+        "priceLabel": "all’apertura ·\nnon ancora acquistabile",
         "go": "Entra in lista d’attesa",
         "cta": "Entra in lista d’attesa"
       },
@@ -580,7 +580,7 @@
           "t": "Mini-Kit Ink the Gap",
           "p": "Il tuo posizionamento nero su bianco, in un weekend. Non è ancora acquistabile: entra in lista e ti avviso quando apre.",
           "go": "Entra in lista d’attesa",
-          "priceLabel": "all’apertura · non ancora acquistabile",
+          "priceLabel": "all’apertura ·\nnon ancora acquistabile",
           "cta": "Entra in lista d’attesa"
         },
         {
@@ -649,6 +649,63 @@
       "cta": "Entra in lista d’attesa",
       "note": "Iscriversi non vuol dire comprare: è solo un avviso.",
       "sent": "Ci sei quasi. Ti ho mandato un’email: conferma l’indirizzo con un clic e sei in lista."
+    }
+  },
+  "emails": {
+    "senderName": "Valentina Inchingolo · Ink the Gap",
+    "checklistConfirm": {
+      "subject": "Un clic e ti mando la checklist",
+      "preview": "Serve solo a confermare che l’indirizzo è tuo.",
+      "before": [
+        "Ciao,",
+        "hai chiesto la Checklist Ink the Gap: dodici domande per capire se il tuo prodotto è pronto per il mercato.",
+        "Prima di mandartela devo essere sicura che questo indirizzo sia davvero tuo. Basta un clic."
+      ],
+      "cta": "Conferma e ricevi la checklist",
+      "after": [
+        "Se non l’hai chiesta tu, ignora questa email: senza il clic non ti scrivo più.",
+        "Valentina"
+      ]
+    },
+    "checklistDelivery": {
+      "subject": "La tua Checklist Ink the Gap",
+      "preview": "Dodici domande, dieci minuti, una regola sola.",
+      "before": [
+        "Ciao,",
+        "eccola."
+      ],
+      "cta": "Scarica la checklist",
+      "after": [
+        "Dodici domande, dieci minuti, e una regola sola: un sì vale solo se potresti dimostrarlo a una persona esterna. «Più o meno» conta come no, ed è proprio lì che di solito si nascondono i buchi.",
+        "Un consiglio su come usarla. Non contare soltanto quanti no hai: guarda dove sono. Tre no sparsi sono fisiologici, tre no nella stessa area sono un messaggio, ed è da lì che conviene ripartire. La chiave di lettura la trovi in fondo alla checklist.",
+        "Se ti va, rispondi a questa email e dimmi dove sono finiti i tuoi no. Le leggo tutte.",
+        "Valentina Inchingolo · Ink the Gap"
+      ]
+    },
+    "waitlistConfirm": {
+      "subject": "Conferma la tua email per la lista del Mini-Kit",
+      "before": [
+        "Ciao,\nun clic per confermare che questo indirizzo è tuo ed entrare nella lista d’attesa del Mini-Kit Ink the Gap."
+      ],
+      "cta": "Confermo",
+      "after": [
+        "Se non hai chiesto tu di entrare nella lista, ignora questa email: non riceverai altro.",
+        "Valentina"
+      ]
+    },
+    "waitlistWelcome": {
+      "subject": "Sei nella lista del Mini-Kit",
+      "before": [
+        "Ciao,\nsei in lista. Appena il Mini-Kit Ink the Gap è disponibile ti scrivo, con il link per averlo.",
+        "Una domanda, se ti va: qual è la frase che oggi usi per spiegare il tuo prodotto?\nRispondi a questa email, la leggo io.",
+        "Valentina"
+      ]
+    },
+    "callRequest": {
+      "subject": "Nuova richiesta call: {subject}",
+      "intro": "Nuova richiesta di call dal sito.",
+      "sentAt": "Inviata il {date}",
+      "empty": "(non indicato)"
     }
   }
 }

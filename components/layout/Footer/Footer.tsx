@@ -61,8 +61,8 @@ export default function Footer() {
             ease: 'none',
             scrollTrigger: {
               trigger: sentinel.current,
-              start: 'top bottom',
-              end: 'top top',
+              start: () => `top-=${footer.current!.offsetHeight} bottom`,
+              end: 'top bottom',
               scrub: 0.5,
               invalidateOnRefresh: true,
             },
@@ -117,7 +117,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn ↗
+                LinkedIn {"↗\uFE0E"}
               </a>
               <p className={styles.tagline}>{t('tagline')}</p>
             </div>

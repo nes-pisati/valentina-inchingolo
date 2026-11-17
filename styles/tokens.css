@@ -26,6 +26,7 @@
 
   /* Footer "sipario" — usata dal footer fixed e dal margin del contenuto */
   --footer-h: 100vh;
+  --footer-h: 100svh;
 
   /* Overlap ExpandMedia <-> Manifesto */
   --expand-enter: 100svh;

@@ -191,13 +191,21 @@
 
 @media (max-width: 768px) {
   .footer {
-    height: auto;
-    min-height: var(--footer-h);
+    padding-top: clamp(5.5rem, 13svh, 7rem);
   }
 
   .cols {
     grid-template-columns: 1fr;
-    gap: clamp(1.8rem, 6vh, 3rem);
+    gap: clamp(1.5rem, 4svh, 2.5rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .label {
+    margin-bottom: 0.9rem;
+  }
+
+  .tagline {
+    margin-top: 0.9rem;
   }
 
   .email {
