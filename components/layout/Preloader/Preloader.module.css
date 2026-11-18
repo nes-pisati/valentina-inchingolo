@@ -11,6 +11,10 @@
   will-change: transform;
 }
 
+.off {
+  display: none;
+}
+
 .counter {
   display: flex;
   align-items: flex-start;

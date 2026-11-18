@@ -170,6 +170,28 @@
   opacity: 0.55;
 }
 
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.6rem;
+  margin-left: auto;
+  margin-right: 1.6rem;
+}
+
+.legalLink {
+  color: var(--color-osso);
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity var(--duration-fast) var(--ease-out-expo),
+    color var(--duration-fast) var(--ease-out-expo);
+}
+
+.legalLink:hover,
+.legalLink:focus-visible {
+  opacity: 1;
+  color: var(--color-corallo);
+}
+
 .backToTop {
   appearance: none;
   border: none;
@@ -221,5 +243,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
+  }
+
+  .legal {
+    margin: 0;
   }
 }

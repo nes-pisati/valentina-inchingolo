@@ -214,7 +214,10 @@
     "navLabel": "Naviga",
     "tagline": "Consulenza go-to-market per founder e brand di prodotto. Lavoro in remoto.",
     "rights": "© 2026 Valentina Inchingolo",
-    "backToTop": "Torna su"
+    "backToTop": "Torna su",
+    "legalLabel": "Note legali",
+    "privacy": "Privacy policy",
+    "cookie": "Cookie policy"
   },
   "soluzioni": {
     "meta": {
@@ -706,6 +709,388 @@
       "intro": "Nuova richiesta di call dal sito.",
       "sentAt": "Inviata il {date}",
       "empty": "(non indicato)"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "meta": {
+        "title": "Privacy policy | Valentina Inchingolo · Ink the Gap",
+        "description": "Informativa sul trattamento dei dati personali raccolti attraverso il sito di Valentina Inchingolo · Ink the Gap."
+      },
+      "eyebrow": "Privacy policy",
+      "title": "Informativa sul trattamento dei dati personali",
+      "updated": "Ultimo aggiornamento: 18 novembre 2026",
+      "intro": [
+        "Questa informativa spiega quali dati personali raccolgo attraverso questo sito, perché li raccolgo, per quanto tempo li conservo e quali sono i tuoi diritti. È resa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (\"GDPR\")."
+      ],
+      "sections": [
+        {
+          "title": "1. Chi è il titolare del trattamento",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Valentina Inchingolo<br>Email: valentina.inchingolo@gmail.com"
+            },
+            {
+              "type": "p",
+              "text": "Per qualsiasi domanda su questa informativa o sui tuoi dati puoi scrivere a questo indirizzo. Non è stato nominato un responsabile della protezione dei dati (DPO), perché non è obbligatorio per questa attività."
+            }
+          ]
+        },
+        {
+          "title": "2. Quali dati raccolgo e perché",
+          "blocks": [
+            {
+              "type": "h3",
+              "text": "2.1 Download della Checklist gratuita"
+            },
+            {
+              "type": "fields",
+              "items": [
+                {
+                  "label": "Dati",
+                  "text": "indirizzo email."
+                },
+                {
+                  "label": "Finalità",
+                  "text": "inviarti la Checklist che hai richiesto e confermare che l'indirizzo è tuo (doppia conferma)."
+                },
+                {
+                  "label": "Base giuridica",
+                  "text": "esecuzione di una tua richiesta (art. 6.1.b GDPR)."
+                },
+                {
+                  "label": "Conservazione",
+                  "text": "fino a 12 mesi dalla richiesta, se non hai dato il consenso al punto 2.2."
+                }
+              ]
+            },
+            {
+              "type": "h3",
+              "text": "2.2 Email di aggiornamento (solo con il tuo consenso)"
+            },
+            {
+              "type": "fields",
+              "items": [
+                {
+                  "label": "Dati",
+                  "text": "indirizzo email, data e ora in cui hai dato il consenso."
+                },
+                {
+                  "label": "Finalità",
+                  "text": "inviarti email su posizionamento, go-to-market e sulle mie offerte."
+                },
+                {
+                  "label": "Base giuridica",
+                  "text": "il tuo consenso (art. 6.1.a GDPR), separato e facoltativo. Puoi scaricare la Checklist o iscriverti alla lista d'attesa anche senza darlo."
+                },
+                {
+                  "label": "Conservazione",
+                  "text": "fino a quando revochi il consenso. Puoi farlo in ogni momento con il link presente in ogni email o scrivendomi. Gli indirizzi che non aprono nessuna email per 24 mesi vengono cancellati."
+                }
+              ]
+            },
+            {
+              "type": "h3",
+              "text": "2.3 Lista d'attesa del Mini-Kit"
+            },
+            {
+              "type": "fields",
+              "items": [
+                {
+                  "label": "Dati",
+                  "text": "indirizzo email e, se scegli di indicarlo, il prodotto che vuoi posizionare."
+                },
+                {
+                  "label": "Finalità",
+                  "text": "avvisarti quando il Mini-Kit sarà disponibile; usare le risposte facoltative, in forma aggregata, per capire per quali prodotti viene richiesto."
+                },
+                {
+                  "label": "Base giuridica",
+                  "text": "esecuzione di una tua richiesta (art. 6.1.b GDPR) per l'avviso; legittimo interesse a migliorare il prodotto (art. 6.1.f GDPR) per l'uso aggregato delle risposte."
+                },
+                {
+                  "label": "Conservazione",
+                  "text": "fino all'invio dell'email che annuncia la disponibilità del Mini-Kit e per i 30 giorni successivi. Puoi uscire dalla lista prima, in ogni momento, con il link presente nelle email o scrivendomi."
+                }
+              ]
+            },
+            {
+              "type": "h3",
+              "text": "2.4 Richiesta della call gratuita"
+            },
+            {
+              "type": "fields",
+              "items": [
+                {
+                  "label": "Dati",
+                  "text": "nome, email e le risposte che dai nel form: il tuo prodotto, a che punto sei, cosa vorresti capire nella call. Insieme alle risposte vengono registrate data e ora dell'invio."
+                },
+                {
+                  "label": "Finalità",
+                  "text": "valutare la richiesta, ricontattarti e organizzare la call."
+                },
+                {
+                  "label": "Base giuridica",
+                  "text": "misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR)."
+                },
+                {
+                  "label": "Conservazione",
+                  "text": "24 mesi dall'invio del form, se alla call non segue un incarico. Se segue un incarico, i dati vengono conservati per la durata del rapporto e poi per i tempi previsti dalla legge."
+                }
+              ]
+            },
+            {
+              "type": "h3",
+              "text": "2.5 Email che mi scrivi direttamente"
+            },
+            {
+              "type": "fields",
+              "items": [
+                {
+                  "label": "Dati",
+                  "text": "quelli che scegli di inserire nel messaggio."
+                },
+                {
+                  "label": "Finalità",
+                  "text": "risponderti."
+                },
+                {
+                  "label": "Base giuridica",
+                  "text": "tua richiesta (art. 6.1.b GDPR) o mio legittimo interesse a rispondere alla corrispondenza (art. 6.1.f GDPR)."
+                },
+                {
+                  "label": "Conservazione",
+                  "text": "fino a 24 mesi dall'ultimo scambio, salvo che diventi un rapporto di lavoro."
+                }
+              ]
+            },
+            {
+              "type": "h3",
+              "text": "2.6 Dati di navigazione"
+            },
+            {
+              "type": "p",
+              "text": "<b>Dati tecnici:</b> i server che ospitano il sito registrano automaticamente alcuni dati necessari al funzionamento e alla sicurezza (ad esempio indirizzo IP, tipo di browser, pagine richieste). Base giuridica: legittimo interesse alla sicurezza e al funzionamento del sito (art. 6.1.f GDPR)."
+            },
+            {
+              "type": "p",
+              "text": "<b>Statistiche:</b> il sito non usa strumenti di statistica come Google Analytics né cookie di profilazione. I dettagli sono nella <a href=\"/it/cookie\">Cookie policy</a>."
+            }
+          ]
+        },
+        {
+          "title": "3. Obbligatorietà dei dati",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "I dati obbligatori nei form sono necessari per darti quello che chiedi: senza, non posso inviarti la Checklist, avvisarti dell'apertura del Mini-Kit o ricontattarti per la call. Il consenso alle email di aggiornamento è facoltativo e il rifiuto non ha conseguenze sull'uso del sito."
+            }
+          ]
+        },
+        {
+          "title": "4. A chi vengono comunicati i dati",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "I dati non vengono venduti né ceduti a terzi per fini propri. Possono trattarli, per mio conto e solo per le finalità indicate, questi fornitori, nominati responsabili del trattamento:"
+            },
+            {
+              "type": "table",
+              "head": [
+                "Fornitore",
+                "Servizio",
+                "Sede"
+              ],
+              "rows": [
+                [
+                  "Render Services, Inc.",
+                  "Hosting del sito",
+                  "Stati Uniti"
+                ],
+                [
+                  "Brevo (Sendinblue SAS)",
+                  "Invio della Checklist e delle email, gestione delle liste",
+                  "Francia (UE)"
+                ],
+                [
+                  "Google Ireland Limited",
+                  "Posta elettronica, videochiamate",
+                  "Irlanda (UE)"
+                ],
+                [
+                  "Cloudflare, Inc.",
+                  "Protezione e sicurezza del sito",
+                  "Stati Uniti"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "I dati possono essere comunicati al mio commercialista per gli adempimenti fiscali e alle autorità quando la legge lo richiede."
+            }
+          ]
+        },
+        {
+          "title": "5. Trasferimenti fuori dall'Unione europea",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Alcuni fornitori hanno sede negli Stati Uniti o possono trattare dati negli Stati Uniti. In questi casi il trasferimento avviene sulla base della decisione di adeguatezza della Commissione europea del 10 luglio 2023 (EU-U.S. Data Privacy Framework), per i fornitori certificati, oppure delle clausole contrattuali standard approvate dalla Commissione."
+            }
+          ]
+        },
+        {
+          "title": "6. I tuoi diritti",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Puoi in ogni momento chiedere di:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "accedere ai tuoi dati e riceverne una copia;",
+                "correggerli o completarli;",
+                "cancellarli;",
+                "limitarne il trattamento;",
+                "riceverli in un formato leggibile da macchina o trasferirli a un altro titolare (portabilità);",
+                "opporti al trattamento basato sul legittimo interesse;",
+                "revocare il consenso, senza effetti sui trattamenti già fatti."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Basta scrivere a valentina.inchingolo@gmail.com. Rispondo entro un mese."
+            },
+            {
+              "type": "p",
+              "text": "Se ritieni che il trattamento violi il GDPR, puoi presentare reclamo al Garante per la protezione dei dati personali (garanteprivacy.it)."
+            }
+          ]
+        },
+        {
+          "title": "7. Decisioni automatizzate",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Non uso i tuoi dati per decisioni automatizzate né per profilazione."
+            }
+          ]
+        },
+        {
+          "title": "8. Minori",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Il sito e i prodotti sono rivolti a persone maggiorenni."
+            }
+          ]
+        },
+        {
+          "title": "9. Modifiche",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Questa informativa può essere aggiornata. La versione in vigore è sempre questa pagina, con la data dell'ultimo aggiornamento in alto."
+            }
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "meta": {
+        "title": "Cookie policy | Valentina Inchingolo · Ink the Gap",
+        "description": "Quali cookie e strumenti simili usa il sito di Valentina Inchingolo · Ink the Gap e come gestirli."
+      },
+      "eyebrow": "Cookie policy",
+      "title": "Cookie policy",
+      "updated": "Ultimo aggiornamento: 18 novembre 2026",
+      "intro": [],
+      "sections": [
+        {
+          "title": "1. Cosa sono i cookie",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "I cookie sono piccoli file che un sito salva nel tuo browser. Servono, ad esempio, a farlo funzionare, a ricordare le tue scelte o a raccogliere statistiche. Questa pagina usa la parola \"cookie\" anche per strumenti simili, come il salvataggio locale nel browser."
+            },
+            {
+              "type": "p",
+              "text": "Titolare: Valentina Inchingolo, valentina.inchingolo@gmail.com. L'informativa completa sul trattamento dei dati è nella <a href=\"/it/privacy\">Privacy policy</a>."
+            }
+          ]
+        },
+        {
+          "title": "2. Quali cookie usa questo sito",
+          "blocks": [
+            {
+              "type": "h3",
+              "text": "2.1 Cookie tecnici, sempre attivi"
+            },
+            {
+              "type": "p",
+              "text": "Servono al funzionamento e alla sicurezza del sito. Non richiedono consenso."
+            },
+            {
+              "type": "h3",
+              "text": "2.2 Nessun cookie di statistica o pubblicitario"
+            },
+            {
+              "type": "p",
+              "text": "Questo sito non usa strumenti di statistica come Google Analytics e non usa cookie di profilazione o pubblicitari."
+            },
+            {
+              "type": "h3",
+              "text": "2.3 Elenco"
+            },
+            {
+              "type": "table",
+              "head": [
+                "Nome",
+                "Fornitore",
+                "Categoria",
+                "Scopo",
+                "Durata"
+              ],
+              "rows": [
+                [
+                  "<code>valeink-intro-seen</code>",
+                  "Questo sito",
+                  "Tecnico (salvataggio locale)",
+                  "Evita di mostrarti di nuovo l'animazione iniziale durante la stessa visita",
+                  "Fino alla chiusura della scheda"
+                ],
+                [
+                  "<code>__cf_bm</code>",
+                  "Cloudflare",
+                  "Tecnico",
+                  "Protegge il sito da traffico automatico",
+                  "30 minuti"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. Come gestire le tue scelte",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Il sito usa solo cookie tecnici, che non richiedono consenso: per questo non trovi un banner dei cookie. Puoi comunque cancellare i cookie e i dati salvati dalle impostazioni del browser."
+            }
+          ]
+        },
+        {
+          "title": "4. Modifiche",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Questa cookie policy può essere aggiornata. La versione in vigore è sempre questa pagina, con la data dell'ultimo aggiornamento in alto."
+            }
+          ]
+        }
+      ]
     }
   }
 }

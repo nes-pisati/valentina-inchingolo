@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -10,10 +11,12 @@ import styles from './Preloader.module.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const SEEN_KEY = 'valeink-intro-seen'
+const NO_PRELOADER = /^\/it\/(privacy|cookie)\/?$/
 
 export default function Preloader() {
   const overlay = useRef<HTMLDivElement>(null)
   const value = useRef<HTMLSpanElement>(null)
+  const skip = NO_PRELOADER.test(usePathname())
 
   useGSAP(
     () => {
@@ -33,7 +36,7 @@ export default function Preloader() {
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       const seen = sessionStorage.getItem(SEEN_KEY)
 
-      if (seen || prefersReduced) {
+      if (seen || prefersReduced || skip) {
         finish()
         signalIntro() 
         return
@@ -68,7 +71,12 @@ export default function Preloader() {
   )
 
   return (
-    <div ref={overlay} className={styles.overlay} data-preloader aria-hidden="true">
+    <div
+      ref={overlay}
+      className={`${styles.overlay} ${skip ? styles.off : ''}`}
+      data-preloader
+      aria-hidden="true"
+    >
       <div className={styles.counter}>
         <span ref={value} className={styles.value}>
           00

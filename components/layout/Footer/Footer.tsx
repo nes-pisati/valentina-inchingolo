@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -171,6 +172,14 @@ export default function Footer() {
 
           <div className={styles.meta}>
             <span>{t('rights')}</span>
+            <nav className={styles.legal} aria-label={t('legalLabel')}>
+              <Link href={`/${locale}/privacy`} className={styles.legalLink}>
+                {t('privacy')}
+              </Link>
+              <Link href={`/${locale}/cookie`} className={styles.legalLink}>
+                {t('cookie')}
+              </Link>
+            </nav>
             <button type="button" className={styles.backToTop} onClick={scrollTop}>
               {t('backToTop')} ↑
             </button>

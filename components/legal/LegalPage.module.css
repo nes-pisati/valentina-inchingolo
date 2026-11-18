@@ -1,0 +1,218 @@
+.page {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: clamp(8rem, 20vh, 12rem) var(--container-padding) var(--space-xl);
+  color: var(--color-fango);
+}
+
+.head {
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  border-bottom: 1px solid var(--color-grigio);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  color: var(--color-corallo);
+}
+
+.title {
+  max-width: 18ch;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6.5vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-inchiostro);
+  overflow-wrap: break-word;
+}
+
+.updated {
+  margin-top: var(--space-md);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.intro {
+  max-width: 62ch;
+  margin-top: var(--space-md);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  padding: clamp(2.5rem, 6vh, 4rem) 0;
+  border-bottom: 1px solid var(--color-grigio);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-inchiostro);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 68ch;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.h3 {
+  margin-top: var(--space-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--color-inchiostro);
+}
+
+.content > .h3:first-child {
+  margin-top: 0;
+}
+
+.p strong {
+  font-weight: 700;
+  color: var(--color-inchiostro);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: var(--space-sm);
+}
+
+.fieldLabel {
+  font-weight: 700;
+  color: var(--color-inchiostro);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 1.2rem;
+}
+
+.list li::marker {
+  color: var(--color-corallo);
+}
+
+.link {
+  color: var(--color-inchiostro);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--color-corallo);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+
+.link:hover {
+  color: var(--color-corallo);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-inchiostro);
+  outline-offset: 2px;
+}
+
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  overflow-wrap: anywhere;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.table th {
+  padding: 0 var(--space-sm) var(--space-xs) 0;
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-inchiostro);
+  border-bottom: 1px solid var(--color-inchiostro);
+}
+
+.table td {
+  padding: 0.75rem var(--space-sm) 0.75rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-grigio);
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .field {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .table tr {
+    display: block;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-grigio);
+  }
+
+  .table td {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: var(--space-sm);
+    padding: 0.2rem 0;
+    border-bottom: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 2;
+    color: var(--color-inchiostro);
+  }
+}
