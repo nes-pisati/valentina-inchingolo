@@ -40,30 +40,6 @@
   border-width: 2px;
 }
 
-.consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: 22px;
-  font-size: 14px;
-  line-height: 1.5;
-  cursor: pointer;
-}
-
-.check {
-  flex: none;
-  width: 18px;
-  height: 18px;
-  margin-top: 1px;
-  accent-color: var(--color-inchiostro);
-  cursor: pointer;
-}
-
-.check:focus-visible {
-  outline: 2px solid var(--color-corallo);
-  outline-offset: 3px;
-}
-
 .honeypot {
   position: absolute;
   left: -9999px;
@@ -156,10 +132,6 @@
 
 .dark .label {
   color: var(--color-osso);
-}
-
-.dark .check {
-  accent-color: var(--color-corallo);
 }
 
 .dark .micro {

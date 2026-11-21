@@ -4,8 +4,8 @@ import l from '../../soluzioni/soluzioni.module.css'
 import styles from './Percorsi.module.css'
 
 const PATHS = [
-  { key: 'a', letter: 'A', anchor: 'checklist', event: 'home_percorso_prelancio' },
-  { key: 'b', letter: 'B', anchor: 'minikit', event: 'home_percorso_postlancio' },
+  { key: 'a', letter: 'A', anchor: 'checklist' },
+  { key: 'b', letter: 'B', anchor: 'minikit' },
 ] as const
 
 export default async function Percorsi({ lang }: { lang: string }) {
@@ -29,7 +29,6 @@ export default async function Percorsi({ lang }: { lang: string }) {
               className={cx(styles.card, path.key === 'b' && styles.featured)}
               data-card
               data-hover="card"
-              data-track={path.event}
             >
               <span className={styles.wipe} data-wipe aria-hidden="true" />
               <span className={styles.letter} aria-hidden="true">

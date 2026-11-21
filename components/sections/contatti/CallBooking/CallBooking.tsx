@@ -10,7 +10,6 @@ import {
   parseCallRequest,
   type CallRequestField,
 } from '../../../../lib/callRequestForm'
-import { track } from '../../../../lib/track'
 import styles from './CallBooking.module.css'
 
 gsap.registerPlugin(useGSAP)
@@ -23,7 +22,6 @@ export default function CallBooking() {
   const id = useId()
   const root = useRef<HTMLDivElement>(null)
   const sentTitle = useRef<HTMLHeadingElement>(null)
-  const started = useRef(false)
   const [invalid, setInvalid] = useState<CallRequestField[]>([])
   const [sent, setSent] = useState<Sent | null>(null)
 
@@ -47,12 +45,6 @@ export default function CallBooking() {
     if (sent) sentTitle.current?.focus()
   }, [sent])
 
-  const onFirstInput = () => {
-    if (started.current) return
-    started.current = true
-    track('form_start')
-  }
-
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.currentTarget
@@ -69,7 +61,6 @@ export default function CallBooking() {
       return
     }
 
-    track('form_submit')
     setSent({ name: data.name, email: data.email })
   }
 
@@ -128,7 +119,7 @@ export default function CallBooking() {
 
   return (
     <div ref={root} className={styles.panel}>
-      <form className={styles.form} onSubmit={onSubmit} onInput={onFirstInput} noValidate>
+      <form className={styles.form} onSubmit={onSubmit} noValidate>
         <div className={styles.fields}>
           <div className={styles.field} data-panel-fade>
             <label className={styles.label} htmlFor={`${id}-name`}>
@@ -219,7 +210,12 @@ export default function CallBooking() {
               <span>
                 {t.rich('fields.privacy', {
                   privacy: (chunks: ReactNode) => (
-                    <a className={styles.link} href={`/${locale}/privacy`}>
+                    <a
+                      className={styles.link}
+                      href={`/${locale}/privacy`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {chunks}
                     </a>
                   ),

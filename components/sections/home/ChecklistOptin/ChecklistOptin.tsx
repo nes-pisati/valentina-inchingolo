@@ -22,7 +22,7 @@ export default async function ChecklistOptin({ lang }: { lang: string }) {
             {t('lead')}
           </p>
           <div data-rv="fade">
-            <OptinForm kind="checklist" source="home" />
+            <OptinForm kind="checklist" />
           </div>
         </div>
 

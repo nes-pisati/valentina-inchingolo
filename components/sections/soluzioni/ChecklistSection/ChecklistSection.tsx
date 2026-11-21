@@ -24,7 +24,7 @@ export default async function ChecklistSection({ lang }: { lang: string }) {
             {t('lead')}
           </p>
           <div data-rv="fade">
-            <OptinForm kind="checklist" source="soluzioni" />
+            <OptinForm kind="checklist" />
           </div>
 
           <div className={p.list}>

@@ -631,7 +631,6 @@
   "forms": {
     "errorEmail": "Controlla l’email: sembra incompleta.",
     "errorTechnical": "Qualcosa non ha funzionato. Riprova tra un minuto, oppure scrivimi a {email}.",
-    "updates": "Voglio ricevere anche le email di Valentina su posizionamento e go-to-market. Puoi cancellarti quando vuoi.",
     "privacyNote": "Come uso i tuoi dati: <privacy>Privacy policy</privacy>.",
     "spam": "Se non la vedi, controlla nello spam."
   },
@@ -719,7 +718,7 @@
       },
       "eyebrow": "Privacy policy",
       "title": "Informativa sul trattamento dei dati personali",
-      "updated": "Ultimo aggiornamento: 18 novembre 2026",
+      "updated": "Ultimo aggiornamento: 21 novembre 2026",
       "intro": [
         "Questa informativa spiega quali dati personali raccolgo attraverso questo sito, perché li raccolgo, per quanto tempo li conservo e quali sono i tuoi diritti. È resa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (\"GDPR\")."
       ],
@@ -761,38 +760,13 @@
                 },
                 {
                   "label": "Conservazione",
-                  "text": "fino a 12 mesi dalla richiesta, se non hai dato il consenso al punto 2.2."
+                  "text": "fino a 12 mesi dalla richiesta."
                 }
               ]
             },
             {
               "type": "h3",
-              "text": "2.2 Email di aggiornamento (solo con il tuo consenso)"
-            },
-            {
-              "type": "fields",
-              "items": [
-                {
-                  "label": "Dati",
-                  "text": "indirizzo email, data e ora in cui hai dato il consenso."
-                },
-                {
-                  "label": "Finalità",
-                  "text": "inviarti email su posizionamento, go-to-market e sulle mie offerte."
-                },
-                {
-                  "label": "Base giuridica",
-                  "text": "il tuo consenso (art. 6.1.a GDPR), separato e facoltativo. Puoi scaricare la Checklist o iscriverti alla lista d'attesa anche senza darlo."
-                },
-                {
-                  "label": "Conservazione",
-                  "text": "fino a quando revochi il consenso. Puoi farlo in ogni momento con il link presente in ogni email o scrivendomi. Gli indirizzi che non aprono nessuna email per 24 mesi vengono cancellati."
-                }
-              ]
-            },
-            {
-              "type": "h3",
-              "text": "2.3 Lista d'attesa del Mini-Kit"
+              "text": "2.2 Lista d'attesa del Mini-Kit"
             },
             {
               "type": "fields",
@@ -817,7 +791,7 @@
             },
             {
               "type": "h3",
-              "text": "2.4 Richiesta della call gratuita"
+              "text": "2.3 Richiesta della call gratuita"
             },
             {
               "type": "fields",
@@ -842,7 +816,7 @@
             },
             {
               "type": "h3",
-              "text": "2.5 Email che mi scrivi direttamente"
+              "text": "2.4 Email che mi scrivi direttamente"
             },
             {
               "type": "fields",
@@ -867,7 +841,7 @@
             },
             {
               "type": "h3",
-              "text": "2.6 Dati di navigazione"
+              "text": "2.5 Dati di navigazione"
             },
             {
               "type": "p",
@@ -884,7 +858,7 @@
           "blocks": [
             {
               "type": "p",
-              "text": "I dati obbligatori nei form sono necessari per darti quello che chiedi: senza, non posso inviarti la Checklist, avvisarti dell'apertura del Mini-Kit o ricontattarti per la call. Il consenso alle email di aggiornamento è facoltativo e il rifiuto non ha conseguenze sull'uso del sito."
+              "text": "I dati obbligatori nei form sono necessari per darti quello che chiedi: senza, non posso inviarti la Checklist, avvisarti dell'apertura del Mini-Kit o ricontattarti per la call."
             }
           ]
         },

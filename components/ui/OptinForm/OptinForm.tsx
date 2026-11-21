@@ -3,18 +3,14 @@
 import { useId, useState, type FormEvent, type ReactNode } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import PillButton from '../PillButton/PillButton'
-import { track } from '../../../lib/track'
 import styles from './OptinForm.module.css'
 
-type Props =
-  | { kind: 'checklist'; source: 'home' | 'soluzioni'; tone?: 'light' | 'dark' }
-  | { kind: 'minikit'; source?: never; tone?: 'light' | 'dark' }
+type Props = { kind: 'checklist' | 'minikit'; tone?: 'light' | 'dark' }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const PRODUCT_MAX = 120
 
-export default function OptinForm(props: Props) {
-  const { kind, tone = 'light' } = props
+export default function OptinForm({ kind, tone = 'light' }: Props) {
   const t = useTranslations(`optin.${kind}`)
   const tf = useTranslations('forms')
   const locale = useLocale()
@@ -37,8 +33,6 @@ export default function OptinForm(props: Props) {
       return
     }
 
-    if (kind === 'checklist') track('checklist_optin', { source: props.source })
-    else track('minikit_waitlist_join')
     setSent(true)
   }
 
@@ -55,7 +49,12 @@ export default function OptinForm(props: Props) {
 
   const privacy = tf.rich('privacyNote', {
     privacy: (chunks: ReactNode) => (
-      <a className={styles.link} href={`/${locale}/privacy`}>
+      <a
+        className={styles.link}
+        href={`/${locale}/privacy`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {chunks}
       </a>
     ),
@@ -99,11 +98,6 @@ export default function OptinForm(props: Props) {
           />
         </>
       )}
-
-      <label className={styles.consent}>
-        <input className={styles.check} type="checkbox" name="updates" value="1" />
-        <span>{tf('updates')}</span>
-      </label>
 
       <div className={styles.honeypot} aria-hidden="true">
         <label>

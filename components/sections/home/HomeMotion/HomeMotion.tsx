@@ -21,7 +21,6 @@ import {
 } from '../../soluzioni/SoluzioniMotion/sections'
 import { hovers } from '../../soluzioni/SoluzioniMotion/hovers'
 import { bigTitle, fillRows, introMotion } from './sections'
-import { track } from '../../../../lib/track'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -95,9 +94,6 @@ export default function HomeMotion({ className, children }: Props) {
 
       const onClick = (e: MouseEvent) => {
         const target = e.target as Element | null
-
-        const tracked = target?.closest<HTMLElement>('[data-track]')
-        if (tracked?.dataset.track) track(tracked.dataset.track)
 
         const link = target?.closest<HTMLAnchorElement>('a[href^="#"]')
         const id = link?.getAttribute('href')?.slice(1)
